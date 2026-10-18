@@ -188,7 +188,7 @@ def generate_samples(engine, config: dict) -> int:
     return 1 if failures else 0
 
 
-def generate_all(engine, config: dict, engine_name: str, force: bool) -> int:
+def generate_all(engine, config: dict, engine_name: str, force: bool, force_human: bool = False) -> int:
     VOICE_DIR.mkdir(parents=True, exist_ok=True)
     (VOICE_DIR / NAHUAT_DIR).mkdir(exist_ok=True)
     old_index = json.loads(INDEX_PATH.read_text(encoding="utf-8")) if INDEX_PATH.exists() else {}
@@ -213,7 +213,12 @@ def generate_all(engine, config: dict, engine_name: str, force: bool) -> int:
         digest = config_hash(line.text, cfg, engine_name)
         voice_label = cfg["model"] if engine_name == "piper" else f"winrt:{WINRT_VOICE_OF.get(line.speaker, 'female')}"
         index[filename] = {"speaker": line.speaker, "text": line.text, "nahuat": False, "voice": voice_label, "hash": digest, "status": "generada"}
-        unchanged = old_index.get(filename, {}).get("hash") == digest and (VOICE_DIR / filename).exists()
+        previous = old_index.get(filename, {})
+        human = str(previous.get("voice", "")).startswith("grabación humana") and (VOICE_DIR / filename).exists()
+        if human and not force_human:
+            index[filename] = previous  # grabación del estudiante: se conserva tal cual
+            continue
+        unchanged = previous.get("hash") == digest and (VOICE_DIR / filename).exists()
         if force or not unchanged:
             todo.append((line, filename, cfg))
 
@@ -240,13 +245,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--engine", choices=("piper", "winrt"), default="piper")
     parser.add_argument("--sample", action="store_true", help="Generar solo las frases de prueba de voices.json")
-    parser.add_argument("--force", action="store_true", help="Regenerar aunque el hash no haya cambiado")
+    parser.add_argument("--force", action="store_true", help="Regenerar aunque el hash no haya cambiado (respeta las grabaciones humanas)")
+    parser.add_argument("--force-human", action="store_true", help="Sustituir también las grabaciones humanas por síntesis")
     args = parser.parse_args()
     config = load_config()
     engine = PiperEngine(config) if args.engine == "piper" else WinRTEngine()
     if args.sample:
         return generate_samples(engine, config)
-    return generate_all(engine, config, args.engine, args.force)
+    return generate_all(engine, config, args.engine, args.force, args.force_human)
 
 
 if __name__ == "__main__":

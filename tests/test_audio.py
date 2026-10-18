@@ -190,3 +190,32 @@ def test_missing_optional_voice_is_silent(silent_audio, caplog):
         assert silent_audio.play_voice("nahuat/yek_tunal.wav", optional=True) is False
         assert silent_audio.has_voice("nahuat/yek_tunal.wav") is False
     assert not [r for r in caplog.records if "nahuat" in r.getMessage()]
+
+
+def test_record_voice_processing_and_plan():
+    import sys
+    from array import array
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from tools import record_voice as rv
+
+    silence = [0] * 4410
+    tone = [int(12000 * ((i % 100) < 50) * 2 - 12000) for i in range(8820)]
+    samples = array("h", silence + tone + silence)
+    trimmed = rv.trim_silence(samples, pad_ms=0)
+    assert abs(len(trimmed) - len(tone)) <= 2
+    normalized = rv.normalize(trimmed)
+    assert max(abs(v) for v in normalized) == pytest.approx(int(0.9 * 32767), abs=2)
+    assert rv.trim_silence(array("h", silence)) == array("h")
+
+    class Args:
+        nahuat_only = True
+        spanish_only = False
+        speaker = None
+        scene = None
+        redo = True
+
+    items = rv.build_items(Args())
+    assert items and all(i.nahuat_id for i in items)
+    assert all(i.filename.startswith("nahuat/") for i in items)

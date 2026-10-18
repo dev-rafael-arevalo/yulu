@@ -147,6 +147,18 @@ volúmenes se guardan en `settings.json`.
     `.onnx.json` en `yulu/assets/voices/piper/`. *"No matching distribution found for
     onnxruntime"*: el intérprete es 3.15; crea `.venv-tts` con 3.14. Si falta un WAV, el juego
     muestra el subtítulo, registra una advertencia y continúa.
+- **Grabar con tu propia voz** (narración y náhuat): `tools/record_voice.py` muestra cada
+  línea, graba con el micrófono al pulsar ESPACIO, permite escuchar (P), aceptar (ENTER) o
+  repetir (R), recorta silencios, normaliza y guarda el WAV con el nombre que espera el juego.
+  Las tomas quedan marcadas como "grabación humana" en `voice/index.json` y Piper no las
+  sobrescribe. Las frases en náhuat solo pueden grabarse así.
+
+  ```powershell
+  .venv\Scripts\python toolsecord_voice.py --list            # micrófonos y plan
+  .venv\Scripts\python toolsecord_voice.py --nahuat-only     # primero las 7 frases en náhuat
+  .venv\Scripts\python toolsecord_voice.py                   # el resto (97 líneas en español)
+  .venv\Scripts\python toolsecord_voice.py --redo --scene s1_despertar   # regrabar una escena
+  ```
 - **Herramientas**: `tools/check_audio.py` valida archivos y metadatos de licencia;
   `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla
   de una escena, y `--id jaguar_sierra` un sonido concreto.
