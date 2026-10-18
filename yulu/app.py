@@ -132,11 +132,11 @@ class Game:
         self.dialogue.set_line(line)
         self.cast.set_speaker(line.speaker)
         # Las frases en náhuat solo suenan si existe una grabación humana; nunca se sintetizan.
-        self.voice_available = self.audio.play_voice(voice_filename(line), optional=is_human_recording_required(line))
+        self.voice_available = config.VOICE_ENABLED and self.audio.play_voice(voice_filename(line), optional=is_human_recording_required(line))
 
     def _replay_voice(self) -> None:
         line = self.dialogue.line
-        if line is not None:
+        if config.VOICE_ENABLED and line is not None:
             self.audio.play_voice(voice_filename(line), optional=is_human_recording_required(line))
 
     # ---------- flujo narrativo ----------
@@ -323,7 +323,7 @@ class Game:
 
         if self.phase == Phase.CHOICES:
             self.menu.draw(surface)
-            self.dialogue.draw(surface, hint="Flechas o números y Enter, o ratón    ·    G: glosario    ·    V: repetir voz")
+            self.dialogue.draw(surface, hint="Flechas o números y Enter, o ratón    ·    G: glosario" + ("    ·    V: repetir voz" if config.VOICE_ENABLED else ""))
         elif self.phase == Phase.FEEDBACK:
             self.dialogue.draw(surface)
             self._draw_learned_card(surface)
@@ -331,7 +331,7 @@ class Game:
             self.dialogue.draw(surface, hint="R: volver a jugar    ·    G: glosario    ·    Esc: menú")
             self._draw_ending_summary(surface)
         else:
-            self.dialogue.draw(surface, hint="Enter / clic: continuar    ·    V: repetir voz    ·    G: glosario    ·    Esc: pausa")
+            self.dialogue.draw(surface, hint="Enter / clic: continuar" + ("    ·    V: repetir voz" if config.VOICE_ENABLED else "") + "    ·    G: glosario    ·    Esc: pausa")
         self._draw_subtitle_translation(surface)
 
         self.fade.draw(surface)
@@ -359,7 +359,7 @@ class Game:
         else:
             text, color = "(No entiendes estas palabras... todavía.)", config.TEXT_DIM
         draw_text(surface, text, (104, H - 120), 20, color)
-        if not self.voice_available:
+        if config.VOICE_ENABLED and not self.voice_available:
             draw_text(surface, "náhuat: sin grabación de hablante", (W - 420, H - 120), 14, config.TEXT_DIM, shadow=False)
 
     def _draw_learned_card(self, surface: pygame.Surface) -> None:

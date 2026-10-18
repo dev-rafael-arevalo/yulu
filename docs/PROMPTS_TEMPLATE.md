@@ -70,6 +70,7 @@ petición.
 | 2026-10-18 | Narración con más sentimiento y voz masculina | Voz plana y única | SSML por personaje y voz Raul (WinRT) para los hombres |
 | 2026-10-18 | Voces Piper locales y referencias culturales de vestuario | Voces de Windows sonaban robóticas; vestuario con elementos ajenos (casco) | Piper en entorno 3.14, voces por personaje; retratos íntegros de anciana y guardia, jaguar y aldea como fondos; `docs/REFERENCIAS_CULTURALES.md` |
 | 2026-10-18 | Grabar toda la narración y el náhuat con voz propia | Las voces sintéticas no convencían | `tools/record_voice.py` (grabación guiada) y `tools/clean_voice.py` (reducción de ruido de 15 dB de media) |
+| 2026-10-18 | Quitar la narración hablada y dejar el juego en lectura | El resultado de voz no convenció | `VOICE_ENABLED = False`; grabaciones y herramientas conservadas |
 | ✎ | | | |
 
 ## 3. Errores y limitaciones observados

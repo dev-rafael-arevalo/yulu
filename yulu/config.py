@@ -30,6 +30,10 @@ TRUST_START = 0
 # Umbral a partir del cual la presentación y el audio pasan a modo de peligro.
 THREAT_HIGH = 70
 
+# Narración hablada: desactivada a petición del estudiante; el juego se lee. Las grabaciones y
+# herramientas se conservan y basta poner True para volver a oírlas.
+VOICE_ENABLED = False
+
 # Volúmenes por defecto (0.0 a 1.0), independientes por categoría.
 DEFAULT_VOLUMES = {"music": 0.35, "ambient": 0.5, "sfx": 0.7, "voice": 1.0}
 

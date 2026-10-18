@@ -9,7 +9,7 @@ from yulu.ui.text import draw_text, get_font
 W, H = config.LOGICAL_WIDTH, config.LOGICAL_HEIGHT
 
 VOLUME_PREFIX = "volume:"
-VOLUME_ITEMS = (("music", "Música"), ("ambient", "Ambiente"), ("sfx", "Efectos"), ("voice", "Voces"))
+VOLUME_ITEMS = (("music", "Música"), ("ambient", "Ambiente"), ("sfx", "Efectos")) + ((("voice", "Voces"),) if config.VOICE_ENABLED else ())
 ITEMS = (("continue", "Continuar"), *((VOLUME_PREFIX + key, label) for key, label in VOLUME_ITEMS), ("restart", "Volver a empezar"), ("quit", "Salir del juego"))
 VOLUME_STEP = 0.1
 BAR_W, BAR_H = 220, 10
@@ -62,4 +62,4 @@ class PauseMenu:
                 pygame.draw.rect(surface, config.AMBER if active else (120, 100, 60), (bx, by, int(BAR_W * value), BAR_H), border_radius=5)
                 pygame.draw.rect(surface, (90, 90, 90), (bx, by, BAR_W, BAR_H), 1, border_radius=5)
                 surface.blit(get_font(16).render(f"{int(value * 100)}%", True, color), (bx + BAR_W + 12, y + 4))
-        draw_text(surface, "Flechas izquierda y derecha ajustan el volumen   ·   F11: pantalla completa / ventana   ·   V: repetir la voz", (W // 2 - 330, H // 2 + 200), 15, config.TEXT_DIM)
+        draw_text(surface, "Flechas izquierda y derecha ajustan el volumen   ·   F11: pantalla completa / ventana" + ("   ·   V: repetir la voz" if config.VOICE_ENABLED else ""), (W // 2 - 330, H // 2 + 200), 15, config.TEXT_DIM)

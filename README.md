@@ -49,9 +49,8 @@ No se instala nada a nivel global ni se requiere conexión durante la partida.
 | Flechas ↑ ↓ o 1-9 | Seleccionar una decisión |
 | Enter o clic | Confirmar la decisión |
 | G | Abrir o cerrar el glosario de náhuat (detiene el temporizador) |
-| V | Repetir la narración de la línea actual (las líneas en náhuat solo si hay grabación humana) |
 | ← → (en pausa) | Ajustar el volumen de música, ambiente, efectos o voces |
-| Esc | Menú de pausa (continuar, volúmenes, volver a empezar, salir) |
+| Esc | Menú de pausa (continuar, volúmenes de música, ambiente y efectos, volver a empezar, salir) |
 | F11 | Alternar pantalla completa / ventana |
 | R (en un final) | Volver a jugar y explorar otras decisiones |
 
@@ -102,7 +101,11 @@ volúmenes se guardan en `settings.json`.
   Autor, licencia, URL, fecha y limitaciones de cada una están en
   [`yulu/assets/audio/CREDITS.md`](yulu/assets/audio/CREDITS.md). Solo las cuatro señales
   de interfaz (`ui_*`) se generan por código.
-- **Narración en español (Piper TTS, local)**: los diálogos se pregeneran con
+- **Narración hablada: desactivada.** El juego se lee; los diálogos se muestran con subtítulos y
+  sin voz. Las grabaciones del estudiante y las herramientas de voz se conservan, y para
+  reactivarlas basta poner `VOICE_ENABLED = True` en `yulu/config.py` (vuelven la tecla V,
+  el volumen de voces y la atenuación de la música al hablar).
+- **Narración en español (Piper TTS, local, opcional)**: los diálogos se pregeneran con
   [Piper](https://github.com/OHF-Voice/piper1-gpl) (código GPL-3.0) y modelos oficiales de
   `rhasspy/piper-voices`. Piper necesita `onnxruntime`, que todavía no publica binarios para
   Python 3.15, así que se usa un **segundo entorno solo para generar voces** con el Python 3.14
