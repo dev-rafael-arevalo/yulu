@@ -62,7 +62,7 @@ def _row_segments(surface: pygame.Surface, y0: int, y1: int) -> list[tuple[int, 
     return _segments(band.get_width(), _bright_lines(band, "x"))
 
 
-def _black_to_alpha(cell: pygame.Surface, boost: float, solid_from: int = 255) -> pygame.Surface:
+def _black_to_alpha(cell: pygame.Surface, boost: float, solid_from: int = 255, transparent_below: int = 10) -> pygame.Surface:
     """Alfa derivado de la luminancia: el negro puro se vuelve transparente.
 
     `boost` escala la rampa; a partir de `solid_from` el píxel es totalmente opaco, lo que
@@ -74,14 +74,29 @@ def _black_to_alpha(cell: pygame.Surface, boost: float, solid_from: int = 255) -
         for x in range(w):
             r, g, b, *_ = cell.get_at((x, y))
             lum = max(r, g, b)
-            if lum < 10:
+            if lum < transparent_below:
                 alpha = 0
             elif lum >= solid_from:
                 alpha = 255
             else:
-                alpha = min(255, int((lum - 8) * boost))
+                alpha = min(255, int((lum - transparent_below + 1) * boost))
             out.set_at((x, y), (r, g, b, alpha))
     return out
+
+
+def _feather_edges(surface: pygame.Surface, fraction: float = 0.12) -> pygame.Surface:
+    """Desvanece el alfa hacia los bordes de la celda para que la niebla pintada no deje un recuadro."""
+    w, h = surface.get_size()
+    mx, my = max(1, int(w * fraction)), max(1, int(h * fraction))
+    for y in range(h):
+        fy = min(1.0, y / my, (h - 1 - y) / my)
+        for x in range(w):
+            fx = min(1.0, x / mx, (w - 1 - x) / mx)
+            k = min(fx, fy)
+            if k < 1.0:
+                r, g, b, a = surface.get_at((x, y))
+                surface.set_at((x, y), (r, g, b, int(a * k * k)))
+    return surface
 
 
 def _trim(surface: pygame.Surface, margin: int = 6) -> pygame.Surface:
@@ -119,7 +134,9 @@ def main(grid_path: str) -> int:
         for (x0, x1), (filename, kind) in zip(cols, row_plan):
             cell = grid.subsurface(pygame.Rect(x0, y0, x1 - x0, y1 - y0)).copy()
             if kind == "jaguar":
-                cell = _trim(_black_to_alpha(cell, boost=6.0, solid_from=50))
+                # El fondo de las celdas del jaguar no es negro puro (gris muy oscuro): todo lo que esté por
+                # debajo de 26 se hace transparente para no arrastrar un recuadro gris alrededor del animal.
+                cell = _trim(_feather_edges(_black_to_alpha(cell, boost=11.0, solid_from=50, transparent_below=26)))
             elif kind == "fog":
                 cell = _black_to_alpha(cell, boost=1.0)
             target = IMAGES_DIR / filename

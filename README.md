@@ -8,11 +8,12 @@ El Salvador, en una época prehispánica ficticia. Un jaguar lo sigue. A lo lejo
 aldea cuyos habitantes hablan náhuat. Para sobrevivir hasta el amanecer tendrá que
 aprender expresiones, interpretar diálogos y tomar decisiones con consecuencias.
 
-> Estado del proyecto: **FASE 4 completada**. Capítulo 1 jugable de principio a fin con
+> Estado del proyecto: **FASE 5 en curso**. Capítulo 1 jugable de principio a fin con
 > cinco escenas, 12 expresiones de náhuat con fuente citada, glosario, dos finales,
 > fondos y personajes generados por IA, grabaciones ambientales con licencia, música de
-> dron, narración expresiva pregenerada y volúmenes independientes. Pendiente: pruebas finales y
-> documentación académica (FASE 5).
+> dron, narración expresiva con dos voces y volúmenes independientes. Pendiente: las
+> pruebas manuales en equipo real ([`docs/PRUEBAS_MANUALES.md`](docs/PRUEBAS_MANUALES.md))
+> y la bitácora académica ([`docs/PROMPTS_TEMPLATE.md`](docs/PROMPTS_TEMPLATE.md)).
 
 ## Requisitos
 
@@ -101,15 +102,16 @@ volúmenes se guardan en `settings.json`.
   Autor, licencia, URL, fecha y limitaciones de cada una están en
   [`yulu/assets/audio/CREDITS.md`](yulu/assets/audio/CREDITS.md). Solo las cuatro señales
   de interfaz (`ui_*`) se generan por código.
-- **Narración en español**: se pregenera sin conexión con la voz SAPI5 de Windows
-  (`Microsoft Sabina Desktop`, es-MX) usando SSML con ritmo, tono y pausas distintos
-  por personaje:
+- **Narración en español**: se pregenera sin conexión con las voces de Windows
+  (motor WinRT: `Microsoft Sabina` para narradora y anciana, `Microsoft Raul` para
+  protagonista, guardia y niño; respaldo SAPI5 con una sola voz) usando SSML con ritmo,
+  tono y pausas distintos por personaje y volumen uniforme:
 
   ```powershell
   .venv\Scripts\python tools\generate_narration.py
   ```
 
-  Crea unos 106 WAV (42 MB) en `yulu/assets/audio/voice/`, que no se incluyen en Git.
+  Crea unos 106 WAV (unos 40 MB) en `yulu/assets/audio/voice/`, que no se incluyen en Git.
   Las frases en náhuat se leen con fonética española aproximada: **no es una voz nativa**.
 - **Herramientas**: `tools/check_audio.py` valida archivos y metadatos de licencia;
   `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla
@@ -148,5 +150,5 @@ yulu/audio/             Administrador de audio, paisaje sonoro y claves de narra
 yulu/assets/            Manifiesto, imágenes, audio y fuentes locales
 tools/                  Comprobación de recursos, corte de cuadrículas, síntesis de sonidos y narración
 tests/                  Pruebas automatizadas con pytest
-docs/                   Fuentes lingüísticas, prompts de arte, plantilla académica (FASE 5)
+docs/                   Fuentes lingüísticas, prompts de arte, pruebas manuales, bitácora académica
 ```

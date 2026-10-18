@@ -1,6 +1,9 @@
-"""Pregenera la narración en español con la voz SAPI5 de Windows (sin conexión).
+"""Pregenera la narración en español con las voces de Windows (sin conexión).
 
-Uso:  python tools/generate_narration.py [--force] [--voice "Microsoft Sabina Desktop"]
+Uso:  python tools/generate_narration.py [--force] [--female-voice "Microsoft Sabina"] [--male-voice "Microsoft Raul"]
+
+Narradora y anciana usan la voz femenina; protagonista, guardia y niño, la masculina
+(el niño con el tono elevado). Motor WinRT (voces OneCore) con respaldo SAPI5.
 
 Recorre todas las líneas de diálogo y retroalimentaciones del capítulo, calcula el nombre
 estable de archivo de cada una (ver yulu/audio/voice.py) y sintetiza las que falten en
@@ -40,14 +43,17 @@ def all_lines() -> list[DialogueLine]:
 
 
 # Prosodia por personaje (SSML): ritmo, tono y volumen relativos a la voz base.
+# El volumen se mantiene igual en todos los locutores: las diferencias de volumen por SSML
+# producían picos molestos en las palabras sueltas en náhuat. La expresividad viene del
+# ritmo, el tono, las pausas y la voz (femenina o masculina) de cada personaje.
 PROSODY: dict[str, dict[str, str]] = {
-    NARRATOR: {"rate": "-12%", "pitch": "-4%", "volume": "medium"},
-    YOU: {"rate": "-5%", "pitch": "+3%", "volume": "medium"},
-    GUARD: {"rate": "+12%", "pitch": "-12%", "volume": "x-loud"},
-    ELDER: {"rate": "-22%", "pitch": "-8%", "volume": "soft"},
-    CHILD: {"rate": "+5%", "pitch": "+28%", "volume": "medium"},
+    NARRATOR: {"rate": "-12%", "pitch": "-4%", "voice": "female"},
+    YOU: {"rate": "-6%", "pitch": "0%", "voice": "male"},
+    GUARD: {"rate": "+8%", "pitch": "-10%", "voice": "male"},
+    ELDER: {"rate": "-22%", "pitch": "-8%", "voice": "female"},
+    CHILD: {"rate": "+4%", "pitch": "+22%", "voice": "male"},
 }
-DEFAULT_PROSODY = {"rate": "-8%", "pitch": "0%", "volume": "medium"}
+DEFAULT_PROSODY = {"rate": "-8%", "pitch": "0%", "voice": "female"}
 
 
 def _escape(text: str) -> str:
@@ -64,13 +70,11 @@ def build_ssml(line: DialogueLine) -> str:
     text = _escape(line.text)
     text = text.replace("...", '<break time="650ms"/>').replace("…", '<break time="650ms"/>')
     text = text.replace(". ", '.<break time="380ms"/> ').replace("? ", '?<break time="320ms"/> ').replace("! ", '!<break time="320ms"/> ')
-    if line.text.endswith("!") or line.text.endswith("?!"):
-        text = f'<emphasis level="strong">{text}</emphasis>'
     rate, pitch = prosody["rate"], prosody["pitch"]
     if line.nahuat_id:
-        rate = "-30%"
+        rate = "-28%"
         text = '<break time="250ms"/>' + text
-    body = f'<prosody rate="{rate}" pitch="{pitch}" volume="{prosody["volume"]}">{text}</prosody>'
+    body = f'<prosody rate="{rate}" pitch="{pitch}">{text}</prosody>'
     return (
         '<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-MX">'
         f"{body}</speak>"
@@ -84,17 +88,20 @@ def build_jobs(force: bool) -> tuple[list[dict], dict[str, dict]]:
         filename = voice_filename(line)
         if filename in index:
             continue
-        index[filename] = {"speaker": line.speaker, "text": line.text, "nahuat": bool(line.nahuat_id)}
+        index[filename] = {"speaker": line.speaker, "text": line.text, "nahuat": bool(line.nahuat_id),
+                           "voice": PROSODY.get(line.speaker, DEFAULT_PROSODY)["voice"]}
         target = VOICE_DIR / filename
         if force or not target.exists():
-            jobs.append({"file": str(target), "text": line.text, "ssml": build_ssml(line)})
+            voice = PROSODY.get(line.speaker, DEFAULT_PROSODY)["voice"]
+            jobs.append({"file": str(target), "text": line.text, "ssml": build_ssml(line), "voice": voice})
     return jobs, index
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--force", action="store_true", help="Regenerar aunque el archivo exista")
-    parser.add_argument("--voice", default="Microsoft Sabina Desktop", help="Nombre de la voz SAPI5")
+    parser.add_argument("--female-voice", default="Microsoft Sabina", help="Voz femenina (WinRT/OneCore)")
+    parser.add_argument("--male-voice", default="Microsoft Raul", help="Voz masculina (WinRT/OneCore)")
     args = parser.parse_args()
 
     VOICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -109,7 +116,8 @@ def main() -> int:
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as fh:
         json.dump(jobs, fh, ensure_ascii=False)
         job_file = fh.name
-    command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(SCRIPT), "-JobFile", job_file, "-Voice", args.voice]
+    command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(SCRIPT), "-JobFile", job_file,
+               "-FemaleVoice", args.female_voice, "-MaleVoice", args.male_voice]
     result = subprocess.run(command, capture_output=True, text=True)
     print(result.stdout.strip())
     if result.returncode != 0:

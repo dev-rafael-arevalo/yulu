@@ -14,7 +14,8 @@ from yulu import config
 from yulu.ui.assets import ImageStore
 
 W, H = config.LOGICAL_WIDTH, config.LOGICAL_HEIGHT
-PORTRAIT_HEIGHT = int(H * 0.56)
+PORTRAIT_HEIGHT = int(H * 0.50)
+PORTRAIT_TOP_MIN = 92  # por debajo del HUD
 PORTRAIT_BOTTOM = H - 230 + 24  # apoya sobre la caja de diálogo
 FADE_SPEED = 3.0  # unidades de alfa (0-1) por segundo
 
@@ -59,8 +60,8 @@ class CharacterLayer:
             surface = self._scaled(spec["file"], int(spec.get("height", 0.4) * H))
             if surface is None:
                 continue
-            x = int(spec.get("x", 0.05) * W)
-            y = int(spec.get("bottom", 0.7) * H) - surface.get_height()
+            x = max(0, min(W - surface.get_width(), int(spec.get("x", 0.05) * W)))
+            y = max(PORTRAIT_TOP_MIN, int(spec.get("bottom", 0.7) * H) - surface.get_height())
             self._groups.append(_Placed(surface, x, y, float(spec.get("alpha", 0.9))))
         self.set_speaker(None)
 
@@ -77,8 +78,8 @@ class CharacterLayer:
         surface = self._scaled(filename, PORTRAIT_HEIGHT)
         if surface is None:
             return
-        x = W - surface.get_width() - 70
-        y = PORTRAIT_BOTTOM - surface.get_height()
+        x = max(0, W - surface.get_width() - 70)
+        y = max(PORTRAIT_TOP_MIN, PORTRAIT_BOTTOM - surface.get_height())
         self._portrait = _Placed(surface, x, y, 1.0)
         self._portrait_name = speaker
 

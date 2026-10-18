@@ -26,7 +26,7 @@ class JaguarPresence:
 
     def update(self, dt: float, threat: int, visible: bool) -> None:
         target = (threat / config.METER_MAX) if visible else 0.0
-        self.intensity += (target - self.intensity) * min(1.0, dt * 1.5)
+        self.intensity += (target - self.intensity) * min(1.0, dt * 2.5)
         self._blink_timer -= dt
         if self._blink_timer <= 0:
             self._blink_timer = 3.0 + (threat % 5)
@@ -69,12 +69,9 @@ class JaguarPresence:
         sprite = self._sprite(pose, max(40, width // 8 * 8))
         if sprite is None:
             return False
-        if pose == "eyes":
-            alpha = min(1.0, self.intensity * 1.8)
-        else:  # aparece entre la niebla y se vuelve sólido rápidamente al crecer la amenaza
-            alpha = min(1.0, 0.45 + (self.intensity - SILHOUETTE_THRESHOLD) / (1 - SILHOUETTE_THRESHOLD) * 1.2)
-        if self._blink > 0 and pose == "eyes":
-            alpha *= 0.1
+        # Sólido: la amenaza gobierna tamaño y posición, no la transparencia.
+        # Solo hay un fundido breve al aparecer (intensidad < 0.12) para evitar un corte brusco.
+        alpha = min(1.0, self.intensity / 0.12)
         sprite.set_alpha(int(255 * alpha))
         surface.blit(sprite, (x - sprite.get_width() * 0.3, y - sprite.get_height() * 0.55))
         return True

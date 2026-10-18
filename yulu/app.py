@@ -173,6 +173,7 @@ class Game:
             self.fade.start(on_midpoint=self._enter_scene)
             return
         self.phase = Phase.CHOICES
+        self.characters.set_speaker(None)  # el retrato no debe quedar bajo el menú de decisiones
         self.menu.set_choices(self.engine.available_choices(self.state))
         # La presión temporal empieza solo cuando el jugador ya leyó la escena.
         self.timer_left = self.scene.timer_seconds
@@ -211,61 +212,83 @@ class Game:
         if event.type == pygame.QUIT:
             self.running = False
             return
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_F11:
-            self._toggle_fullscreen()
+        if self._handle_overlay_event(event):
             return
-        if self.glossary.visible:
-            self.glossary.handle_event(event)
-            return
-        if self.paused:
-            action = self.pause.handle_event(event)
-            if isinstance(action, tuple):
-                _, category, value = action
-                self.audio.set_volume(category, value)
-                self._save_volumes()
-                if category == "sfx":
-                    self.audio.play_sfx("ui_move", gain=0.6)
-            elif action == "continue":
-                self.paused = False
-            elif action == "restart":
-                self.paused = False
-                self._restart()
-            elif action == "quit":
-                self.running = False
-            return
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-            self.paused = True
-            return
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_g:
-            self.glossary.toggle()  # consultar el glosario detiene el temporizador (ver update)
-            return
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_v:
-            self._replay_voice()
+        if self._handle_global_key(event):
             return
         if self.fade.active:
             return
+        self._handle_phase_event(event)
 
-        confirm = (event.type == pygame.KEYDOWN and event.key in (pygame.K_RETURN, pygame.K_KP_ENTER, pygame.K_SPACE)) or (
-            event.type == pygame.MOUSEBUTTONDOWN and event.button == 1
-        )
-        if self.phase == Phase.DIALOGUE and confirm:
-            self._advance_dialogue()
+    def _handle_overlay_event(self, event: pygame.event.Event) -> bool:
+        """Glosario y pausa capturan la entrada mientras están abiertos."""
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_F11:
+            self._toggle_fullscreen()
+            return True
+        if self.glossary.visible:
+            self.glossary.handle_event(event)
+            return True
+        if self.paused:
+            self._handle_pause_action(self.pause.handle_event(event))
+            return True
+        return False
+
+    def _handle_pause_action(self, action) -> None:
+        if isinstance(action, tuple):
+            _, category, value = action
+            self.audio.set_volume(category, value)
+            self._save_volumes()
+            if category == "sfx":
+                self.audio.play_sfx("ui_move", gain=0.6)
+        elif action == "continue":
+            self.paused = False
+        elif action == "restart":
+            self.paused = False
+            self._restart()
+        elif action == "quit":
+            self.running = False
+
+    def _handle_global_key(self, event: pygame.event.Event) -> bool:
+        if event.type != pygame.KEYDOWN:
+            return False
+        if event.key == pygame.K_ESCAPE:
+            self.paused = True
+        elif event.key == pygame.K_g:
+            self.glossary.toggle()  # consultar el glosario detiene el temporizador (ver update)
+        elif event.key == pygame.K_v:
+            self._replay_voice()
+        else:
+            return False
+        return True
+
+    @staticmethod
+    def _is_confirm(event: pygame.event.Event) -> bool:
+        if event.type == pygame.KEYDOWN:
+            return event.key in (pygame.K_RETURN, pygame.K_KP_ENTER, pygame.K_SPACE)
+        return event.type == pygame.MOUSEBUTTONDOWN and event.button == 1
+
+    def _handle_phase_event(self, event: pygame.event.Event) -> None:
+        confirm = self._is_confirm(event)
+        if self.phase == Phase.DIALOGUE:
+            if confirm:
+                self._advance_dialogue()
         elif self.phase == Phase.CHOICES:
-            if event.type == pygame.KEYDOWN and event.key in (pygame.K_UP, pygame.K_DOWN, pygame.K_w, pygame.K_s):
-                self.soundscape.on_menu_move()
-            choice = self.menu.handle_event(event)
-            if choice is not None:
-                self._resolve(self.engine.apply_choice(self.state, choice.id))
-        elif self.phase == Phase.FEEDBACK and confirm:
-            if self.dialogue.finished:
-                self._go_to_pending()
-            else:
-                self.dialogue.skip()
+            self._handle_choice_event(event)
+        elif self.phase == Phase.FEEDBACK:
+            if confirm:
+                self._go_to_pending() if self.dialogue.finished else self.dialogue.skip()
         elif self.phase == Phase.ENDING:
             if event.type == pygame.KEYDOWN and event.key == pygame.K_r:
                 self._restart()
             elif confirm and not self.dialogue.finished:
                 self.dialogue.skip()
+
+    def _handle_choice_event(self, event: pygame.event.Event) -> None:
+        if event.type == pygame.KEYDOWN and event.key in (pygame.K_UP, pygame.K_DOWN, pygame.K_w, pygame.K_s):
+            self.soundscape.on_menu_move()
+        choice = self.menu.handle_event(event)
+        if choice is not None:
+            self._resolve(self.engine.apply_choice(self.state, choice.id))
 
     # ---------- actualización ----------
     def update(self, dt: float) -> None:
@@ -344,7 +367,7 @@ class Game:
             return
         items = [self.lexicon.get(i) for i in self.pending.learned]
         height = 44 + 46 * len(items)
-        card = pygame.Rect(W - 480, H - 250 - height, 400, height)
+        card = pygame.Rect(80, H - 250 - height, 400, height)
         panel = pygame.Surface(card.size, pygame.SRCALPHA)
         panel.fill((*config.PANEL, 225))
         pygame.draw.rect(panel, (*config.AMBER, 200), panel.get_rect(), 2, border_radius=6)
