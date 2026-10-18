@@ -8,4 +8,4 @@ prompt de cada uno están en `docs/ART_PROMPTS.md`. Comprueba el estado con
 
 | Archivo | Herramienta / autor | Fecha | Licencia o condiciones de uso |
 |---|---|---|---|
-| (ninguno todavía) | | | |
+| Cinematic Jungle Village Asset Grid.png (origen de los 12 PNG, cortado con tools/slice_asset_grid.py) | Generada por el estudiante con una herramienta de IA (completar nombre) | 2026-10-18 | Uso según las condiciones de la herramienta (completar) |

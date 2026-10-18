@@ -65,11 +65,14 @@ class JaguarPresence:
     def _draw_sprites(self, surface: pygame.Surface, x: float, y: float, scale: float) -> bool:
         """Dibuja con sprites. Devuelve False si no hay sprites disponibles."""
         pose = "stalk" if self.intensity > SILHOUETTE_THRESHOLD else "eyes"
-        width = int((520 if pose == "stalk" else 260) * scale)
+        width = int((430 if pose == "stalk" else 260) * scale)
         sprite = self._sprite(pose, max(40, width // 8 * 8))
         if sprite is None:
             return False
-        alpha = min(1.0, self.intensity * 1.8) if pose == "eyes" else (self.intensity - SILHOUETTE_THRESHOLD) / (1 - SILHOUETTE_THRESHOLD) * 0.9 + 0.1
+        if pose == "eyes":
+            alpha = min(1.0, self.intensity * 1.8)
+        else:  # aparece entre la niebla y se vuelve sólido rápidamente al crecer la amenaza
+            alpha = min(1.0, 0.45 + (self.intensity - SILHOUETTE_THRESHOLD) / (1 - SILHOUETTE_THRESHOLD) * 1.2)
         if self._blink > 0 and pose == "eyes":
             alpha *= 0.1
         sprite.set_alpha(int(255 * alpha))

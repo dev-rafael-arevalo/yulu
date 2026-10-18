@@ -1,12 +1,64 @@
 {
-  "_comment": "Manifiesto de recursos gráficos. Las rutas son relativas a yulu/assets/images. Si un archivo falta, el juego usa un escenario procedural provisional y lo indica en pantalla.",
+  "_comment": "Manifiesto de recursos gráficos. Las rutas son relativas a yulu/assets/images. Si un archivo falta, el juego usa un escenario procedural provisional y lo indica en pantalla. 'torches' y 'fire' son posiciones normalizadas (0-1) sobre la imagen para el resplandor animado.",
   "backgrounds": {
-    "forest_dense": {"file": "bg_01_forest_awakening.png", "fog": 1.0, "warmth": 0.0},
-    "forest_path": {"file": "bg_02_forest_chase.png", "fog": 1.2, "warmth": 0.0},
-    "village_edge": {"file": "bg_03_path_to_village.png", "fog": 0.8, "warmth": 0.25},
-    "village_gate": {"file": "bg_04_village_gate_torches.png", "fog": 0.5, "warmth": 0.5},
-    "shelter": {"file": "bg_05_shelter_interior.png", "fog": 0.2, "warmth": 0.7},
-    "dawn": {"file": "bg_06_dawn_clearing.png", "fog": 0.6, "warmth": 0.3}
+    "forest_dense": {
+      "file": "bg_01_forest_awakening.png",
+      "fog": 0.8,
+      "warmth": 0.0
+    },
+    "forest_path": {
+      "file": "bg_02_forest_chase.png",
+      "fog": 0.9,
+      "warmth": 0.0
+    },
+    "village_edge": {
+      "file": "bg_03_path_to_village.png",
+      "fog": 0.6,
+      "warmth": 0.25,
+      "torches": [
+        [
+          0.62,
+          0.42
+        ],
+        [
+          0.74,
+          0.4
+        ],
+        [
+          0.86,
+          0.39
+        ]
+      ]
+    },
+    "village_gate": {
+      "file": "bg_04_village_gate_torches.png",
+      "fog": 0.4,
+      "warmth": 0.5,
+      "torches": [
+        [
+          0.22,
+          0.28
+        ],
+        [
+          0.78,
+          0.3
+        ]
+      ]
+    },
+    "shelter": {
+      "file": "bg_05_shelter_interior.png",
+      "fog": 0.15,
+      "warmth": 0.7,
+      "fire": [
+        0.48,
+        0.78
+      ]
+    },
+    "dawn": {
+      "file": "bg_06_dawn_clearing.png",
+      "fog": 0.5,
+      "warmth": 0.15
+    }
   },
   "jaguar": {
     "eyes": "jaguar_eyes_glow.png",
@@ -14,7 +66,10 @@
     "charge": "jaguar_charging.png"
   },
   "overlays": {
-    "fog": ["fx_fog_layer_01.png", "fx_fog_layer_02.png"],
+    "fog": [
+      "fx_fog_layer_01.png",
+      "fx_fog_layer_02.png"
+    ],
     "smoke": "fx_torch_smoke.png"
   }
 }

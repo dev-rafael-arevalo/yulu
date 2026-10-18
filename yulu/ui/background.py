@@ -120,6 +120,11 @@ class Background:
         self.fire: tuple[int, int] | None = None
         if self.is_provisional:
             self._build_placeholder(key, rng)
+        else:
+            # Posiciones normalizadas del manifiesto para el resplandor animado sobre la imagen.
+            self.torches = [(int(tx * W), int(ty * H)) for tx, ty in spec.get("torches", [])]
+            if spec.get("fire"):
+                self.fire = (int(spec["fire"][0] * W), int(spec["fire"][1] * H))
         image_fog = store.fog_layers() if store else []
         self.fog_layers = image_fog or [_fog_layer(rng, 60 + i * 25, 0.25 + i * 0.1) for i in range(3)]
         self.fog_offsets = [0.0] * len(self.fog_layers)
@@ -216,14 +221,16 @@ class Background:
             pygame.draw.polygon(surface, config.FIRE, [(x - 8, y + 4), (x + 8, y + 4), (x, y - flame_h)])
             pygame.draw.polygon(surface, config.AMBER, [(x - 4, y + 2), (x + 4, y + 2), (x, y - flame_h // 2)])
 
-    @staticmethod
-    def _draw_fire(surface: pygame.Surface, x: int, y: int, t: float) -> None:
+    def _draw_fire(self, surface: pygame.Surface, x: int, y: int, t: float) -> None:
         flicker = 0.8 + 0.2 * math.sin(t * 11) * math.cos(t * 5.1)
         glow = pygame.Surface((700, 500))
+        strength = 0.12 if self.is_provisional else 0.05
         for r in range(240, 10, -12):
-            k = 0.12 * flicker * (1 - r / 240)
+            k = strength * flicker * (1 - r / 240)
             pygame.draw.ellipse(glow, tuple(int(c * k) for c in config.FIRE), (350 - r * 1.4, 250 - r, r * 2.8, r * 2))
         surface.blit(glow, (x - 350, y - 250), special_flags=pygame.BLEND_ADD)
+        if not self.is_provisional:
+            return
         for i in range(5):
             fx = x - 40 + i * 20 + math.sin(t * 9 + i) * 4
             fh = int((26 + i % 3 * 10) * flicker)
