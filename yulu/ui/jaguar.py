@@ -1,4 +1,8 @@
-"""Presencia del jaguar: ojos ámbar y silueta cuya visibilidad crece con la amenaza."""
+"""Presencia del jaguar: sprites si existen, primitivas provisionales si no.
+
+La visibilidad crece con la amenaza: primero solo los ojos entre la vegetación, después la
+figura completa acechando desde la izquierda del encuadre.
+"""
 from __future__ import annotations
 
 import math
@@ -6,15 +10,19 @@ import math
 import pygame
 
 from yulu import config
+from yulu.ui.assets import ImageStore
 
 W, H = config.LOGICAL_WIDTH, config.LOGICAL_HEIGHT
+SILHOUETTE_THRESHOLD = 0.35
 
 
 class JaguarPresence:
-    def __init__(self) -> None:
+    def __init__(self, store: ImageStore | None = None) -> None:
         self.intensity = 0.0  # 0..1 suavizado a partir del nivel de amenaza
         self._blink_timer = 0.0
         self._blink = 0.0
+        self._store = store
+        self._sprite_cache: dict[tuple[str, int], pygame.Surface] = {}
 
     def update(self, dt: float, threat: int, visible: bool) -> None:
         target = (threat / config.METER_MAX) if visible else 0.0
@@ -34,11 +42,41 @@ class JaguarPresence:
         scale = 0.6 + 1.2 * self.intensity
         sway = math.sin(time_s * 0.8) * 6 * scale
 
-        if self.intensity > 0.35:
-            self._draw_silhouette(surface, base_x + sway, base_y, scale, (self.intensity - 0.35) / 0.65)
+        if self._draw_sprites(surface, base_x + sway, base_y, scale):
+            return
+        if self.intensity > SILHOUETTE_THRESHOLD:
+            self._draw_silhouette(surface, base_x + sway, base_y, scale, (self.intensity - SILHOUETTE_THRESHOLD) / (1 - SILHOUETTE_THRESHOLD))
         if self._blink <= 0:
             self._draw_eyes(surface, base_x + sway, base_y - 36 * scale, scale, time_s)
 
+    # ---------- sprites ----------
+    def _sprite(self, pose: str, width: int) -> pygame.Surface | None:
+        if self._store is None:
+            return None
+        key = (pose, width)
+        if key not in self._sprite_cache:
+            raw = self._store.jaguar(pose)
+            if raw is None:
+                return None
+            ratio = raw.get_height() / raw.get_width()
+            self._sprite_cache[key] = pygame.transform.smoothscale(raw, (width, max(1, int(width * ratio))))
+        return self._sprite_cache[key]
+
+    def _draw_sprites(self, surface: pygame.Surface, x: float, y: float, scale: float) -> bool:
+        """Dibuja con sprites. Devuelve False si no hay sprites disponibles."""
+        pose = "stalk" if self.intensity > SILHOUETTE_THRESHOLD else "eyes"
+        width = int((520 if pose == "stalk" else 260) * scale)
+        sprite = self._sprite(pose, max(40, width // 8 * 8))
+        if sprite is None:
+            return False
+        alpha = min(1.0, self.intensity * 1.8) if pose == "eyes" else (self.intensity - SILHOUETTE_THRESHOLD) / (1 - SILHOUETTE_THRESHOLD) * 0.9 + 0.1
+        if self._blink > 0 and pose == "eyes":
+            alpha *= 0.1
+        sprite.set_alpha(int(255 * alpha))
+        surface.blit(sprite, (x - sprite.get_width() * 0.3, y - sprite.get_height() * 0.55))
+        return True
+
+    # ---------- primitivas provisionales ----------
     def _draw_eyes(self, surface: pygame.Surface, x: float, y: float, scale: float, t: float) -> None:
         gap = 22 * scale
         pulse = 0.8 + 0.2 * math.sin(t * 3)

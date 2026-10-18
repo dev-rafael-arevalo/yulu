@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "language": "Náhuat (pipil) de El Salvador",
+    "orthography": "Ortografía práctica usada por Alan R. King (Timumachtikan!, 2011) y Tushik: sh = /ʃ/, j = /h/, w = /w/, sin marcar la longitud vocálica. Las citas de Campbell (1985) usan otra ortografía (x = sh, ':' = vocal larga) y se transcriben aquí a la ortografía práctica.",
+    "pronunciation_basis": "Reglas generales de King (2011) pp. 20, 22, 26: acento en la penúltima sílaba salvo excepciones indicadas; 'sh' como en inglés 'sh'; 'j' como la j salvadoreña (h aspirada); 'w' como 'hu' en 'hueso'; 'n' final velar; 'k' puede sonar 'g' según el dialecto; 'tz' = 'ts'.",
+    "status_values": {
+      "verificada": "Forma y traducción tomadas tal cual de al menos una fuente publicada.",
+      "compuesta": "Frase formada combinando piezas atestiguadas según reglas gramaticales explícitas de las fuentes. No se encontró la frase completa en una fuente.",
+      "provisional": "Pendiente de verificación. No se usa en el juego mientras tenga este estado."
+    },
+    "sources": {
+      "KING2011": "King, Alan R. (2011). Timumachtikan! Curso de lengua náhuat para principiantes adultos. 170 pp. Disponible en tushik.org/timumachtikan/ (© Alan R. King).",
+      "CAMPBELL1985": "Campbell, Lyle (1985). The Pipil Language of El Salvador. Berlin: Mouton (Mouton Grammar Library 1). Consultada la traducción al español 'El idioma pipil (nahuate) de El Salvador' (trad. Mauricio Mixco), PDF en tushik.org.",
+      "HERNANDEZ2016": "Hernández González, Werner (2016). Nawat Mujmusta (diccionario). Marzo de 2016, PDF en tushik.org (© Werner Hernández G.).",
+      "KING2014": "King, Alan R. (2014). On-line Nawat (Ne Nawat Matapan). A lexicon and glossary of Nawat usage for websites, social media and computer applications. PDF en tushik.org."
+    }
+  },
+  "expressions": [
+    {
+      "id": "yek_tunal",
+      "nahuat": "Yek tunal!",
+      "spanish": "¡Buen día! / Buenos días.",
+      "literal": "yek = bueno, bien; tunal = día, sol",
+      "context": "Saludo de día. Se responde repitiendo el mismo saludo.",
+      "pronunciation": "yek TÚ-nal",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 1, pp. 19-20"
+        },
+        {
+          "ref": "HERNANDEZ2016",
+          "locator": "entradas 'Yek' y 'Tunal'"
+        }
+      ]
+    },
+    {
+      "id": "yek_tayua",
+      "nahuat": "Yek tayua!",
+      "spanish": "¡Buena noche!",
+      "literal": "tayua = noche",
+      "context": "Saludo nocturno. En la aldea es el saludo correcto porque es de noche.",
+      "pronunciation": "yek ta-YÚ-a (la u y la a forman dos sílabas)",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 1, pp. 19-20"
+        },
+        {
+          "ref": "HERNANDEZ2016",
+          "locator": "entrada 'Tayua'"
+        }
+      ]
+    },
+    {
+      "id": "ken_tinemi",
+      "nahuat": "Ken tinemi?",
+      "spanish": "¿Cómo estás?",
+      "literal": "ken = cómo; tinemi = estás",
+      "context": "Pregunta de cortesía tras el saludo.",
+      "pronunciation": "ken ti-NÉ-mi",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 1, pp. 19-20"
+        },
+        {
+          "ref": "HERNANDEZ2016",
+          "locator": "entrada 'Ken'"
+        }
+      ]
+    },
+    {
+      "id": "ninemi_yek",
+      "nahuat": "Ninemi yek.",
+      "spanish": "Estoy bien.",
+      "literal": "ni- = yo; nemi = estar; yek = bien",
+      "context": "Respuesta a 'Ken tinemi?'. También vale responder solo 'Yek'.",
+      "pronunciation": "ni-NÉ-mi yek",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 1, p. 20; Lección 3, p. 25"
+        }
+      ]
+    },
+    {
+      "id": "ken_mutukay",
+      "nahuat": "Ken mutukay?",
+      "spanish": "¿Cómo te llamas?",
+      "literal": "mu-tukay = tu nombre",
+      "context": "Para preguntar el nombre. 'Nombre' siempre lleva prefijo posesivo: nu- (mi), mu- (tu), i- (su).",
+      "pronunciation": "ken mu-TÚ-kay",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 2, pp. 21-22"
+        }
+      ]
+    },
+    {
+      "id": "nutukay",
+      "nahuat": "Naja nutukay Yulu.",
+      "spanish": "Yo me llamo Yulu.",
+      "literal": "naja = yo; nu-tukay = mi nombre. El náhuat no traduce 'es'.",
+      "context": "Respuesta a 'Ken mutukay?'. El nombre propio se coloca al final.",
+      "pronunciation": "NÁ-ja nu-TÚ-kay",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 2, pp. 21-22 ('Naja nutukay Luisa')"
+        }
+      ]
+    },
+    {
+      "id": "e_te",
+      "nahuat": "E. / Te.",
+      "spanish": "Sí. / No.",
+      "literal": "e (también ej, eje) = sí; te (también inte) = no",
+      "context": "Respuestas breves. También se responde repitiendo la palabra principal de la pregunta.",
+      "pronunciation": "e / te",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 3, pp. 24-25"
+        }
+      ]
+    },
+    {
+      "id": "tay_tikneki",
+      "nahuat": "Tay tikneki?",
+      "spanish": "¿Qué quieres?",
+      "literal": "tay = qué; tikneki = quieres",
+      "context": "Lo primero que grita el guardia. Es una pregunta, no una amenaza.",
+      "pronunciation": "tay tik-NÉ-ki",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "KING2011",
+          "locator": "Lección 4, pp. 27-28"
+        },
+        {
+          "ref": "HERNANDEZ2016",
+          "locator": "entrada 'Tay'"
+        }
+      ]
+    },
+    {
+      "id": "padiush",
+      "nahuat": "Padiush.",
+      "spanish": "Gracias.",
+      "literal": null,
+      "context": "Agradecimiento. Hernández lo registra con la marca NW (variante de un pueblo concreto); conviene tratarlo como forma local.",
+      "pronunciation": null,
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "HERNANDEZ2016",
+          "locator": "entrada 'Padiush gracias (NW)'"
+        }
+      ]
+    },
+    {
+      "id": "tekwani",
+      "nahuat": "Tekwani!",
+      "spanish": "¡Jaguar! (tigre)",
+      "literal": "te- 'alguien' + kwa 'comer' + -ni 'agente': 'el que come gente'",
+      "context": "Nombre del jaguar. Gritarlo advierte a la aldea del peligro real.",
+      "pronunciation": "tek-WÁ-ni",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "CAMPBELL1985",
+          "locator": "diccionario: te:kwani 'tigre (jaguar)'; variante de Teotepeque tekwani"
+        }
+      ]
+    },
+    {
+      "id": "shinechpalewi",
+      "nahuat": "Shinechpalewi!",
+      "spanish": "¡Ayúdame!",
+      "literal": "shi- = imperativo; nech- = a mí; palewi(a) = ayudar",
+      "context": "Petición directa de ayuda. Campbell la registra como xi-nech-pale:wi; King da 'shikpalewi' (ayúdalo) y 'shinechmaka' (dame) con la misma estructura.",
+      "pronunciation": "shi-nech-pa-LÉ-wi",
+      "status": "verificada",
+      "sources": [
+        {
+          "ref": "CAMPBELL1985",
+          "locator": "morfología verbal: xi-nech-pale:wi '¡ayúdame!'"
+        },
+        {
+          "ref": "KING2011",
+          "locator": "Lección 4, p. 27 ('Shinechmaka'); tabla de verbos ('shikpalewi')"
+        }
+      ]
+    },
+    {
+      "id": "nimajmawi",
+      "nahuat": "Nimajmawi.",
+      "spanish": "Tengo miedo.",
+      "literal": "ni- = yo; majmawi = tener miedo, temer",
+      "context": "Compuesta con el prefijo de primera persona ni- (King, p. 20: 'ninemi') y el verbo 'majmawi' (Hernández; Campbell: mahmawi 'tener miedo').",
+      "pronunciation": "ni-maj-MÁ-wi",
+      "status": "compuesta",
+      "sources": [
+        {
+          "ref": "HERNANDEZ2016",
+          "locator": "entrada 'Majmawi 1. tener miedo, temer'"
+        },
+        {
+          "ref": "CAMPBELL1985",
+          "locator": "diccionario: mahmawi (v.i.) tener miedo"
+        },
+        {
+          "ref": "KING2011",
+          "locator": "Lección 1, p. 20 (prefijo ni-)"
+        }
+      ]
+    }
+  ]
+}

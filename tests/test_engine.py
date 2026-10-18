@@ -186,6 +186,7 @@ def test_chapter_every_path_terminates():
             continue
         visited.add(current)
         scene = engine.scene(current)
-        if not scene.is_ending:
-            stack.extend(c.next_scene for c in scene.choices)
-    assert any(engine.scene(s).is_ending for s in visited)
+        stack.extend(c.next_scene for c in scene.choices)
+        stack.extend(b.next_scene for b in scene.branches)
+    endings_seen = {engine.scene(s).ending for s in visited if engine.scene(s).is_ending}
+    assert endings_seen == engine.endings()

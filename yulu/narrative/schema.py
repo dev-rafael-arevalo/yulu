@@ -6,11 +6,15 @@ from dataclasses import dataclass, field
 
 @dataclass(frozen=True)
 class DialogueLine:
-    """Una línea de diálogo o narración con subtítulo y audio opcional."""
+    """Una línea de diálogo o narración con subtítulo y audio opcional.
+
+    Si `nahuat_id` está presente, `text` es la frase en náhuat tal como la oye el
+    protagonista; la traducción solo se muestra si el jugador ya aprendió la expresión.
+    """
 
     speaker: str
     text: str
-    nahuat_id: str | None = None  # expresión del léxico que se muestra o enseña
+    nahuat_id: str | None = None
     voice_file: str | None = None  # nombre de archivo en assets/audio/voice
 
 
@@ -36,12 +40,27 @@ class Choice:
 
 
 @dataclass(frozen=True)
+class Branch:
+    """Transición automática condicionada por el estado. La última rama debe ser incondicional."""
+
+    next_scene: str
+    min_trust: int = 0
+    max_threat: int = 100
+    requires_flag: str | None = None
+
+    @property
+    def is_default(self) -> bool:
+        return self.min_trust <= 0 and self.max_threat >= 100 and self.requires_flag is None
+
+
+@dataclass(frozen=True)
 class Scene:
     id: str
     chapter_step: int  # 1..5, escena del capítulo a la que pertenece el nodo
     title: str
     lines: tuple[DialogueLine, ...]
     choices: tuple[Choice, ...] = ()
+    branches: tuple[Branch, ...] = ()  # alternativa a `choices`: el estado decide la salida
     timer_seconds: float | None = None  # presión temporal solo en nodos seleccionados
     timeout_choice: str | None = None  # opción aplicada automáticamente al agotarse el tiempo
     ending: str | None = None  # identificador del final si el nodo es terminal
@@ -52,3 +71,7 @@ class Scene:
     @property
     def is_ending(self) -> bool:
         return self.ending is not None
+
+    @property
+    def is_automatic(self) -> bool:
+        return bool(self.branches)
