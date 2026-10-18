@@ -151,11 +151,13 @@ volúmenes se guardan en `settings.json`.
   `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla
   de una escena, y `--id jaguar_sierra` un sonido concreto.
 
-## Personajes
+## Personajes y referencias culturales
 
-Los retratos de la anciana, el guardia y el niño aparecen solo cuando hablan, y los grupos
-de pobladores solo en las escenas declaradas en la sección `characters` del manifiesto de
-imágenes. Se recortan de la hoja de referencia con `tools/slice_character_sheet.py`.
+La anciana y el guardia aparecen al hablar como **imágenes íntegras** (viñeta con bordes
+desvanecidos, sin recortar su fondo); el niño y los grupos de pobladores son recortes de la
+hoja de referencia (`tools/slice_character_sheet.py`). El jaguar de la persecución y la
+reunión de la aldea son fondos completos. Criterios de vestuario, lo que se retiró y las
+incertidumbres declaradas están en [`docs/REFERENCIAS_CULTURALES.md`](docs/REFERENCIAS_CULTURALES.md).
 
 ## Pruebas
 

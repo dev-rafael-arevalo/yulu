@@ -88,7 +88,7 @@ _SCENES: list[Scene] = [
     ),
     # ---------------- ESCENA 2: LA PERSECUCIÓN ----------------
     Scene(
-        id="s2_persecucion", chapter_step=2, title=T_PERSECUCION, background="forest_path", ambient="forest_tense",
+        id="s2_persecucion", chapter_step=2, title=T_PERSECUCION, background="jaguar_close", ambient="forest_tense", jaguar_visible=False,
         timer_seconds=15.0, timeout_choice="paralizarse",
         lines=(
             DialogueLine(NARRATOR, "Un rugido corto, muy cerca. El jaguar ya no se esconde."),
@@ -131,7 +131,7 @@ _SCENES: list[Scene] = [
         choices=(Choice("salir", "Salir del agua y caminar hacia las antorchas.", "s2_claro", Effect(flags=("rumbo_aldea",)), "Empapado y tiritando, sigues la luz."),),
     ),
     Scene(
-        id="s2_paralizado", chapter_step=2, title=T_PERSECUCION, background="forest_path", ambient="forest_tense",
+        id="s2_paralizado", chapter_step=2, title=T_PERSECUCION, background="jaguar_close", ambient="forest_tense", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "Tienes un corte en el brazo y el corazón en la garganta, pero sigues vivo."),
             DialogueLine(NARRATOR, "Corres sin rumbo hasta que una luz naranja aparece entre los troncos. Fuego. Gente."),
@@ -294,7 +294,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s4_fuego", chapter_step=4, title=T_CONFIANZA, background="shelter", ambient="shelter", jaguar_visible=False,
+        id="s4_fuego", chapter_step=4, title=T_CONFIANZA, background="village_fire", ambient="shelter", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "El jaguar se retira a la selva. Las antorchas tiemblan. La anciana te mira largo rato y dice algo a los demás."),
             DialogueLine(NARRATOR, "No entiendes la discusión, pero entiendes las miradas. Deciden qué hacer contigo cuando amanezca."),
@@ -308,7 +308,7 @@ _SCENES: list[Scene] = [
     ),
     # ---------------- ESCENA 5: EL AMANECER ----------------
     Scene(
-        id="s5_decision", chapter_step=5, title=T_AMANECER, background="shelter", ambient="shelter", jaguar_visible=False,
+        id="s5_decision", chapter_step=5, title=T_AMANECER, background="village_fire", ambient="shelter", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "El cielo cambia de negro a índigo. Los insectos callan uno a uno. La anciana se levanta y hace una señal."),
         ),

@@ -1,23 +1,88 @@
 {
-  "_comment": "Configuración de voces para tools/generate_narration.py (motor Piper). 'models' declara cada modelo local; 'characters' asigna modelo y parámetros por locutor. length_scale > 1 = más lento; noise_scale y noise_w_scale controlan la variación; sentence_silence son segundos de pausa entre frases. Los modelos viven en yulu/assets/voices/piper/ y no se incluyen en Git (ver README).",
+  "_comment": "Configuración de voces para tools/generate_narration.py (motor Piper). 'models' declara cada modelo local; 'characters' asigna modelo y parámetros por locutor. length_scale > 1 = más lento; noise_scale y noise_w_scale controlan la variación; sentence_silence son segundos de pausa entre frases. Los modelos viven en yulu/assets/voices/piper/ y no se incluyen en Git (ver README). 'pitch_factor' < 1 reproduce el audio más grave y lento (se compensa con length_scale) sin cambiar de acento: Piper no ofrece voces centroamericanas.",
   "models_dir": "voices/piper",
   "models": {
-    "es_MX-claude-high": {"file": "es_MX-claude-high.onnx", "language": "es_MX", "quality": "high", "dataset_license": "Apache-2.0 (https://huggingface.co/spaces/HirCoir/Piper-TTS-Spanish)", "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_MX/claude/high"},
-    "es_MX-ald-medium": {"file": "es_MX-ald-medium.onnx", "language": "es_MX", "quality": "medium", "dataset_license": "Unlicense (https://huggingface.co/datasets/rmcpantoja/Ald_Mexican_Spanish_speech_dataset)", "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_MX/ald/medium"},
-    "es_AR-daniela-high": {"file": "es_AR-daniela-high.onnx", "language": "es_AR", "quality": "high", "dataset_license": "CC BY-SA 4.0 (https://www.openslr.org/61/)", "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_AR/daniela/high"},
-    "es_ES-davefx-medium": {"file": "es_ES-davefx-medium.onnx", "language": "es_ES", "quality": "medium", "dataset_license": "CC0 (https://github.com/OHF-Voice/voice-datasets)", "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_ES/davefx/medium"}
+    "es_MX-claude-high": {
+      "file": "es_MX-claude-high.onnx",
+      "language": "es_MX",
+      "quality": "high",
+      "dataset_license": "Apache-2.0 (https://huggingface.co/spaces/HirCoir/Piper-TTS-Spanish)",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_MX/claude/high"
+    },
+    "es_MX-ald-medium": {
+      "file": "es_MX-ald-medium.onnx",
+      "language": "es_MX",
+      "quality": "medium",
+      "dataset_license": "Unlicense (https://huggingface.co/datasets/rmcpantoja/Ald_Mexican_Spanish_speech_dataset)",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_MX/ald/medium"
+    },
+    "es_AR-daniela-high": {
+      "file": "es_AR-daniela-high.onnx",
+      "language": "es_AR",
+      "quality": "high",
+      "dataset_license": "CC BY-SA 4.0 (https://www.openslr.org/61/)",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_AR/daniela/high"
+    },
+    "es_ES-davefx-medium": {
+      "file": "es_ES-davefx-medium.onnx",
+      "language": "es_ES",
+      "quality": "medium",
+      "dataset_license": "CC0 (https://github.com/OHF-Voice/voice-datasets)",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/main/es/es_ES/davefx/medium"
+    }
   },
   "characters": {
-    "Narrador": {"model": "es_MX-claude-high", "length_scale": 1.12, "noise_scale": 0.667, "noise_w_scale": 0.8, "sentence_silence": 0.45},
-    "Anciana": {"model": "es_AR-daniela-high", "length_scale": 1.2, "noise_scale": 0.6, "noise_w_scale": 0.7, "sentence_silence": 0.4},
-    "Guardia": {"model": "es_MX-ald-medium", "length_scale": 0.95, "noise_scale": 0.6, "noise_w_scale": 0.7, "sentence_silence": 0.2},
-    "Tú": {"model": "es_ES-davefx-medium", "length_scale": 1.0, "noise_scale": 0.667, "noise_w_scale": 0.8, "sentence_silence": 0.3},
-    "Niño": {"model": "es_MX-ald-medium", "length_scale": 0.9, "noise_scale": 0.7, "noise_w_scale": 0.8, "sentence_silence": 0.2}
+    "Narrador": {
+      "model": "es_MX-claude-high",
+      "length_scale": 1.1,
+      "noise_scale": 0.667,
+      "noise_w_scale": 0.8,
+      "sentence_silence": 0.45,
+      "pitch_factor": 1.0
+    },
+    "Anciana": {
+      "model": "es_MX-claude-high",
+      "length_scale": 1.0,
+      "noise_scale": 0.55,
+      "noise_w_scale": 0.7,
+      "sentence_silence": 0.5,
+      "pitch_factor": 0.9
+    },
+    "Guardia": {
+      "model": "es_MX-ald-medium",
+      "length_scale": 0.95,
+      "noise_scale": 0.6,
+      "noise_w_scale": 0.7,
+      "sentence_silence": 0.2
+    },
+    "Tú": {
+      "model": "es_ES-davefx-medium",
+      "length_scale": 1.0,
+      "noise_scale": 0.667,
+      "noise_w_scale": 0.8,
+      "sentence_silence": 0.3
+    },
+    "Niño": {
+      "model": "es_MX-ald-medium",
+      "length_scale": 0.9,
+      "noise_scale": 0.7,
+      "noise_w_scale": 0.8,
+      "sentence_silence": 0.2
+    }
   },
   "default_character": "Narrador",
   "samples": [
-    {"speaker": "Narrador", "text": "Despiertas con la cara contra la tierra húmeda. No recuerdas cómo llegaste aquí. Es de noche, y algo te observa desde los helechos."},
-    {"speaker": "Anciana", "text": "Tranquilo. Aquí dentro el fuego nos cuida. Siéntate, y escucha antes de hablar."},
-    {"speaker": "Guardia", "text": "¡Alto ahí! No des un paso más. ¿Quién eres y qué quieres de nosotros?"}
+    {
+      "speaker": "Narrador",
+      "text": "Despiertas con la cara contra la tierra húmeda. No recuerdas cómo llegaste aquí. Es de noche, y algo te observa desde los helechos."
+    },
+    {
+      "speaker": "Anciana",
+      "text": "Tranquilo. Aquí dentro el fuego nos cuida. Siéntate, hijo, y escucha antes de hablar. La noche es larga y el tekwani tiene paciencia."
+    },
+    {
+      "speaker": "Guardia",
+      "text": "¡Alto ahí! No des un paso más. ¿Quién eres y qué quieres de nosotros?"
+    }
   ]
 }

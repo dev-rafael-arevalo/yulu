@@ -24,9 +24,9 @@ petición.
   se eligió `pygame-ce`), estructura de carpetas, plan por fases y criterios de aceptación.
 - **Correcciones:** ninguna en esta fase; la decisión abierta (fuentes de náhuat) se delegó
   explícitamente al asistente.
-- **Aprendizaje sobre el prompt:** ✎ (por ejemplo: pedir "plan antes de código" evitó que el
+- **Aprendizaje sobre el prompt:** ✎ pedir "plan antes de código" evitó que el
   asistente generara todo el proyecto de golpe; las reglas "no afirmes que una prueba pasó
-  si no se ejecutó" se cumplieron de forma visible en los informes).
+  si no se ejecutó" se cumplieron de forma visible en los informes.
 
 ### Prompt 2 — Cambio radical de dirección artística
 
@@ -42,7 +42,7 @@ petición.
   un recuadro gris; se corrigió en dos iteraciones ajustando umbrales de luminancia. Un zip
   posterior con fondos a 1920×1080 resultó ser la misma cuadrícula reescalada, con una franja
   blanca en tres archivos, y se descartó tras medir la nitidez.
-- **Aprendizaje sobre el prompt:** ✎
+- **Aprendizaje sobre el prompt:** ✎ La validación manual permite identificar el rumbo del proyecto, y ajustarlo si algo no se apega a lo necesario.
 
 ### Prompt 3 — Renovación profesional del audio
 
@@ -68,6 +68,7 @@ petición.
 | 2026-10-18 | Jaguar solo donde haga falta y sólido | Aparecía en todas las escenas y translúcido | Visible en 7 nodos; alfa sólido; umbral de recorte corregido |
 | 2026-10-18 | Personajes de la aldea | Dar rostro a los interlocutores | Retratos al hablar y grupos en escenas concretas |
 | 2026-10-18 | Narración con más sentimiento y voz masculina | Voz plana y única | SSML por personaje y voz Raul (WinRT) para los hombres |
+| 2026-10-18 | Voces Piper locales y referencias culturales de vestuario | Voces de Windows sonaban robóticas; vestuario con elementos ajenos (casco) | Piper en entorno 3.14, voces por personaje; retratos íntegros de anciana y guardia, jaguar y aldea como fondos; `docs/REFERENCIAS_CULTURALES.md` |
 | ✎ | | | |
 
 ## 3. Errores y limitaciones observados

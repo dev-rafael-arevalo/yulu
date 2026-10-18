@@ -112,10 +112,28 @@ class PiperEngine:
                 voice.synthesize_wav(prepare_text(text), wav_file, syn_config=syn, sentence_silence=silence)
             except TypeError:  # versiones sin el parámetro sentence_silence
                 voice.synthesize_wav(prepare_text(text), wav_file, syn_config=syn)
+        pitch = float(char_cfg.get("pitch_factor", 1.0))
+        if abs(pitch - 1.0) > 0.001:
+            _apply_pitch_factor(tmp, pitch)
         tmp.replace(target)
 
     def flush(self) -> None:
         return None
+
+
+def _apply_pitch_factor(path: Path, factor: float) -> None:
+    """Reescribe la cabecera WAV con otra frecuencia de muestreo: < 1 = más grave y lento.
+
+    No altera las muestras; el mezclador del juego remuestrea al reproducir. Es un recurso
+    sencillo para diferenciar personajes con un mismo modelo, no una simulación de acento.
+    """
+    with wave.open(str(path), "rb") as src:
+        params = src.getparams()
+        frames = src.readframes(src.getnframes())
+    with wave.open(str(path), "wb") as dst:
+        dst.setparams(params)
+        dst.setframerate(max(8000, int(params.framerate * factor)))
+        dst.writeframes(frames)
 
 
 class WinRTEngine:

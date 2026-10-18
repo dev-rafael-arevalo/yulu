@@ -8,3 +8,4 @@ settings.json
 yulu/assets/audio/voice/*.wav
 .venv-tts/
 yulu/assets/voices/
+yulu/assets/images/reference/

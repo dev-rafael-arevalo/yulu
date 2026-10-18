@@ -115,7 +115,7 @@ class ImageStore:
             files.append(overlays["smoke"])
         characters = self.manifest.get("characters", {})
         sub = characters.get("dir", "characters")
-        names = set(characters.get("portraits", {}).values())
+        names = {(v["file"] if isinstance(v, dict) else v) for v in characters.get("portraits", {}).values()}
         for specs in characters.get("scenes", {}).values():
             names.update(spec["file"] for spec in specs)
         files += [f"{sub}/{name}" for name in sorted(names)]

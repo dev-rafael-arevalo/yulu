@@ -58,6 +58,20 @@
       "file": "bg_06_dawn_clearing.png",
       "fog": 0.5,
       "warmth": 0.15
+    },
+    "jaguar_close": {
+      "file": "bg_07_jaguar_encounter.png",
+      "fog": 0.35,
+      "warmth": 0.0
+    },
+    "village_fire": {
+      "file": "bg_08_village_fire.png",
+      "fog": 0.25,
+      "warmth": 0.35,
+      "fire": [
+        0.5,
+        0.86
+      ]
     }
   },
   "jaguar": {
@@ -75,20 +89,20 @@
   "characters": {
     "dir": "characters",
     "portraits": {
-      "Anciana": "npc_anciana.png",
-      "Guardia": "npc_guardia.png",
-      "Niño": "npc_nino.png"
+      "Anciana": {
+        "file": "portrait_anciana_integrado.png",
+        "style": "card"
+      },
+      "Guardia": {
+        "file": "portrait_guardia_integrado.png",
+        "style": "card"
+      },
+      "Niño": {
+        "file": "npc_nino.png",
+        "style": "cutout"
+      }
     },
     "scenes": {
-      "s3_tekwani": [
-        {
-          "file": "group_guardia_anciano.png",
-          "x": 0.52,
-          "bottom": 0.72,
-          "height": 0.4,
-          "alpha": 0.95
-        }
-      ],
       "s4_refugio": [
         {
           "file": "group_familia.png",
@@ -108,33 +122,6 @@
         }
       ],
       "s4_sed": [
-        {
-          "file": "group_fogata.png",
-          "x": 0.04,
-          "bottom": 0.72,
-          "height": 0.36,
-          "alpha": 0.92
-        }
-      ],
-      "s4_alarma": [
-        {
-          "file": "group_guardia_anciano.png",
-          "x": 0.05,
-          "bottom": 0.72,
-          "height": 0.4,
-          "alpha": 0.95
-        }
-      ],
-      "s4_fuego": [
-        {
-          "file": "group_fogata.png",
-          "x": 0.04,
-          "bottom": 0.72,
-          "height": 0.36,
-          "alpha": 0.92
-        }
-      ],
-      "s5_decision": [
         {
           "file": "group_fogata.png",
           "x": 0.04,

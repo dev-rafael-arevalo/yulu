@@ -1,0 +1,8 @@
+{
+  "forest_dense": {"file": "bg_01_forest_awakening.png", "type": "background", "status": "generated-cropped-preview"},
+  "forest_path": {"file": "bg_02_forest_chase.png", "type": "background", "status": "generated-cropped-preview"},
+  "village_edge": {"file": "bg_03_path_to_village.png", "type": "background", "status": "generated-cropped-preview"},
+  "village_gate": {"file": "bg_04_village_gate_torches.png", "type": "background", "status": "generated-cropped-preview"},
+  "shelter": {"file": "bg_05_shelter_interior.png", "type": "background", "status": "generated-cropped-preview"},
+  "dawn": {"file": "bg_06_dawn_clearing.png", "type": "background", "status": "generated-cropped-preview"}
+}

@@ -31,6 +31,8 @@ TENSION_LAYER: dict[str, str] = {
     "shelter_alarm": "tambor_persecucion",
 }
 MUSIC_FOR_AMBIENT: dict[str, str] = {"forest_tense": "persecucion", "shelter_alarm": "persecucion"}
+# Ambientes donde el jaguar está presente aunque no se dibuje como sprite (va en el fondo o fuera de plano).
+JAGUAR_PRESENT_AMBIENTS = {"forest_tense", "shelter_alarm"}
 DEFAULT_PRESET = "forest_night"
 DEFAULT_MUSIC = "exploracion"
 ENDING_MUSIC = {True: "desenlace_aldea", False: "desenlace_solo"}
@@ -54,7 +56,7 @@ class Soundscape:
     # ---------- escena ----------
     def enter_scene(self, scene: Scene, threat: int) -> None:
         self.ambient_key = scene.ambient if scene.ambient in AMBIENT_PRESETS else DEFAULT_PRESET
-        self.jaguar_visible = scene.jaguar_visible
+        self.jaguar_visible = scene.jaguar_visible or scene.ambient in JAGUAR_PRESENT_AMBIENTS
         self.audio.set_ambient_layers(self.layers_for(threat))
         if not scene.is_ending:
             self.audio.play_music(MUSIC_FOR_AMBIENT.get(self.ambient_key, DEFAULT_MUSIC))
