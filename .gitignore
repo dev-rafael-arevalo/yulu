@@ -4,3 +4,5 @@ __pycache__/
 .pytest_cache/
 *.log
 *.zip
+settings.json
+yulu/assets/audio/voice/*.wav

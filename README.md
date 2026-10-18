@@ -8,10 +8,11 @@ El Salvador, en una época prehispánica ficticia. Un jaguar lo sigue. A lo lejo
 aldea cuyos habitantes hablan náhuat. Para sobrevivir hasta el amanecer tendrá que
 aprender expresiones, interpretar diálogos y tomar decisiones con consecuencias.
 
-> Estado del proyecto: **FASE 3 completada**. Capítulo 1 jugable de principio a fin con
-> cinco escenas, 12 expresiones de náhuat con fuente citada, glosario y dos finales.
-> Pendiente: audio y narración (FASE 4), ilustraciones definitivas y documentación
-> académica final (FASE 5).
+> Estado del proyecto: **FASE 4 completada**. Capítulo 1 jugable de principio a fin con
+> cinco escenas, 12 expresiones de náhuat con fuente citada, glosario, dos finales,
+> fondos generados por IA, ambiente sonoro por capas, efectos, música, narración en
+> español pregenerada y volúmenes independientes. Pendiente: pruebas finales y
+> documentación académica (FASE 5).
 
 ## Requisitos
 
@@ -47,7 +48,9 @@ No se instala nada a nivel global ni se requiere conexión durante la partida.
 | Flechas ↑ ↓ o 1-9 | Seleccionar una decisión |
 | Enter o clic | Confirmar la decisión |
 | G | Abrir o cerrar el glosario de náhuat (detiene el temporizador) |
-| Esc | Menú de pausa (continuar, volver a empezar, salir) |
+| V | Repetir la narración de la línea actual |
+| ← → (en pausa) | Ajustar el volumen de música, ambiente, efectos o voces |
+| Esc | Menú de pausa (continuar, volúmenes, volver a empezar, salir) |
 | F11 | Alternar pantalla completa / ventana |
 | R (en un final) | Volver a jugar y explorar otras decisiones |
 
@@ -80,6 +83,28 @@ con ajuste 16:9, deriva de cámara, niebla y humo. Los prompts para generarlas e
 .venv\Scripts\python tools\check_assets.py
 ```
 
+## Audio
+
+El administrador de audio ([`yulu/audio/audio_manager.py`](yulu/audio/audio_manager.py))
+mezcla cuatro categorías con volumen propio: música en bucle, ambiente por capas con
+fundidos, efectos y voz. El paisaje sonoro ([`soundscape.py`](yulu/audio/soundscape.py))
+elige las capas según la escena y añade una capa de tensión y rugidos espaciados al azar
+según la amenaza. Si falta cualquier archivo, la partida continúa y se registra una advertencia.
+Los volúmenes se guardan en `settings.json`.
+
+- **Efectos, ambientes y música** son **sintéticos provisionales** generados localmente:
+  `python tools/generate_sounds.py`. Pueden sustituirse por grabaciones con licencia
+  compatible conservando el nombre del archivo en `yulu/assets/audio/`.
+- **Narración en español**: se pregenera sin conexión con la voz SAPI5 de Windows
+  (`Microsoft Sabina Desktop`, es-MX):
+
+  ```powershell
+  .venv\Scripts\python tools\generate_narration.py
+  ```
+
+  Crea unos 106 WAV (35 MB) en `yulu/assets/audio/voice/`, que no se incluyen en Git.
+  Las frases en náhuat se leen con fonética española aproximada: **no es una voz nativa**.
+
 ## Pruebas
 
 ```powershell
@@ -103,9 +128,9 @@ yulu/narrative/         Esquema de datos (schema.py) y escenas del capítulo (sc
 yulu/state/             Estado de la partida (game_state.py) y motor narrativo (engine.py)
 yulu/language/          Léxico de náhuat (lexicon.py) y datos con fuentes (data/)
 yulu/ui/                Carga de imágenes, fondo, jaguar, diálogo, decisiones, glosario, HUD
-yulu/audio/             Administrador de audio (FASE 4)
+yulu/audio/             Administrador de audio, paisaje sonoro y claves de narración
 yulu/assets/            Manifiesto, imágenes, audio y fuentes locales
-tools/                  Utilidades: comprobación de recursos
+tools/                  Comprobación de recursos, corte de cuadrículas, síntesis de sonidos y narración
 tests/                  Pruebas automatizadas con pytest
 docs/                   Fuentes lingüísticas, prompts de arte, plantilla académica (FASE 5)
 ```

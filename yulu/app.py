@@ -1,6 +1,7 @@
 """Aplicación y ciclo principal. Orquesta motor, estado, léxico y presentación."""
 from __future__ import annotations
 
+import json
 import logging
 import math
 import os
@@ -10,8 +11,12 @@ from enum import Enum, auto
 import pygame
 
 from yulu import config
+from yulu.audio.audio_manager import AudioManager
+from yulu.audio.soundscape import Soundscape
+from yulu.audio.voice import voice_filename
 from yulu.language.lexicon import Lexicon
 from yulu.narrative.scenes import GOOD_ENDING, NARRATOR, SCENES, START_SCENE
+from yulu.paths import PROJECT_ROOT
 from yulu.narrative.schema import DialogueLine, Scene
 from yulu.state.engine import ChoiceResult, NarrativeEngine
 from yulu.state.game_state import GameState
@@ -30,6 +35,7 @@ log = logging.getLogger("yulu")
 W, H = config.LOGICAL_WIDTH, config.LOGICAL_HEIGHT
 SHAKE_THREAT_DELTA = 15
 SHAKE_DURATION = 0.45
+SETTINGS_PATH = PROJECT_ROOT / "settings.json"
 
 
 class Phase(Enum):
@@ -58,9 +64,11 @@ class Game:
         missing = self.store.missing_files()
         if missing:
             log.warning("%d recursos gráficos ausentes; se usan escenarios provisionales. Ver docs/ART_PROMPTS.md", len(missing))
+        self.audio = AudioManager(volumes=self._load_volumes())
+        self.soundscape = Soundscape(self.audio)
         self.dialogue = DialogueBox()
         self.menu = ChoiceMenu()
-        self.pause = PauseMenu()
+        self.pause = PauseMenu(self.audio.volumes)
         self.glossary = Glossary(self.lexicon)
         self.fade = Fade()
         self.jaguar = JaguarPresence(self.store)
@@ -101,6 +109,32 @@ class Game:
             self._backgrounds[scene.background] = Background(scene.background, self.store)
         return self._backgrounds[scene.background]
 
+    # ---------- ajustes persistentes ----------
+    @staticmethod
+    def _load_volumes() -> dict[str, float]:
+        volumes = dict(config.DEFAULT_VOLUMES)
+        try:
+            saved = json.loads(SETTINGS_PATH.read_text(encoding="utf-8")).get("volumes", {})
+            volumes.update({k: float(v) for k, v in saved.items() if k in volumes})
+        except (OSError, ValueError, AttributeError):
+            pass
+        return volumes
+
+    def _save_volumes(self) -> None:
+        try:
+            SETTINGS_PATH.write_text(json.dumps({"volumes": self.audio.volumes}, indent=2), encoding="utf-8")
+        except OSError as exc:
+            log.warning("No se pudieron guardar los ajustes: %s", exc)
+
+    def _say(self, line: DialogueLine) -> None:
+        """Muestra la línea con subtítulo y reproduce su narración pregenerada si existe."""
+        self.dialogue.set_line(line)
+        self.audio.play_voice(voice_filename(line))
+
+    def _replay_voice(self) -> None:
+        if self.dialogue.line is not None:
+            self.audio.play_voice(voice_filename(self.dialogue.line))
+
     # ---------- flujo narrativo ----------
     def _enter_scene(self, first: bool = False) -> None:
         """Sincroniza la presentación con la escena que indica el estado (única fuente de verdad)."""
@@ -114,7 +148,8 @@ class Game:
         self.title_timer = 2.6 if (first or scene.title != self._last_title) else 0.0
         self._last_title = scene.title
         self.phase = Phase.DIALOGUE
-        self.dialogue.set_line(scene.lines[0])
+        self.soundscape.enter_scene(scene, self.state.threat)
+        self._say(scene.lines[0])
         log.info("Escena %s (amenaza=%s, confianza=%s, vocabulario=%d)", scene.id, self.state.threat, self.state.trust, len(self.state.vocabulary))
 
     def _advance_dialogue(self) -> None:
@@ -123,10 +158,11 @@ class Game:
             return
         self.line_index += 1
         if self.line_index < len(self.scene.lines):
-            self.dialogue.set_line(self.scene.lines[self.line_index])
+            self._say(self.scene.lines[self.line_index])
             return
         if self.scene.is_ending:
             self.phase = Phase.ENDING
+            self.soundscape.on_ending(self.state.ending == GOOD_ENDING)
             return
         if self.scene.is_automatic:
             self.engine.resolve_branch(self.state)
@@ -141,17 +177,20 @@ class Game:
         self.pending = result
         self.timer_left = None
         self.menu.set_choices([])
+        self.soundscape.on_choice(result)
         if result.threat_delta >= SHAKE_THREAT_DELTA:
             self._shake(6 + result.threat_delta / 5, SHAKE_DURATION)
         if result.feedback:
             self.phase = Phase.FEEDBACK
-            self.dialogue.set_line(DialogueLine(NARRATOR, result.feedback))
+            self._say(DialogueLine(NARRATOR, result.feedback))
         else:
             self._go_to_pending()
 
     def _go_to_pending(self) -> None:
         if self.pending is None:
             return
+        self.audio.stop_voice()
+        self.soundscape.on_transition()
         self.fade.start(on_midpoint=self._enter_scene)
 
     def _restart(self) -> None:
@@ -176,7 +215,13 @@ class Game:
             return
         if self.paused:
             action = self.pause.handle_event(event)
-            if action == "continue":
+            if isinstance(action, tuple):
+                _, category, value = action
+                self.audio.set_volume(category, value)
+                self._save_volumes()
+                if category == "sfx":
+                    self.audio.play_sfx("ui_move", gain=0.6)
+            elif action == "continue":
                 self.paused = False
             elif action == "restart":
                 self.paused = False
@@ -190,6 +235,9 @@ class Game:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_g:
             self.glossary.toggle()  # consultar el glosario detiene el temporizador (ver update)
             return
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_v:
+            self._replay_voice()
+            return
         if self.fade.active:
             return
 
@@ -199,6 +247,8 @@ class Game:
         if self.phase == Phase.DIALOGUE and confirm:
             self._advance_dialogue()
         elif self.phase == Phase.CHOICES:
+            if event.type == pygame.KEYDOWN and event.key in (pygame.K_UP, pygame.K_DOWN, pygame.K_w, pygame.K_s):
+                self.soundscape.on_menu_move()
             choice = self.menu.handle_event(event)
             if choice is not None:
                 self._resolve(self.engine.apply_choice(self.state, choice.id))
@@ -224,6 +274,7 @@ class Game:
         self.dialogue.update(dt)
         self.title_timer = max(0.0, self.title_timer - dt)
         self.shake_time = max(0.0, self.shake_time - dt)
+        self.soundscape.update(dt, self.state.threat, self.timer_left if self.phase == Phase.CHOICES else None)
         if self.phase == Phase.CHOICES and self.timer_left is not None and not self.fade.active:
             self.timer_left -= dt
             if self.timer_left <= 0:
@@ -245,7 +296,7 @@ class Game:
 
         if self.phase == Phase.CHOICES:
             self.menu.draw(surface)
-            self.dialogue.draw(surface, hint="Flechas o números y Enter, o ratón    ·    G: glosario")
+            self.dialogue.draw(surface, hint="Flechas o números y Enter, o ratón    ·    G: glosario    ·    V: repetir voz")
         elif self.phase == Phase.FEEDBACK:
             self.dialogue.draw(surface)
             self._draw_learned_card(surface)
@@ -253,7 +304,7 @@ class Game:
             self.dialogue.draw(surface, hint="R: volver a jugar    ·    G: glosario    ·    Esc: menú")
             self._draw_ending_summary(surface)
         else:
-            self.dialogue.draw(surface, hint="Enter / clic: continuar    ·    G: glosario    ·    Esc: pausa")
+            self.dialogue.draw(surface, hint="Enter / clic: continuar    ·    V: repetir voz    ·    G: glosario    ·    Esc: pausa")
         self._draw_subtitle_translation(surface)
 
         self.fade.draw(surface)
@@ -366,6 +417,7 @@ def run(windowed: bool = False, smoke_frames: int = 0) -> int:
         os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
         os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
     pygame.init()
+    game: Game | None = None
     try:
         game = Game(windowed=windowed, smoke_frames=smoke_frames)
         return game.run()
@@ -373,4 +425,6 @@ def run(windowed: bool = False, smoke_frames: int = 0) -> int:
         log.exception("Error no controlado en el juego")
         return 1
     finally:
+        if game is not None:
+            game.audio.shutdown()
         pygame.quit()
