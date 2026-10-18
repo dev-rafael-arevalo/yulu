@@ -154,10 +154,23 @@ volúmenes se guardan en `settings.json`.
   sobrescribe. Las frases en náhuat solo pueden grabarse así.
 
   ```powershell
-  .venv\Scripts\python toolsecord_voice.py --list            # micrófonos y plan
-  .venv\Scripts\python toolsecord_voice.py --nahuat-only     # primero las 7 frases en náhuat
-  .venv\Scripts\python toolsecord_voice.py                   # el resto (97 líneas en español)
-  .venv\Scripts\python toolsecord_voice.py --redo --scene s1_despertar   # regrabar una escena
+  .venv\Scripts\python tools
+ecord_voice.py --list            # micrófonos y plan
+  .venv\Scripts\python tools
+ecord_voice.py --nahuat-only     # primero las 7 frases en náhuat
+  .venv\Scripts\python tools
+ecord_voice.py                   # el resto (97 líneas en español)
+  .venv\Scripts\python tools
+ecord_voice.py --redo --scene s1_despertar   # regrabar una escena
+  ```
+- **Limpiar las grabaciones**: `tools/clean_voice.py` (entorno `.venv-tts`, usa numpy)
+  reduce el ruido de fondo con una puerta espectral calibrada en los silencios de cada toma,
+  filtra graves y agudos, iguala el nivel a -20 dBFS y remuestrea a 22 050 Hz. Los originales
+  quedan en `voice/raw/` y el procesado siempre parte de ellos (`--strength` ajusta la
+  intensidad; 1.6 por defecto).
+
+  ```powershell
+  .venv-tts\Scripts\python tools\clean_voice.py
   ```
 - **Herramientas**: `tools/check_audio.py` valida archivos y metadatos de licencia;
   `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla

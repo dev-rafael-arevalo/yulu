@@ -69,6 +69,7 @@ petición.
 | 2026-10-18 | Personajes de la aldea | Dar rostro a los interlocutores | Retratos al hablar y grupos en escenas concretas |
 | 2026-10-18 | Narración con más sentimiento y voz masculina | Voz plana y única | SSML por personaje y voz Raul (WinRT) para los hombres |
 | 2026-10-18 | Voces Piper locales y referencias culturales de vestuario | Voces de Windows sonaban robóticas; vestuario con elementos ajenos (casco) | Piper en entorno 3.14, voces por personaje; retratos íntegros de anciana y guardia, jaguar y aldea como fondos; `docs/REFERENCIAS_CULTURALES.md` |
+| 2026-10-18 | Grabar toda la narración y el náhuat con voz propia | Las voces sintéticas no convencían | `tools/record_voice.py` (grabación guiada) y `tools/clean_voice.py` (reducción de ruido de 15 dB de media) |
 | ✎ | | | |
 
 ## 3. Errores y limitaciones observados
@@ -84,6 +85,8 @@ Registra solo lo que realmente ocurrió, con la evidencia (captura, salida de co
 | 2026-10-18 | Picos de volumen en palabras sueltas en náhuat | Reporte del estudiante al escuchar | Eliminados `volume` y `emphasis` del SSML |
 | 2026-10-18 | No existe voz nativa de náhuat | Inventario de voces del sistema | Declarado en README y glosario; voz española con fonética aproximada |
 | 2026-10-18 | Fondos a 555×252 reescalados | Medición de nitidez | Abierto: generar cada fondo por separado a 1920×1080 |
+| 2026-10-18 | La escucha previa sonaba acelerada; la herramienta se congelaba al detener una toma | Reporte del estudiante | Formato mono/estéreo del mezclador; el micrófono se abre una sola vez por sesión |
+| 2026-10-18 | Micrófono con ruido de fondo | Reporte del estudiante y medición del suelo de ruido | Puerta espectral; originales conservados en voice/raw |
 | ✎ | | | |
 
 ## 4. Reflexión final del estudiante ✎

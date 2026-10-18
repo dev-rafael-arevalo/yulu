@@ -6,7 +6,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.4
+  "seconds": 6.4,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -68.4
+  }
  },
  "1f942d1ff6b0.wav": {
   "speaker": "Narrador",
@@ -15,7 +20,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.34
+  "seconds": 8.34,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -60.8
+  }
  },
  "1c66c158093a.wav": {
   "speaker": "Narrador",
@@ -24,7 +34,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.82
+  "seconds": 6.82,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -62.0
+  }
  },
  "cdd70917836b.wav": {
   "speaker": "Tú",
@@ -33,7 +48,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.23
+  "seconds": 6.23,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -68.1
+  }
  },
  "edaada21a402.wav": {
   "speaker": "Narrador",
@@ -42,7 +62,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.19
+  "seconds": 6.19,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -52.2
+  }
  },
  "f1142c6de455.wav": {
   "speaker": "Narrador",
@@ -51,7 +76,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.71
+  "seconds": 7.71,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.3
+  }
  },
  "4830b5521f67.wav": {
   "speaker": "Narrador",
@@ -60,7 +90,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.68
+  "seconds": 7.68,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.7
+  }
  },
  "8cec480cb06d.wav": {
   "speaker": "Narrador",
@@ -69,7 +104,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.22
+  "seconds": 7.22,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -57.3
+  }
  },
  "62d9bd3bdb56.wav": {
   "speaker": "Narrador",
@@ -78,7 +118,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.91
+  "seconds": 7.91,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -65.2
+  }
  },
  "39a8ffdf45da.wav": {
   "speaker": "Tú",
@@ -87,7 +132,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.03
+  "seconds": 7.03,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.3
+  }
  },
  "e0427d90053f.wav": {
   "speaker": "Narrador",
@@ -96,7 +146,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.62
+  "seconds": 6.62,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -61.1
+  }
  },
  "6d510c36fc7c.wav": {
   "speaker": "Narrador",
@@ -105,7 +160,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.82
+  "seconds": 6.82,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -55.9
+  }
  },
  "7db84d20d041.wav": {
   "speaker": "Narrador",
@@ -114,7 +174,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.5
+  "seconds": 6.5,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.0
+  }
  },
  "9a7dba07073f.wav": {
   "speaker": "Narrador",
@@ -123,7 +188,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.82
+  "seconds": 6.82,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.2
+  }
  },
  "9c14c04dab48.wav": {
   "speaker": "Narrador",
@@ -132,7 +202,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.43
+  "seconds": 8.43,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.6
+  }
  },
  "762dc7b48bb4.wav": {
   "speaker": "Narrador",
@@ -141,7 +216,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 11.39
+  "seconds": 11.39,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.2
+  }
  },
  "714d6fb541f5.wav": {
   "speaker": "Narrador",
@@ -150,7 +230,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 9.27
+  "seconds": 9.27,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.8
+  }
  },
  "dcad86e2370c.wav": {
   "speaker": "Narrador",
@@ -159,7 +244,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.58
+  "seconds": 7.58,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -50.6
+  }
  },
  "7631f8c0a8ef.wav": {
   "speaker": "Tú",
@@ -168,7 +258,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.82
+  "seconds": 6.82,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -69.2
+  }
  },
  "fbf786c7f57a.wav": {
   "speaker": "Narrador",
@@ -177,7 +272,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.23
+  "seconds": 8.23,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -61.6
+  }
  },
  "3d6a46681ab7.wav": {
   "speaker": "Narrador",
@@ -186,7 +286,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.39
+  "seconds": 8.39,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -66.4
+  }
  },
  "22966954c905.wav": {
   "speaker": "Narrador",
@@ -195,7 +300,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 4.79
+  "seconds": 4.79,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -57.1
+  }
  },
  "bc6140c75cd1.wav": {
   "speaker": "Narrador",
@@ -204,7 +314,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 9.19
+  "seconds": 9.19,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -69.4
+  }
  },
  "a8a755501c40.wav": {
   "speaker": "Tú",
@@ -213,7 +328,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 3.13
+  "seconds": 3.13,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -50.9
+  }
  },
  "d35fe750b06e.wav": {
   "speaker": "Narrador",
@@ -222,7 +342,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.85
+  "seconds": 8.85,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -62.4
+  }
  },
  "2b13e1a1a8ab.wav": {
   "speaker": "Narrador",
@@ -231,7 +356,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 9.11
+  "seconds": 9.11,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.2
+  }
  },
  "9a667072505c.wav": {
   "speaker": "Narrador",
@@ -240,7 +370,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.74
+  "seconds": 8.74,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -54.1
+  }
  },
  "9b8511190339.wav": {
   "speaker": "Narrador",
@@ -249,7 +384,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.37
+  "seconds": 8.37,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -59.8
+  }
  },
  "e2fc5f8d3e96.wav": {
   "speaker": "Narrador",
@@ -258,7 +398,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.91
+  "seconds": 8.91,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -47.3
+  }
  },
  "abd7ea741951.wav": {
   "speaker": "Narrador",
@@ -267,7 +412,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.36
+  "seconds": 8.36,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -66.5
+  }
  },
  "b46073bbc397.wav": {
   "speaker": "Narrador",
@@ -276,7 +426,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 4.6
+  "seconds": 4.6,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -41.1
+  }
  },
  "e529cc3ed571.wav": {
   "speaker": "Narrador",
@@ -285,7 +440,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 11.38
+  "seconds": 11.38,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -45.9
+  }
  },
  "637fab6b3127.wav": {
   "speaker": "Narrador",
@@ -294,7 +454,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.11
+  "seconds": 7.11,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -50.2
+  }
  },
  "0214942bea5b.wav": {
   "speaker": "Narrador",
@@ -303,7 +468,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 5.39
+  "seconds": 5.39,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -50.3
+  }
  },
  "2d2e6e859077.wav": {
   "speaker": "Narrador",
@@ -312,7 +482,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.93
+  "seconds": 7.93,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.5
+  }
  },
  "7a718457412a.wav": {
   "speaker": "Narrador",
@@ -321,7 +496,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 9.85
+  "seconds": 9.85,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.0
+  }
  },
  "9f82699b4d20.wav": {
   "speaker": "Narrador",
@@ -330,7 +510,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 4.46
+  "seconds": 4.46,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -49.4
+  }
  },
  "40eba7e8cce8.wav": {
   "speaker": "Narrador",
@@ -339,7 +524,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.27
+  "seconds": 7.27,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -49.6
+  }
  },
  "be2c9fd1e78c.wav": {
   "speaker": "Narrador",
@@ -348,7 +538,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.51
+  "seconds": 8.51,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -49.6
+  }
  },
  "9afcd82fba83.wav": {
   "speaker": "Narrador",
@@ -357,7 +552,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 5.02
+  "seconds": 5.02,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -49.6
+  }
  },
  "d9e55e470ff0.wav": {
   "speaker": "Narrador",
@@ -366,7 +566,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 10.77
+  "seconds": 10.77,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -45.1
+  }
  },
  "27c4d113bfbc.wav": {
   "speaker": "Narrador",
@@ -375,7 +580,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 10.12
+  "seconds": 10.12,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -47.6
+  }
  },
  "7f8cdf737d96.wav": {
   "speaker": "Tú",
@@ -384,7 +594,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.94
+  "seconds": 7.94,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -44.6
+  }
  },
  "43a4d5227c2a.wav": {
   "speaker": "Narrador",
@@ -393,7 +608,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 3.67
+  "seconds": 3.67,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -37.8
+  }
  },
  "3f71e2530687.wav": {
   "speaker": "Narrador",
@@ -402,7 +622,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.87
+  "seconds": 7.87,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -66.3
+  }
  },
  "nahuat/tay_tikneki.wav": {
   "speaker": "Guardia",
@@ -411,7 +636,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 2.51
+  "seconds": 2.51,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -56.1
+  }
  },
  "786d7f6c04b5.wav": {
   "speaker": "Narrador",
@@ -420,7 +650,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.46
+  "seconds": 8.46,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -59.6
+  }
  },
  "cf65ada32e86.wav": {
   "speaker": "Narrador",
@@ -429,7 +664,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 15.25
+  "seconds": 15.25,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -65.3
+  }
  },
  "743c1a35e978.wav": {
   "speaker": "Narrador",
@@ -438,7 +678,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 15.7
+  "seconds": 15.7,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -66.9
+  }
  },
  "10dc44fd4cce.wav": {
   "speaker": "Narrador",
@@ -447,7 +692,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 15.23
+  "seconds": 15.23,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.9
+  }
  },
  "57300b2f0192.wav": {
   "speaker": "Narrador",
@@ -456,7 +706,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.66
+  "seconds": 8.66,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.9
+  }
  },
  "nahuat/yek_tayua.wav": {
   "speaker": "Anciana",
@@ -465,7 +720,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 2.97
+  "seconds": 2.97,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -58.5
+  }
  },
  "c387cd2d1034.wav": {
   "speaker": "Narrador",
@@ -474,7 +734,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 11.28
+  "seconds": 11.28,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.7
+  }
  },
  "0e25391d9e9a.wav": {
   "speaker": "Narrador",
@@ -483,7 +748,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 11.96
+  "seconds": 11.96,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -66.8
+  }
  },
  "c21e4882f553.wav": {
   "speaker": "Narrador",
@@ -492,7 +762,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 14.49
+  "seconds": 14.49,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -65.5
+  }
  },
  "febf9239efa4.wav": {
   "speaker": "Narrador",
@@ -501,7 +776,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 11.03
+  "seconds": 11.03,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -68.0
+  }
  },
  "nahuat/ken_mutukay.wav": {
   "speaker": "Anciana",
@@ -510,7 +790,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 2.69
+  "seconds": 2.69,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -56.2
+  }
  },
  "c7b57335a887.wav": {
   "speaker": "Narrador",
@@ -519,7 +804,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.23
+  "seconds": 6.23,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.8
+  }
  },
  "e8878dbef929.wav": {
   "speaker": "Narrador",
@@ -528,7 +818,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.84
+  "seconds": 8.84,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -67.7
+  }
  },
  "d5f2859bde32.wav": {
   "speaker": "Narrador",
@@ -537,7 +832,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 11.04
+  "seconds": 11.04,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -68.1
+  }
  },
  "f754f5fa6b37.wav": {
   "speaker": "Narrador",
@@ -546,7 +846,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.95
+  "seconds": 8.95,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -70.0
+  }
  },
  "837c2bd3d62b.wav": {
   "speaker": "Narrador",
@@ -555,7 +860,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.52
+  "seconds": 7.52,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -69.2
+  }
  },
  "1f68d8d2a2fb.wav": {
   "speaker": "Narrador",
@@ -564,7 +874,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.63
+  "seconds": 7.63,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.6
+  }
  },
  "e9ce5d807b1d.wav": {
   "speaker": "Narrador",
@@ -573,7 +888,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 5.38
+  "seconds": 5.38,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -62.9
+  }
  },
  "c48a8aff65e4.wav": {
   "speaker": "Narrador",
@@ -582,7 +902,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.9
+  "seconds": 6.9,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -56.5
+  }
  },
  "nahuat/tekwani.wav": {
   "speaker": "Guardia",
@@ -591,7 +916,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 2.79
+  "seconds": 2.79,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -56.6
+  }
  },
  "683ad4c255e5.wav": {
   "speaker": "Narrador",
@@ -600,7 +930,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.09
+  "seconds": 6.09,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -55.0
+  }
  },
  "5cfb14967870.wav": {
   "speaker": "Narrador",
@@ -609,7 +944,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 8.9
+  "seconds": 8.9,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -73.6
+  }
  },
  "db28f3fa17ef.wav": {
   "speaker": "Narrador",
@@ -618,7 +958,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 10.28
+  "seconds": 10.28,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.7
+  }
  },
  "2fd5ce34f863.wav": {
   "speaker": "Narrador",
@@ -627,7 +972,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 10.48
+  "seconds": 10.48,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -64.7
+  }
  },
  "0abb01db38b1.wav": {
   "speaker": "Narrador",
@@ -636,7 +986,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 10.36
+  "seconds": 10.36,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -59.6
+  }
  },
  "48249f46de3b.wav": {
   "speaker": "Narrador",
@@ -645,7 +1000,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 7.52
+  "seconds": 7.52,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -56.0
+  }
  },
  "nahuat/ken_tinemi.wav": {
   "speaker": "Anciana",
@@ -654,7 +1014,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 2.46
+  "seconds": 2.46,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.5
+  }
  },
  "1811f749e801.wav": {
   "speaker": "Narrador",
@@ -663,7 +1028,12 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.99
+  "seconds": 6.99,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -51.1
+  }
  },
  "e6ab36ad1313.wav": {
   "speaker": "Narrador",
@@ -672,55 +1042,96 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 6.24
+  "seconds": 6.24,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -55.6
+  }
  },
  "c14a0ff49f26.wav": {
   "speaker": "Narrador",
   "text": "«No». Es honesto: no estás bien. La anciana murmura algo y una mujer te limpia la herida.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5cd3ed5b3e91a8c9",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.79,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -63.9
+  }
  },
  "c6faf7f4e4e2.wav": {
   "speaker": "Narrador",
   "text": "Le has preguntado «¿qué quieres?» a quien te acoge. Alguien ríe. La anciana, paciente, repite: «ken tinemi?», ¿cómo estás?",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "79d5264602ac24fb",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 12.17,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -52.0
+  }
  },
  "62910753d19e.wav": {
   "speaker": "Narrador",
   "text": "Para decir «estoy bien»: «ninemi yek». Para decir que no: «te».",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "0e58552f485740c7",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.63,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.6
+  }
  },
  "c70f0ba486a9.wav": {
   "speaker": "Narrador",
   "text": "«Estoy bien». La anciana asiente despacio. Aprendes rápido, dice su gesto.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "27a8c0a93ede4d74",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.0,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -59.1
+  }
  },
  "19219087247a.wav": {
   "speaker": "Narrador",
   "text": "«No». Ella entiende. Una mujer se acerca con un paño.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "2859ab7d1d69ea42",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 5.5,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -54.5
+  }
  },
  "0a626e15a309.wav": {
   "speaker": "Narrador",
   "text": "Un niño trae un cántaro de agua y se lo entrega a la anciana.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "ffa71da5fdf9b21c",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 4.7,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -58.7
+  }
  },
  "nahuat/padiush.wav": {
   "speaker": "Niño",
@@ -729,127 +1140,222 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 2.18
+  "seconds": 2.18,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -59.8
+  }
  },
  "5abf06dd73dd.wav": {
   "speaker": "Narrador",
   "text": "Ella le acaricia la cabeza. Luego sostiene el cántaro frente a ti y te mira.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "c3603307c7ef53e5",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.24,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.2
+  }
  },
  "c9c28acf163b.wav": {
   "speaker": "Narrador",
   "text": "«Sí». Te da el cántaro. El agua está fría y sabe a barro y a vida. Oyes de nuevo al niño: «padiush». Gracias.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "ba30038ab04c6644",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.07,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -58.7
+  }
  },
  "04f43e631fee.wav": {
   "speaker": "Narrador",
   "text": "«Gracias». La anciana ríe con ganas y te aprieta el hombro. Has usado una palabra de la aldea para agradecer a la aldea.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "7ec5636f0d4c5cea",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.84,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.6
+  }
  },
  "2fe55d045674.wav": {
   "speaker": "Narrador",
   "text": "Bebes. Nadie dice nada, pero el niño se aleja. Lo último que oyes de él es la palabra que repetía: «padiush».",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "79c088bced1ced9c",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.82,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -55.0
+  }
  },
  "6ff017d20aa9.wav": {
   "speaker": "Narrador",
   "text": "Un golpe seco contra la empalizada. Luego otro. Los perros enloquecen.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "d7af760837391d3b",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 5.93,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -51.7
+  }
  },
  "71cc84270f60.wav": {
   "speaker": "Narrador",
   "text": "La anciana se levanta. Los hombres toman antorchas. El jaguar está dentro del claro.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "9cc14b06c827af92",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.11,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -54.3
+  }
  },
  "d5497725e353.wav": {
   "speaker": "Narrador",
   "text": "«¡Ayúdame!» La anciana te pone una antorcha en la mano y te coloca entre dos hombres. Ya no eres un extraño: eres uno más en el círculo de fuego.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "c6f6d6506af5b07d",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.19,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -51.8
+  }
  },
  "eae210144b6d.wav": {
   "speaker": "Narrador",
   "text": "No hacen falta palabras. El círculo de fuego avanza hacia la puerta y el jaguar retrocede entre gruñidos. Alguien grita «shinechpalewi» y dos hombres acuden: ayúdame.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "8ccd29a7cfcac465",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 15.15,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -60.0
+  }
  },
  "b2e0e1549c7e.wav": {
   "speaker": "Narrador",
   "text": "Nadie te lo reprocha en voz alta. Oyes gritar «shinechpalewi», ¡ayúdame!, y no te mueves. Cuando el peligro pasa, nadie te busca con la mirada.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "d13b464a710cd1ca",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.99,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -59.8
+  }
  },
  "ad45689e4304.wav": {
   "speaker": "Narrador",
   "text": "El rugido entra por la rendija de la puerta. Alguien grita «shinechpalewi» y te empuja al suelo. El fuego hace el resto.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5034f484790e44d9",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.99,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.1
+  }
  },
  "ea1501e3e728.wav": {
   "speaker": "Narrador",
   "text": "El jaguar se retira a la selva. Las antorchas tiemblan. La anciana te mira largo rato y dice algo a los demás.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "c41c2a65c7dee8ad",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.35,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -62.2
+  }
  },
  "fc6f4e03ea1a.wav": {
   "speaker": "Narrador",
   "text": "No entiendes la discusión, pero entiendes las miradas. Deciden qué hacer contigo cuando amanezca.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "9b456f03c050f9fd",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.18,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -55.6
+  }
  },
  "8d84a5238ab6.wav": {
   "speaker": "Narrador",
   "text": "«Gracias». La palabra cae en el silencio y lo ablanda un poco.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "67ef6e1e75ee19b3",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 5.34,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.7
+  }
  },
  "41461fbb97de.wav": {
   "speaker": "Narrador",
   "text": "El fuego crepita. Nadie habla. La noche se hace larga.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "adc97e705f37586d",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.13,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -54.5
+  }
  },
  "42e0896b95e1.wav": {
   "speaker": "Narrador",
   "text": "El cielo cambia de negro a índigo. Los insectos callan uno a uno. La anciana se levanta y hace una señal.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "76fc46749227d1c3",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.17,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -52.1
+  }
  },
  "nahuat/yek_tunal.wav": {
   "speaker": "Anciana",
@@ -858,55 +1364,96 @@
   "voice": "grabación humana (estudiante)",
   "status": "grabada",
   "hash": "human",
-  "seconds": 3.0
+  "seconds": 3.0,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -60.0
+  }
  },
  "782ba5915637.wav": {
   "speaker": "Narrador",
   "text": "«Buen día». Ya no es de noche. La aldea te acompaña hasta el sendero con agua, tortillas y una antorcha apagada, por si vuelves a perderte.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "98ae45c5dcbd18ef",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.89,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.1
+  }
  },
  "68444cb6a4dd.wav": {
   "speaker": "Narrador",
   "text": "Al borde de la selva, entre la niebla dorada, el tekwani te observa una última vez. No te sigue.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "dd97236e25de5dfd",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.57,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -52.4
+  }
  },
  "c75e38987a92.wav": {
   "speaker": "Narrador",
   "text": "Has sobrevivido a la noche del jaguar. Y no lo hiciste solo: lo hiciste con palabras.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "b80c7587f7c509bd",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.85,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -51.6
+  }
  },
  "78fb57b6798f.wav": {
   "speaker": "Narrador",
   "text": "Antes de que salga el sol, el guardia abre la puerta y señala el sendero. No hay rencor en su gesto, pero tampoco compañía.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "3f7d9781f85781d4",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.14,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -52.9
+  }
  },
  "059055a6827f.wav": {
   "speaker": "Narrador",
   "text": "Caminas solo hacia la luz gris. Detrás, en la niebla, unas huellas grandes siguen las tuyas a la misma distancia de siempre.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "2add8a2eeb628728",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.25,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -54.3
+  }
  },
  "e69c80e653ea.wav": {
   "speaker": "Narrador",
   "text": "Has sobrevivido a la noche. Pero la aldea no confió en ti, y el jaguar lo sabe. Quizá la próxima vez entiendas mejor sus palabras.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5969d0bcab5a6220",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 12.96,
+  "processed": {
+   "strength": 1.6,
+   "rate": 22050,
+   "noise_floor_db": -53.2
+  }
  },
  "_pending_nahuat": []
 }

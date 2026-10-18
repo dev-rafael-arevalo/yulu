@@ -219,3 +219,19 @@ def test_record_voice_processing_and_plan():
     items = rv.build_items(Args())
     assert items and all(i.nahuat_id for i in items)
     assert all(i.filename.startswith("nahuat/") for i in items)
+
+
+def test_human_recordings_in_index_exist_and_match_game_format():
+    import wave
+
+    index = json.loads((AUDIO_DIR / "voice" / "index.json").read_text(encoding="utf-8"))
+    human = [k for k, v in index.items() if not k.startswith("_") and str(v.get("voice", "")).startswith("grabación humana")]
+    if not human:
+        pytest.skip("sin grabaciones humanas en este clon")
+    for name in human:
+        path = AUDIO_DIR / "voice" / name
+        assert path.is_file(), f"falta {name}"
+        with wave.open(str(path), "rb") as wav:
+            assert wav.getnchannels() == 1 and wav.getsampwidth() == 2
+            assert wav.getframerate() in (22050, 44100)
+            assert wav.getnframes() > wav.getframerate() * 0.5
