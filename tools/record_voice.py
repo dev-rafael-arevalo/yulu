@@ -230,7 +230,11 @@ class Session:
                 self.recorder.start()
                 self.message = "Grabando... pulsa ESPACIO al terminar la frase."
         elif key == pygame.K_p and self.take is not None and len(self.take):
-            pygame.mixer.Sound(buffer=self.take.tobytes()).play()
+            # Se reproduce desde un WAV temporal: así el mezclador respeta la frecuencia y el mono
+            # de la toma aunque él mismo trabaje en estéreo (un búfer crudo se interpretaría mal).
+            preview = VOICE_DIR / "_preview.wav"
+            save_wav(preview, self.take)
+            pygame.mixer.Sound(str(preview)).play()
         elif key == pygame.K_RETURN and self.take is not None and len(self.take) > RATE * 0.2:
             save_wav(VOICE_DIR / item.filename, self.take)
             _mark_recorded(item, len(self.take) / RATE)
@@ -317,10 +321,12 @@ def main() -> int:
     if not items:
         print("No hay líneas pendientes con esos filtros. Usa --redo para regrabar.")
         return 0
-    pygame.mixer.init(frequency=RATE, size=-16, channels=1)
+    pygame.mixer.quit()
+    pygame.mixer.init(frequency=RATE, size=-16, channels=2)
     recorder = Recorder(args.mic)
     session = Session(items, recorder, Lexicon.load())
     done = session.run()
+    (VOICE_DIR / "_preview.wav").unlink(missing_ok=True)
     pygame.quit()
     print(f"Tomas guardadas: {done}. Índice: {INDEX_PATH}")
     return 0
