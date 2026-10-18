@@ -56,7 +56,7 @@ petición.
 - **Correcciones y límites:** un sonido de jaguar se descartó porque su página estaba
   eliminada; se usan gruñidos de tigre como felino compatible; las vistas previas MP3 son de
   128 kb/s porque los originales exigen cuenta.
-- **Aprendizaje sobre el prompt:** ✎
+- **Aprendizaje sobre el prompt:** ✎ Tuve que refactorizar los audios muchas veces porque las narrativas se escuchaban muy mal, y la musica y ambientalización es mejor utilizar sonidos naturales que no infrinjan derechos de autor.
 
 ### Prompt 4 (opcional) — ✎
 
@@ -95,14 +95,14 @@ Registra solo lo que realmente ocurrió, con la evidencia (captura, salida de co
 Responde en 300 a 600 palabras. Preguntas guía:
 
 - ¿Qué parte del proyecto habría sido más lenta o imposible sin asistencia de IA, y cuál
-  habría salido mejor haciéndola a mano?
+  habría salido mejor haciéndola a mano? R/ La más lenta o imposible sería la generación de imagenes, ya que se tuvo que haber diseñado a mano o utilizar imagenes digitales.
 - ¿Qué instrucciones del prompt inicial resultaron decisivas (fases, "no inventes",
-  "informa qué pruebas ejecutaste") y cuáles sobraban?
+  "informa qué pruebas ejecutaste") y cuáles sobraban? R/ Siempre iniciar con un plan por fases resulta efectivo para ir revisando y ajustando cada fase sin necesidad de esperar que este todo completado.
 - ¿Cómo verificaste lo que el asistente afirmaba (pruebas, capturas, licencias, fuentes
-  lingüísticas)? ¿Hubo algo que aceptaste sin comprobar?
+  lingüísticas)? ¿Hubo algo que aceptaste sin comprobar? R/ creo que las partes del código fuente es un desafio finalizar de revisarlo completamente ya que no estoy familiarizado con pygame, pero creo que se entiende. La parte de las fuentes del nahuatl salvadoreño fue duro porque no hay muchas referencias al respecto.
 - ¿Qué aprendiste sobre el náhuat y sobre el riesgo de presentar contenido generado como
-  auténtico?
-- ¿Qué harías distinto en el siguiente proyecto con IA?
+  auténtico? R/ El nahuatl es un desafio hoy en dia porque no se puede comprobar la fuente a menos que se interactue con las comunidades que lo hablan, sin embargo, se ha encontrado documentación que puede servir de base para algunas palabras como inicio de un modelo de aprendizaje.
+- ¿Qué harías distinto en el siguiente proyecto con IA? R/ Creo que haría una planificación con más tiempo, ya que en poco tiempo el riesgo crece porque se depende más de la IA como fuente de verdad y no se tiene suficientes fuentes para poder comprobar.
 
 ✎
 

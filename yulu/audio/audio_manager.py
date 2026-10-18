@@ -154,7 +154,7 @@ class AudioManager:
             except pygame.error as exc:
                 self._warn(key, f"no se pudo cargar ({exc})")
         elif not optional:
-            self._warn(key, "sin narración pregenerada (tools/generate_narration.py)")
+            self._warn(key, "sin archivo de voz")
         self._sounds[key] = sound
         return sound
 

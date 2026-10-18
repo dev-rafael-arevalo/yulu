@@ -88,9 +88,6 @@ class ImageStore:
             self._cache[cache_key] = cover_fit(raw, overscan=overscan) if raw else None
         return self._cache[cache_key]
 
-    def jaguar(self, pose: str) -> pygame.Surface | None:
-        filename = self.manifest.get("jaguar", {}).get(pose)
-        return self._load(filename, alpha=True) if filename else None
 
     def character(self, path: str) -> pygame.Surface | None:
         """Recorte con transparencia, ruta relativa a images/ (por ejemplo 'cast/anciana.png')."""
@@ -108,7 +105,6 @@ class ImageStore:
     # ---------- diagnóstico ----------
     def expected_files(self) -> list[str]:
         files: list[str] = [spec["file"] for spec in self.manifest.get("backgrounds", {}).values() if "file" in spec]
-        files += list(self.manifest.get("jaguar", {}).values())
         overlays = self.manifest.get("overlays", {})
         files += overlays.get("fog", [])
         if overlays.get("smoke"):

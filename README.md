@@ -1,221 +1,189 @@
-# YULU: La noche del jaguar
+<div align="center">
 
-Aventura narrativa educativa de supervivencia desarrollada en Python y Pygame para la
-actividad académica de *AI for Developers* sobre vibecoding y prompt engineering.
+# 🐆 YULU: La noche del jaguar
 
-El jugador despierta de noche en un bosque del territorio que hoy conocemos como
-El Salvador, en una época prehispánica ficticia. Un jaguar lo sigue. A lo lejos hay una
-aldea cuyos habitantes hablan náhuat. Para sobrevivir hasta el amanecer tendrá que
-aprender expresiones, interpretar diálogos y tomar decisiones con consecuencias.
+**Una aventura narrativa de supervivencia para aprender náhuat, la lengua de los pipiles de El Salvador.**
 
-> Estado del proyecto: **FASE 5 en curso**. Capítulo 1 jugable de principio a fin con
-> cinco escenas, 12 expresiones de náhuat con fuente citada, glosario, dos finales,
-> fondos y personajes generados por IA, grabaciones ambientales con licencia, música de
-> dron, narración expresiva con dos voces y volúmenes independientes. Pendiente: las
-> pruebas manuales en equipo real ([`docs/PRUEBAS_MANUALES.md`](docs/PRUEBAS_MANUALES.md))
-> y la bitácora académica ([`docs/PROMPTS_TEMPLATE.md`](docs/PROMPTS_TEMPLATE.md)).
+Despiertas de noche en la selva. Un jaguar te sigue. A lo lejos hay una aldea cuyos habitantes
+hablan una lengua que no entiendes. Para sobrevivir hasta el amanecer tendrás que escuchar,
+aprender sus palabras y ganarte su confianza.
 
-## Requisitos
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![pygame-ce](https://img.shields.io/badge/pygame--ce-2.5-1E3A5F)
+![Plataformas](https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-2d2d2d)
+![Sin conexión](https://img.shields.io/badge/juega-sin%20conexi%C3%B3n-2E7D32)
+![Licencia](https://img.shields.io/badge/c%C3%B3digo-MIT-blue)
 
-- Windows 10/11 (probado en Windows 11).
-- Python 3.11 o superior (desarrollado con Python 3.15).
-- Dependencias: `pygame-ce` y `pytest` (ver `requirements.txt`).
+<img src="docs/capturas/02_persecucion.png" alt="La persecución: el jaguar frente a ti y cuatro decisiones con el tiempo en contra" width="800">
 
-Se usa **pygame-ce** (fork mantenido de Pygame con la misma API `import pygame`) porque
-el paquete `pygame` clásico no publica binarios para Python 3.15.
+</div>
 
-## Instalación
+---
+
+## ✨ Qué es
+
+YULU es un juego de decisiones de unos 20 minutos, en español, donde **el idioma es la
+mecánica principal**: los personajes de la aldea te hablan en náhuat y al principio no
+entiendes nada. Cada respuesta correcta suma confianza; cada error te enseña la expresión y
+te deja intentarlo de nuevo. Al amanecer, lo que hayas entendido decide uno de dos finales.
+
+- 🌙 **Cinco escenas** en una noche: el despertar, la persecución, la aldea, la confianza y el amanecer.
+- 🗣️ **12 expresiones reales de náhuat**, cada una con traducción, contexto, pronunciación
+  aproximada y la **fuente publicada** de la que procede. Nada inventado.
+- 📖 **Glosario consultable** en cualquier momento (tecla `G`), que crece a medida que aprendes.
+- ⚖️ **Amenaza y confianza**: dos indicadores que reaccionan a lo que haces y a lo que dices.
+- ⏱️ **Presión temporal solo cuando toca**: nunca mientras aprendes una palabra nueva.
+- 🎧 **Ambientación grabada**: selva nocturna, lluvia, viento, fuego, tambores y un jaguar
+  que se acerca con la amenaza. Música de dron que se oscurece con el peligro.
+- 🎨 **Arte cinematográfico**: fondos y personajes de cuerpo entero integrados en cada escena.
+
+<div align="center">
+<img src="docs/capturas/01_bosque.png" width="400"> <img src="docs/capturas/03_aldea_guardia.png" width="400">
+<img src="docs/capturas/04_refugio.png" width="400"> <img src="docs/capturas/06_amanecer.png" width="400">
+</div>
+
+## 🚀 Instalación y ejecución
+
+Necesitas **Python 3.11 o superior** ([python.org](https://www.python.org/downloads/)). Nada más.
+
+**Windows** (PowerShell):
 
 ```powershell
-cd C:\yulu
+git clone https://github.com/<tu-usuario>/yulu.git
+cd yulu
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python main.py
 ```
 
-No se instala nada a nivel global ni se requiere conexión durante la partida.
+**macOS / Linux**:
 
-## Ejecución
-
-```powershell
-.venv\Scripts\python main.py             # pantalla completa
-.venv\Scripts\python main.py --windowed  # en ventana
+```bash
+git clone https://github.com/<tu-usuario>/yulu.git
+cd yulu
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python main.py
 ```
 
-## Controles
+El juego abre a pantalla completa. Para jugar en ventana: `main.py --windowed`.
+Una vez instalado no necesita conexión a Internet.
+
+> **¿Problemas?** Si `pip` falla al instalar `pygame-ce`, actualízalo primero con
+> `python -m pip install --upgrade pip`. Si no hay sonido, el juego sigue funcionando y avisa
+> en la consola; si no hay pantalla completa disponible, usa `--windowed`.
+
+## 🎮 Controles
 
 | Tecla / acción | Función |
 |---|---|
-| Enter, Espacio o clic | Mostrar el texto completo / continuar |
-| Flechas ↑ ↓ o 1-9 | Seleccionar una decisión |
-| Enter o clic | Confirmar la decisión |
-| G | Abrir o cerrar el glosario de náhuat (detiene el temporizador) |
-| ← → (en pausa) | Ajustar el volumen de música, ambiente, efectos o voces |
-| Esc | Menú de pausa (continuar, volúmenes de música, ambiente y efectos, volver a empezar, salir) |
-| F11 | Alternar pantalla completa / ventana |
-| R (en un final) | Volver a jugar y explorar otras decisiones |
+| `Enter`, `Espacio` o clic | Completar el texto / continuar |
+| `↑` `↓` o `1`-`4` | Elegir una decisión |
+| `Enter` o clic | Confirmar la decisión |
+| `G` | Abrir o cerrar el glosario de náhuat (detiene el temporizador) |
+| `Esc` | Pausa: continuar, volúmenes de música, ambiente y efectos, reiniciar, salir |
+| `F11` | Alternar pantalla completa / ventana |
+| `R` (en un final) | Volver a jugar y explorar otras decisiones |
 
-## Cómo se juega
+## 🗣️ El náhuat del juego
 
-- **Amenaza**: sube con decisiones ruidosas o lentas; baja al usar el río, los árboles o el fuego.
-- **Confianza**: sube al entender y responder bien en náhuat; baja con silencios o malos modos.
-- **Temporizador**: solo en tres momentos (la persecución, el aviso del jaguar y la alarma en el
-  refugio). Nunca mientras se aprende una expresión nueva, y se detiene al abrir el glosario.
-- **Errores**: una respuesta equivocada enseña la expresión correcta y permite seguir.
-- **Finales**: al amanecer, confianza ≥ 40 y amenaza ≤ 84 llevan al final con la aldea;
-  en otro caso, al final en soledad.
+El **náhuat** (también llamado pipil o nawat) es la lengua de los pueblos nahuas del occidente
+de El Salvador, hoy con muy pocos hablantes nativos y en proceso de revitalización. Las doce
+expresiones del capítulo se tomaron de tres obras publicadas y accesibles:
 
-## Náhuat
+| Expresión | Significado | Estado |
+|---|---|---|
+| Yek tunal! | ¡Buen día! | verificada |
+| Yek tayua! | ¡Buena noche! | verificada |
+| Ken tinemi? | ¿Cómo estás? | verificada |
+| Ninemi yek. | Estoy bien. | verificada |
+| Ken mutukay? | ¿Cómo te llamas? | verificada |
+| Naja nutukay Yulu. | Yo me llamo Yulu. | verificada |
+| E. / Te. | Sí. / No. | verificada |
+| Tay tikneki? | ¿Qué quieres? | verificada |
+| Padiush. | Gracias. | verificada |
+| Tekwani! | ¡Jaguar! | verificada |
+| Shinechpalewi! | ¡Ayúdame! | verificada |
+| Nimajmawi. | Tengo miedo. | compuesta de formas atestiguadas |
 
-Las 12 expresiones del capítulo tienen texto, traducción, contexto, fuente y estado de
-validación en [`yulu/language/data/nahuat_ch1.json`](yulu/language/data/nahuat_ch1.json).
-Las fuentes y los límites del material están en [`docs/NAHUAT_SOURCES.md`](docs/NAHUAT_SOURCES.md).
-No existe en el proyecto ninguna voz nativa de náhuat.
+Fuentes: **King, Alan R. (2011)** *Timumachtikan! Curso de lengua náhuat para principiantes
+adultos*; **Campbell, Lyle (1985)** *The Pipil Language of El Salvador*; **Hernández González,
+Werner (2016)** *Nawat Mujmusta* (diccionario). Cada entrada del glosario muestra su fuente y
+página. Detalles, ortografía y límites en [`docs/NAHUAT_SOURCES.md`](docs/NAHUAT_SOURCES.md).
 
-## Recursos gráficos
+> El juego no incluye voces: la pronunciación indicada es una guía escrita basada en las reglas
+> de las fuentes. Para oír náhuat real, busca materiales de hablantes y de los proyectos de
+> revitalización en El Salvador.
 
-Los escenarios actuales son **sustitutos procedurales provisionales** y el juego lo indica
-en pantalla. El manifiesto [`yulu/assets/manifest.json`](yulu/assets/manifest.json) declara
-las imágenes definitivas; al colocarlas en `yulu/assets/images/` se cargan automáticamente
-con ajuste 16:9, deriva de cámara, niebla y humo. Los prompts para generarlas están en
-[`docs/ART_PROMPTS.md`](docs/ART_PROMPTS.md). Comprueba qué falta con:
+<div align="center"><img src="docs/capturas/05_glosario.png" alt="Glosario con fuente y estado de validación" width="700"></div>
 
-```powershell
-.venv\Scripts\python tools\check_assets.py
-```
+## 🧭 Cómo se juega bien
 
-## Audio
+- Escucha antes de actuar: gritar o correr sube la **amenaza**; el río, los árboles y el fuego la bajan.
+- En la aldea, **repite lo que oyes** y responde con la expresión adecuada: cada acierto suma
+  **confianza**. Una respuesta equivocada no castiga, enseña.
+- Consulta el glosario con `G` cuando dudes: el tiempo se detiene.
+- Al amanecer, confianza alta y amenaza controlada te llevan al final con la aldea; si no,
+  saldrás solo. Pulsa `R` y prueba otro camino.
 
-El administrador de audio ([`yulu/audio/audio_manager.py`](yulu/audio/audio_manager.py))
-lee [`yulu/assets/audio/manifest.json`](yulu/assets/audio/manifest.json) y mezcla cuatro
-categorías con volumen propio: música en bucle, ambiente por capas con fundidos, efectos
-(con ligera variación de volumen y paneo) y voz. La música se atenúa mientras habla un
-personaje. El paisaje sonoro ([`soundscape.py`](yulu/audio/soundscape.py)) elige las capas
-por escena, hace crecer los tambores con la amenaza durante la persecución, amortigua el
-exterior dentro del refugio y lanza vocalizaciones del jaguar a intervalos aleatorios.
-Si falta cualquier archivo, la partida continúa y se registra una advertencia. Los
-volúmenes se guardan en `settings.json`.
-
-- **Grabaciones**: selva nocturna, lluvia, viento, murmullo de aldea, fuego, tambores,
-  pasos, vocalizaciones de felinos y música de dron son grabaciones con licencia CC0 o
-  CC BY obtenidas de Freesound (a través de la API de Openverse) y Wikimedia Commons.
-  Autor, licencia, URL, fecha y limitaciones de cada una están en
-  [`yulu/assets/audio/CREDITS.md`](yulu/assets/audio/CREDITS.md). Solo las cuatro señales
-  de interfaz (`ui_*`) se generan por código.
-- **Narración hablada: desactivada.** El juego se lee; los diálogos se muestran con subtítulos y
-  sin voz. Las grabaciones del estudiante y las herramientas de voz se conservan, y para
-  reactivarlas basta poner `VOICE_ENABLED = True` en `yulu/config.py` (vuelven la tecla V,
-  el volumen de voces y la atenuación de la música al hablar).
-- **Narración en español (Piper TTS, local, opcional)**: los diálogos se pregeneran con
-  [Piper](https://github.com/OHF-Voice/piper1-gpl) (código GPL-3.0) y modelos oficiales de
-  `rhasspy/piper-voices`. Piper necesita `onnxruntime`, que todavía no publica binarios para
-  Python 3.15, así que se usa un **segundo entorno solo para generar voces** con el Python 3.14
-  ya instalado en el equipo (el juego sigue en `.venv` y solo reproduce WAV):
-
-  ```powershell
-  # una vez: entorno de herramientas (ajusta la ruta si tu Python 3.14 está en otro sitio)
-  py -V:Astral\CPython3.14.7 -m venv .venv-tts
-  .venv-tts\Scripts\python -m pip install piper-tts onnxruntime
-
-  # modelos (unos 300 MB, no se incluyen en Git) en yulussetsoices\piper  # descarga manual desde https://huggingface.co/rhasspy/piper-voices (archivo .onnx + .onnx.json + MODEL_CARD)
-  # o con la utilidad de Piper:
-  .venv-tts\Scripts\python -m piper.download_voices es_MX-claude-high es_MX-ald-medium es_AR-daniela-high es_ES-davefx-medium --data-dir yulussetsoices\piper
-
-  # 1) tres frases de prueba para escuchar y evaluar
-  .venv-tts\Scripts\python tools\generate_narration.py --sample
-  # 2) todo el capítulo (solo lo que falta o cambió; --force para regenerar)
-  .venv-tts\Scripts\python tools\generate_narration.py
-  ```
-
-  | Personaje | Modelo | Licencia del dataset (según MODEL_CARD) |
-  |---|---|---|
-  | Narradora | `es_MX-claude-high` | Apache-2.0 |
-  | Anciana | `es_AR-daniela-high` | CC BY-SA 4.0 |
-  | Guardia y niño | `es_MX-ald-medium` | Unlicense |
-  | Protagonista | `es_ES-davefx-medium` | CC0 |
-
-  - **Cambiar la voz de un personaje**: edita `yulu/assets/audio/voices.json` (modelo,
-    `length_scale` para la velocidad, `sentence_silence` para las pausas) y vuelve a ejecutar
-    el generador; solo se regeneran las líneas cuyo texto o configuración cambió.
-  - **Escuchar las muestras**: `yulu/assets/audio/voice/samples/` (cualquier reproductor) o
-    `tools/audio_preview.py`. Los WAV finales quedan en `yulu/assets/audio/voice/` con
-    `index.json` (texto, locutor, modelo, estado) y `errors.log` si algo falló.
-  - **Náhuat**: las frases en náhuat **no se sintetizan**. Solo suenan si existe una grabación
-    hecha por una persona competente en la lengua en `yulu/assets/audio/voice/nahuat/<id>.wav`
-    (el id es el de `nahuat_ch1.json`); mientras tanto el juego muestra el texto y el aviso
-    "náhuat: sin grabación de hablante". `index.json` lista las pendientes.
-  - **Respaldo**: `--engine winrt` usa las voces de Windows (Sabina y Raul) si Piper no está
-    disponible.
-  - **Errores comunes**: *"piper-tts no está instalado en este intérprete"*: estás usando
-    `.venv` en lugar de `.venv-tts`. *"Modelo ... no encontrado"*: faltan el `.onnx` o el
-    `.onnx.json` en `yulu/assets/voices/piper/`. *"No matching distribution found for
-    onnxruntime"*: el intérprete es 3.15; crea `.venv-tts` con 3.14. Si falta un WAV, el juego
-    muestra el subtítulo, registra una advertencia y continúa.
-- **Grabar con tu propia voz** (narración y náhuat): `tools/record_voice.py` muestra cada
-  línea, graba con el micrófono al pulsar ESPACIO, permite escuchar (P), aceptar (ENTER) o
-  repetir (R), recorta silencios, normaliza y guarda el WAV con el nombre que espera el juego.
-  Las tomas quedan marcadas como "grabación humana" en `voice/index.json` y Piper no las
-  sobrescribe. Las frases en náhuat solo pueden grabarse así.
-
-  ```powershell
-  .venv\Scripts\python tools
-ecord_voice.py --list            # micrófonos y plan
-  .venv\Scripts\python tools
-ecord_voice.py --nahuat-only     # primero las 7 frases en náhuat
-  .venv\Scripts\python tools
-ecord_voice.py                   # el resto (97 líneas en español)
-  .venv\Scripts\python tools
-ecord_voice.py --redo --scene s1_despertar   # regrabar una escena
-  ```
-- **Limpiar las grabaciones**: `tools/clean_voice.py` (entorno `.venv-tts`, usa numpy)
-  reduce el ruido de fondo con una puerta espectral calibrada en los silencios de cada toma,
-  filtra graves y agudos, iguala el nivel a -20 dBFS y remuestrea a 22 050 Hz. Los originales
-  quedan en `voice/raw/` y el procesado siempre parte de ellos (`--strength` ajusta la
-  intensidad; 1.6 por defecto).
-
-  ```powershell
-  .venv-tts\Scripts\python tools\clean_voice.py
-  ```
-- **Herramientas**: `tools/check_audio.py` valida archivos y metadatos de licencia;
-  `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla
-  de una escena, y `--id jaguar_sierra` un sonido concreto.
-
-## Personajes y referencias culturales
-
-Cada escena declara su **reparto** (`cast` en `yulu/assets/manifest.json`): personajes de
-cuerpo entero y jaguar de pie sobre la línea de suelo, con sombra, tono de luz del escenario,
-el que habla iluminado y los demás atenuados; el jaguar escala con la amenaza y nunca es
-translúcido. Los recortes se generan desde el paquete de personajes con
-`tools/prepare_cutouts.py` (fondo negro eliminado por relleno desde los bordes, figura
-principal conservada, hoja de control sobre damero). El jaguar de la persecución y la
-reunión de la aldea son fondos completos. Criterios de vestuario, lo que se retiró y las
-incertidumbres declaradas están en [`docs/REFERENCIAS_CULTURALES.md`](docs/REFERENCIAS_CULTURALES.md).
-
-## Pruebas
-
-```powershell
-.venv\Scripts\python -m pytest -q
-```
-
-Prueba de humo sin pantalla (recorre la historia automáticamente durante N fotogramas):
-
-```powershell
-.venv\Scripts\python main.py --smoke-frames 5000
-```
-
-## Estructura
+## 🧩 Cómo está hecho
 
 ```
 main.py                 Punto de entrada
-yulu/app.py             Ciclo principal, fases de juego, glosario, pausa, cámara
-yulu/config.py          Paleta, resolución lógica, umbrales y volúmenes por defecto
-yulu/paths.py           Rutas de recursos independientes del directorio de ejecución
-yulu/narrative/         Esquema de datos (schema.py) y escenas del capítulo (scenes.py)
-yulu/state/             Estado de la partida (game_state.py) y motor narrativo (engine.py)
-yulu/language/          Léxico de náhuat (lexicon.py) y datos con fuentes (data/)
-yulu/ui/                Carga de imágenes, fondo, jaguar, diálogo, decisiones, glosario, HUD
-yulu/audio/             Administrador de audio, paisaje sonoro y claves de narración
-yulu/assets/            Manifiesto, imágenes, audio y fuentes locales
-tools/                  Comprobación de recursos, corte de cuadrículas, síntesis de sonidos y narración
-tests/                  Pruebas automatizadas con pytest
-docs/                   Fuentes lingüísticas, prompts de arte, pruebas manuales, bitácora académica
+yulu/app.py             Ciclo principal, fases de juego, pausa, cámara
+yulu/narrative/         Esquema de datos y las 23 escenas del capítulo
+yulu/state/             Estado de la partida y motor narrativo (valida el grafo al arrancar)
+yulu/language/          Léxico de náhuat con fuentes (nahuat_ch1.json)
+yulu/audio/             Mezclador por capas y paisaje sonoro ligado a la amenaza
+yulu/ui/                Fondos, reparto de personajes, diálogo, decisiones, glosario, HUD
+yulu/assets/            Imágenes, grabaciones y manifiestos
+tools/                  Comprobación de recursos, corte de imágenes, previsualización de audio
+tests/                  57 pruebas automatizadas (pytest)
+docs/                   Fuentes lingüísticas, criterios culturales, prompts de arte, pruebas manuales
 ```
+
+- El **estado** (escena, amenaza, confianza, vocabulario, decisiones, final) está separado de
+  la presentación. El motor rechaza transiciones inválidas y comprueba que todas las escenas
+  sean alcanzables y que cada expresión usada exista en el léxico.
+- Todos los recursos se cargan desde el manifiesto local; si falta uno, el juego continúa y
+  lo registra en consola. Nada se descarga durante la partida.
+
+Pruebas y comprobaciones:
+
+```bash
+.venv/bin/python -m pytest -q                 # Windows: .venv\Scripts\python -m pytest -q
+.venv/bin/python tools/check_assets.py        # imágenes declaradas en el manifiesto
+.venv/bin/python tools/check_audio.py         # grabaciones y metadatos de licencia
+.venv/bin/python tools/audio_preview.py --scene s2_persecucion --threat 70
+.venv/bin/python main.py --smoke-frames 1500  # recorrido automático sin pantalla
+```
+
+## 🎨 Arte y sonido: créditos
+
+- **Imágenes**: arte conceptual generado con ChatGPT ImageGen por el autor a partir de los
+  prompts de [`docs/ART_PROMPTS.md`](docs/ART_PROMPTS.md). Los criterios de vestuario, lo que se
+  descartó y las incertidumbres declaradas están en
+  [`docs/REFERENCIAS_CULTURALES.md`](docs/REFERENCIAS_CULTURALES.md). No son reconstrucciones históricas.
+- **Sonido**: grabaciones con licencia CC0 y CC BY de Freesound (vía la API de Openverse) y
+  Wikimedia Commons, con autor, licencia, URL y limitaciones en
+  [`yulu/assets/audio/CREDITS.md`](yulu/assets/audio/CREDITS.md). Entre ellas, una vocalización
+  real de jaguar; los rugidos de ataque son de tigre, como gran felino compatible, y así consta.
+- **Código**: licencia MIT ([`LICENSE`](LICENSE)).
+
+## 🗺️ Ideas para seguir
+
+- Más capítulos y más vocabulario (verbos, números, familia).
+- Grabaciones de hablantes de náhuat para cada expresión del glosario.
+- Modo repaso: tarjetas con las expresiones aprendidas.
+- Traducción de la interfaz al inglés.
+
+Las contribuciones son bienvenidas, especialmente de personas que conozcan la lengua y la
+historia de la región. Abre un *issue* o un *pull request*.
+
+---
+
+<div align="center">
+
+Hecho con Python y pygame-ce. **Shiwi, timumachtikan!** (¡Ven, aprendamos!)
+
+</div>

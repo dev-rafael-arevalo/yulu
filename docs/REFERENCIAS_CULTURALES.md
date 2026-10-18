@@ -14,12 +14,11 @@ arqueológica ni etnográfica certificada.
 | `bg_07_jaguar_encounter.png` | Fondo de la persecución | Jaguar íntegro en su entorno. |
 | `bg_09_forest_moonlight.png`, `bg_10_forest_path.png` | Bosque del despertar y sendero de la huida | Imágenes íntegras a resolución completa. |
 | `bg_08_village_fire.png` | Deliberación tras la alarma y amanecer previo a la decisión | Pobladores de la misma comunidad; aquí no se superpone reparto para no duplicar figuras. |
-| `characters/portrait_*_integrado.png`, `characters/*.png`, `reference/*.png` | Ya no se muestran en el juego; se conservan como referencia | Sustituidos por el reparto de cuerpo entero a petición del estudiante (sin tarjetas ni recortes de hoja). |
 
 ## Qué se retiró
 
-- `group_guardia_anciano.png` (un guardia con tocado rígido tipo casco), las viñetas de retrato
-  y los grupos recortados de la primera hoja ya no aparecen en ninguna escena.
+- Los recortes de la primera hoja de personajes (entre ellos un guardia con tocado rígido tipo
+  casco), las viñetas de retrato y los grupos pegados se retiraron del proyecto.
 - Nota sobre el guardia líder: su tocado es de fibra con plumas, no un casco europeo; si se
   prefiere evitar plumas, el manifiesto permite sustituirlo por `cast/joven_guardia.png`.
 - Los penachos grandes de plumas de algunas hojas de concepto no se usan en recursos finales.
@@ -42,8 +41,7 @@ pueblo, deberá distinguirse visualmente y declararse como decisión narrativa.
 - Campbell, Lyle (1985). *The Pipil Language of El Salvador*. Berlin: Mouton. Fuente de la
   lengua; su diccionario documenta términos materiales (por ejemplo, voces para algodón,
   manta, casa) que apoyan la presencia de tejidos de algodón y casas de materiales vegetales.
-- Hojas de referencia del estudiante (ChatGPT ImageGen, 18/10/2026), paquete
-  `YULU_referencias_culturales_para_claude_code.zip`, y sus instrucciones de vestuario.
+- Hojas de referencia generadas por el autor (ChatGPT ImageGen, 18/10/2026) y sus notas de vestuario.
 
 **Incertidumbres declaradas**: no se han verificado en fuentes primarias los diseños
 concretos de las cenefas, la forma exacta de las orejeras, el tipo de escudo ni los colores

@@ -121,7 +121,7 @@ def main(grid_path: str) -> int:
     plan = [
         [(backgrounds[k]["file"], "opaque") for k in ("forest_dense", "forest_path", "village_edge")],
         [(backgrounds[k]["file"], "opaque") for k in ("village_gate", "shelter", "dawn")],
-        [],  # fila del jaguar: ya no se recorta (el juego usa la imagen íntegra bg_07 y ojos dibujados por código)
+        [],  # fila del jaguar: no se usa (el jaguar del juego viene del paquete de personajes, ver tools/prepare_cutouts.py)
         [(overlays["fog"][0], "fog"), (overlays["fog"][1], "fog"), (overlays["smoke"], "fog")],
     ]
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)

@@ -28,7 +28,6 @@ def test_manifest_declares_required_backgrounds():
 def test_missing_images_return_none_without_raising(tmp_path):
     store = ImageStore(images_dir=tmp_path)
     assert store.background("forest_dense") is None
-    assert store.jaguar("stalk") is None
     assert store.fog_layers() == []
     assert store.smoke() is None
     assert len(store.missing_files()) == len(store.expected_files())
