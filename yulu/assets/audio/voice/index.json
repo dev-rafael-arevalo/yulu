@@ -3,177 +3,199 @@
   "speaker": "Narrador",
   "text": "Despiertas con la cara contra la tierra húmeda. No recuerdas cómo llegaste aquí.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "a8a3c2cdda41e2b9",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.4
  },
  "1f942d1ff6b0.wav": {
   "speaker": "Narrador",
   "text": "Es de noche. El bosque respira a tu alrededor: insectos, hojas, un viento que no ves.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "359e1e14aec43d28",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.34
  },
  "1c66c158093a.wav": {
   "speaker": "Narrador",
   "text": "Entre los árboles, algo se mueve sin hacer ruido. Luego, silencio.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "513fa01235e84e57",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.82
  },
  "cdd70917836b.wav": {
   "speaker": "Tú",
   "text": "¿Dónde estoy...? Tengo que pensar. Tengo que moverme antes de que amanezca.",
   "nahuat": false,
-  "voice": "es_ES-davefx-medium",
-  "hash": "9cb694fec4125c47",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.23
  },
  "edaada21a402.wav": {
   "speaker": "Narrador",
   "text": "Respiras despacio. Cuando dejas de moverte, el bosque empieza a hablarte.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "e076b64cc32ebb01",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.19
  },
  "f1142c6de455.wav": {
   "speaker": "Narrador",
   "text": "Tu voz rompe la noche. Todo calla de golpe... y luego un rugido bajo responde a lo lejos.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "c39dc65f91270e97",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.71
  },
  "4830b5521f67.wav": {
   "speaker": "Narrador",
   "text": "Avanzas a tientas. Las raíces te hacen tropezar y cada rama rota suena como un disparo.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "c410ffed3047a183",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.68
  },
  "8cec480cb06d.wav": {
   "speaker": "Narrador",
   "text": "A tu derecha corre agua. A tu izquierda, muy lejos, un tambor marca un ritmo lento.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "dcbbb22a31ca6def",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.22
  },
  "62d9bd3bdb56.wav": {
   "speaker": "Narrador",
   "text": "Y detrás de ti, dos puntos ámbar se encienden entre los helechos. Te están mirando.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "a7c39748cf0a8bf0",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.91
  },
  "39a8ffdf45da.wav": {
   "speaker": "Tú",
   "text": "Un tambor significa gente. El agua significa un camino. Pero no puedo quedarme aquí.",
   "nahuat": false,
-  "voice": "es_ES-davefx-medium",
-  "hash": "6ad07134bda06496",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.03
  },
  "e0427d90053f.wav": {
   "speaker": "Narrador",
   "text": "Caminas hacia el ritmo. Los ojos ámbar se mueven contigo, a la misma distancia.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "f3d47864b9114582",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.62
  },
  "6d510c36fc7c.wav": {
   "speaker": "Narrador",
   "text": "El río te guía, pero el suelo blando deja huellas... y algo las sigue.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "e8d45c332e9fb164",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.82
  },
  "7db84d20d041.wav": {
   "speaker": "Narrador",
   "text": "El eco de tu grito muere. Nadie responde, salvo el bosque.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "645e41e9aeb5edff",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.5
  },
  "9a7dba07073f.wav": {
   "speaker": "Narrador",
   "text": "Ahora sabes que no estás solo. Y lo que te acompaña ya sabe dónde estás.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "71629753a5963b02",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.82
  },
  "9c14c04dab48.wav": {
   "speaker": "Narrador",
   "text": "Corres. Las ramas te azotan la cara. Oyes las zarpas golpear la tierra detrás de ti.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5c87242b93701088",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.43
  },
  "762dc7b48bb4.wav": {
   "speaker": "Narrador",
   "text": "Te haces pequeño entre las raíces. El jaguar pasa cerca, olfatea... y sigue de largo. Por ahora.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "c87c1aab91a193e9",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.39
  },
  "714d6fb541f5.wav": {
   "speaker": "Narrador",
   "text": "Tras unos pasos el suelo se abre en un claro. La luna ilumina un sendero de tierra pisada.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "24dfec24983625c0",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.27
  },
  "dcad86e2370c.wav": {
   "speaker": "Narrador",
   "text": "Al otro lado del claro, dos ojos ámbar flotan a la altura de tu cintura.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "57df7107b0c81ed6",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.58
  },
  "7631f8c0a8ef.wav": {
   "speaker": "Tú",
   "text": "Un sendero. Alguien lo usa. Pero ese animal está justo entre el camino y yo.",
   "nahuat": false,
-  "voice": "es_ES-davefx-medium",
-  "hash": "9d8e7e3186ae0c9a",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.82
  },
  "fbf786c7f57a.wav": {
   "speaker": "Narrador",
   "text": "Avanzas pegado a los troncos. Los ojos giran siguiéndote, pero no se acercan.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "e25b98fc142f5db1",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.23
  },
  "3d6a46681ab7.wav": {
   "speaker": "Narrador",
   "text": "Cruzas bajo la luna, a la vista. El jaguar baja la cabeza y empieza a moverse.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "dd4ac5d2a06f516a",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.39
  },
  "22966954c905.wav": {
   "speaker": "Narrador",
   "text": "Un rugido corto, muy cerca. El jaguar ya no se esconde.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "40d237bfbb8c2afb",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 4.79
  },
  "bc6140c75cd1.wav": {
   "speaker": "Narrador",

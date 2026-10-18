@@ -115,11 +115,17 @@ def _mark_recorded(item: Item, seconds: float) -> None:
 
 
 # ---------- procesamiento de audio ----------
-def trim_silence(samples: array, threshold: int = SILENCE_THRESHOLD, pad_ms: int = 120) -> array:
+def trim_silence(samples: array, threshold: int | None = None, pad_ms: int = 120) -> array:
+    """Recorta el silencio inicial y final. El umbral se adapta al pico de la toma, de modo que
+    una grabación suave no se descarta entera; si no hay nada por encima del umbral, se devuelve
+    la toma tal cual."""
     n = len(samples)
+    peak = max((abs(v) for v in samples), default=0)
+    if threshold is None:
+        threshold = max(120, int(peak * 0.06))
     start = next((i for i in range(n) if abs(samples[i]) > threshold), None)
     if start is None:
-        return array("h")
+        return array("h") if peak < 120 else samples
     end = next(i for i in range(n - 1, -1, -1) if abs(samples[i]) > threshold)
     pad = int(RATE * pad_ms / 1000)
     return samples[max(0, start - pad): min(n, end + pad)]
@@ -224,20 +230,31 @@ class Session:
         if key == pygame.K_SPACE:
             if self.recorder.recording:
                 raw = self.recorder.stop()
+                peak = max((abs(v) for v in raw), default=0)
                 self.take = normalize(trim_silence(raw))
                 seconds = len(self.take) / RATE
-                self.message = f"Toma de {seconds:.1f} s. P para escuchar, ENTER para aceptar, R para repetir." if seconds > 0.2 else "No se detectó voz. Pulsa ESPACIO y habla más cerca del micrófono."
+                if seconds > 0.2:
+                    self.message = f"Toma de {seconds:.1f} s (pico {peak * 100 // 32767}%). P para escuchar, ENTER para aceptar, R para repetir."
+                else:
+                    self.take = None
+                    self.message = f"La toma duró {len(raw) / RATE:.1f} s y el micrófono apenas captó señal (pico {peak * 100 // 32767}%). Acércate y vuelve a pulsar ESPACIO."
             else:
                 self.take = None
-                self.recorder.start()
-                self.message = "Grabando... pulsa ESPACIO al terminar la frase."
+                try:
+                    self.recorder.start()
+                    self.message = "Grabando... pulsa ESPACIO al terminar la frase."
+                except Exception as exc:  # noqa: BLE001 - el micrófono puede estar ocupado o desconectado
+                    self.message = f"No se pudo abrir el micrófono: {exc}. Comprueba que ninguna otra aplicación lo use y vuelve a intentarlo."
         elif key == pygame.K_p and self.take is not None and len(self.take):
             # Se reproduce desde un WAV temporal: así el mezclador respeta la frecuencia y el mono
             # de la toma aunque él mismo trabaje en estéreo (un búfer crudo se interpretaría mal).
             preview = VOICE_DIR / "_preview.wav"
             save_wav(preview, self.take)
             pygame.mixer.Sound(str(preview)).play()
-        elif key == pygame.K_RETURN and self.take is not None and len(self.take) > RATE * 0.2:
+        elif key == pygame.K_RETURN:
+            if self.take is None or len(self.take) <= RATE * 0.2:
+                self.message = "No hay una toma válida que aceptar: pulsa ESPACIO para grabar (y otra vez para detener) antes de ENTER."
+                return False
             save_wav(VOICE_DIR / item.filename, self.take)
             _mark_recorded(item, len(self.take) / RATE)
             self.done += 1
