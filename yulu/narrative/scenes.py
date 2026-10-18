@@ -209,7 +209,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s3_tekwani", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate",
+        id="s3_tekwani", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=False,
         timer_seconds=12.0, timeout_choice="paralizarse",
         lines=(
             DialogueLine(NARRATOR, "Un rugido corto sale del bosque, muy cerca. El guardia levanta la antorcha y escruta la oscuridad."),

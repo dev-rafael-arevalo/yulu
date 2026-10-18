@@ -11,7 +11,8 @@ arqueológica ni etnográfica certificada.
 |---|---|---|
 | `characters/portrait_anciana_integrado.png` | Retrato de la anciana cuando habla (viñeta con bordes desvanecidos, imagen íntegra) | Túnica de algodón claro con cenefas tejidas, manta o rebozo, collares de cuentas y orejeras de disco: elementos plausibles en Mesoamérica con fibras naturales, sin símbolos inventados presentados como históricos. |
 | `characters/portrait_guardia_integrado.png` | Retrato del guardia cuando habla | Banda tejida en la cabeza, manta anudada al hombro, faja, lanza de madera con punta lítica y escudo circular de madera y fibra. **Sustituye** al recorte anterior, que llevaba un tocado con aspecto de casco europeo. |
-| `bg_07_jaguar_encounter.png` | Fondo de la persecución y del momento de parálisis | Jaguar íntegro en su entorno, sin recorte ni transparencia. |
+| `bg_07_jaguar_encounter.png` | Fondo de la persecución y del momento de parálisis | Jaguar íntegro en su entorno, sin recorte ni transparencia. En el resto de escenas donde acecha fuera de plano solo se dibujan dos ojos ámbar por código; los recortes del jaguar se eliminaron. |
+| `bg_09_forest_moonlight.png`, `bg_10_forest_path.png` | Bosque del despertar y sendero de la huida | Imágenes íntegras a resolución completa del paquete de imágenes sólidas. |
 | `bg_08_village_fire.png` | Fondo de la deliberación tras la alarma y del amanecer previo a la decisión | Pobladores de la misma comunidad con vestuario coherente (algodón claro, cenefas rojas, collares), casas de palma y empalizada. |
 | `characters/npc_nino.png`, `group_familia.png`, `group_fogata.png` | Niño al hablar; grupos en el refugio | Vestuario coherente con los retratos integrados. |
 | `reference/concepto_cultural_*.png` | Solo referencia; no se muestran en el juego | Hojas de concepto del paquete de referencias. |

@@ -111,7 +111,6 @@ def main(grid_path: str) -> int:
     grid = pygame.image.load(grid_path).convert_alpha()
     manifest = load_manifest()
     backgrounds = manifest["backgrounds"]
-    jaguar = manifest["jaguar"]
     overlays = manifest["overlays"]
 
     rows = _segments(grid.get_height(), _bright_lines(grid, "y"))
@@ -122,11 +121,13 @@ def main(grid_path: str) -> int:
     plan = [
         [(backgrounds[k]["file"], "opaque") for k in ("forest_dense", "forest_path", "village_edge")],
         [(backgrounds[k]["file"], "opaque") for k in ("village_gate", "shelter", "dawn")],
-        [(jaguar["eyes"], "jaguar"), (jaguar["stalk"], "jaguar"), (jaguar["charge"], "jaguar")],
+        [],  # fila del jaguar: ya no se recorta (el juego usa la imagen íntegra bg_07 y ojos dibujados por código)
         [(overlays["fog"][0], "fog"), (overlays["fog"][1], "fog"), (overlays["smoke"], "fog")],
     ]
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     for (y0, y1), row_plan in zip(rows, plan):
+        if not row_plan:
+            continue
         cols = _row_segments(grid, y0, y1)
         if len(cols) != len(row_plan):
             print(f"Fila {y0}-{y1}: se esperaban {len(row_plan)} celdas y se detectaron {len(cols)}: {cols}")

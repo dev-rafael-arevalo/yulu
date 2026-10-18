@@ -1,14 +1,14 @@
 {
-  "_comment": "Manifiesto de recursos gráficos. Las rutas son relativas a yulu/assets/images. Si un archivo falta, el juego usa un escenario procedural provisional y lo indica en pantalla. 'torches' y 'fire' son posiciones normalizadas (0-1) sobre la imagen para el resplandor animado.",
+  "_comment": "Manifiesto de recursos gráficos. Las rutas son relativas a yulu/assets/images. Si un archivo falta, el juego usa un escenario procedural provisional y lo indica en pantalla. El jaguar no usa recortes: se muestra íntegro en bg_07_jaguar_encounter.png y, cuando acecha fuera de plano, solo se dibujan sus ojos por código. 'torches' y 'fire' son posiciones normalizadas (0-1) para el resplandor animado.",
   "backgrounds": {
     "forest_dense": {
-      "file": "bg_01_forest_awakening.png",
-      "fog": 0.8,
+      "file": "bg_09_forest_moonlight.png",
+      "fog": 0.6,
       "warmth": 0.0
     },
     "forest_path": {
-      "file": "bg_02_forest_chase.png",
-      "fog": 0.9,
+      "file": "bg_10_forest_path.png",
+      "fog": 0.7,
       "warmth": 0.0
     },
     "village_edge": {
@@ -73,11 +73,6 @@
         0.86
       ]
     }
-  },
-  "jaguar": {
-    "eyes": "jaguar_eyes_glow.png",
-    "stalk": "jaguar_stalking.png",
-    "charge": "jaguar_charging.png"
   },
   "overlays": {
     "fog": [

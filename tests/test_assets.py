@@ -34,15 +34,19 @@ def test_missing_images_return_none_without_raising(tmp_path):
     assert len(store.missing_files()) == len(store.expected_files())
 
 
+def _forest_file() -> str:
+    return load_manifest()["backgrounds"]["forest_dense"]["file"]
+
+
 def test_corrupt_image_is_tolerated(tmp_path):
-    (tmp_path / "bg_01_forest_awakening.png").write_bytes(b"no soy un png")
+    (tmp_path / _forest_file()).write_bytes(b"no soy un png")
     store = ImageStore(images_dir=tmp_path)
     assert store.background("forest_dense") is None
 
 
 def test_present_image_is_cover_fitted(tmp_path):
     image = pygame.Surface((400, 300))  # 4:3, debe recortarse a 16:9
-    pygame.image.save(image, str(tmp_path / "bg_01_forest_awakening.png"))
+    pygame.image.save(image, str(tmp_path / _forest_file()))
     store = ImageStore(images_dir=tmp_path)
     surface = store.background("forest_dense", overscan=1.0)
     assert surface is not None
