@@ -92,6 +92,10 @@ class ImageStore:
         filename = self.manifest.get("jaguar", {}).get(pose)
         return self._load(filename, alpha=True) if filename else None
 
+    def character(self, filename: str) -> pygame.Surface | None:
+        sub = self.manifest.get("characters", {}).get("dir", "characters")
+        return self._load(f"{sub}/{filename}", alpha=True)
+
     def fog_layers(self) -> list[pygame.Surface]:
         files = self.manifest.get("overlays", {}).get("fog", [])
         layers = [self._load(f, alpha=True) for f in files]
@@ -109,6 +113,12 @@ class ImageStore:
         files += overlays.get("fog", [])
         if overlays.get("smoke"):
             files.append(overlays["smoke"])
+        characters = self.manifest.get("characters", {})
+        sub = characters.get("dir", "characters")
+        names = set(characters.get("portraits", {}).values())
+        for specs in characters.get("scenes", {}).values():
+            names.update(spec["file"] for spec in specs)
+        files += [f"{sub}/{name}" for name in sorted(names)]
         return files
 
     def missing_files(self) -> list[str]:

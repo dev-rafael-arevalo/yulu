@@ -71,5 +71,87 @@
       "fx_fog_layer_02.png"
     ],
     "smoke": "fx_torch_smoke.png"
+  },
+  "characters": {
+    "dir": "characters",
+    "portraits": {
+      "Anciana": "npc_anciana.png",
+      "Guardia": "npc_guardia.png",
+      "Niño": "npc_nino.png"
+    },
+    "scenes": {
+      "s3_tekwani": [
+        {
+          "file": "group_guardia_anciano.png",
+          "x": 0.52,
+          "bottom": 0.72,
+          "height": 0.4,
+          "alpha": 0.95
+        }
+      ],
+      "s4_refugio": [
+        {
+          "file": "group_familia.png",
+          "x": 0.02,
+          "bottom": 0.7,
+          "height": 0.34,
+          "alpha": 0.9
+        }
+      ],
+      "s4_refugio_otra_vez": [
+        {
+          "file": "group_familia.png",
+          "x": 0.02,
+          "bottom": 0.7,
+          "height": 0.34,
+          "alpha": 0.9
+        }
+      ],
+      "s4_sed": [
+        {
+          "file": "group_fogata.png",
+          "x": 0.04,
+          "bottom": 0.72,
+          "height": 0.36,
+          "alpha": 0.92
+        }
+      ],
+      "s4_alarma": [
+        {
+          "file": "group_guardia_anciano.png",
+          "x": 0.05,
+          "bottom": 0.72,
+          "height": 0.4,
+          "alpha": 0.95
+        }
+      ],
+      "s4_fuego": [
+        {
+          "file": "group_fogata.png",
+          "x": 0.04,
+          "bottom": 0.72,
+          "height": 0.36,
+          "alpha": 0.92
+        }
+      ],
+      "s5_decision": [
+        {
+          "file": "group_fogata.png",
+          "x": 0.04,
+          "bottom": 0.72,
+          "height": 0.36,
+          "alpha": 0.92
+        }
+      ],
+      "s5_final_aldea": [
+        {
+          "file": "group_familia.png",
+          "x": 0.22,
+          "bottom": 0.7,
+          "height": 0.3,
+          "alpha": 0.9
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,577 @@
+{
+  "_comment": "Manifiesto de audio de YULU. Ganancias 0-1 relativas al volumen de su categoría. Ver CREDITS.md.",
+  "sounds": [
+    {
+      "id": "jungla_noche_densa",
+      "file": "ambient/jungla_noche_densa.mp3",
+      "category": "ambient",
+      "gain": 0.55,
+      "loop": true,
+      "scenes": [
+        "s1_*",
+        "s4_* (atenuado)"
+      ],
+      "source": {
+        "title": "noche_Lacandona.wav",
+        "author": "nicotep",
+        "url": "https://freesound.org/people/nicotep/sounds/619310/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Selva Lacandona (Chiapas, México), 2015. Insectos nocturnos. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "jungla_noche_abierta",
+      "file": "ambient/jungla_noche_abierta.mp3",
+      "category": "ambient",
+      "gain": 0.45,
+      "loop": true,
+      "scenes": [
+        "s2_*",
+        "s3_*"
+      ],
+      "source": {
+        "title": "Costa Rica cloud forest at night.wav",
+        "author": "sethlind",
+        "url": "https://freesound.org/people/sethlind/sounds/332722/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound; página no abierta individualmente. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "lluvia_ligera",
+      "file": "ambient/lluvia_ligera.mp3",
+      "category": "ambient",
+      "gain": 0.3,
+      "loop": true,
+      "scenes": [
+        "s2_persecucion",
+        "s2_rio"
+      ],
+      "source": {
+        "title": "Tropical Rain - light in a forest with drop hitting the leaves",
+        "author": "nyoz",
+        "url": "https://freesound.org/people/nyoz/sounds/615747/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "viento_suave",
+      "file": "ambient/viento_suave.mp3",
+      "category": "ambient",
+      "gain": 0.3,
+      "loop": true,
+      "scenes": [
+        "s1_*",
+        "s5_*"
+      ],
+      "source": {
+        "title": "G56-26-Steady Blowing Wind.wav",
+        "author": "craigsmith",
+        "url": "https://freesound.org/people/craigsmith/sounds/438881/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "viento_aullante",
+      "file": "ambient/viento_aullante.mp3",
+      "category": "ambient",
+      "gain": 0.35,
+      "loop": true,
+      "scenes": [
+        "s2_*"
+      ],
+      "source": {
+        "title": "Howling Wind",
+        "author": "Fission9",
+        "url": "https://freesound.org/people/Fission9/sounds/521736/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "aldea_distante",
+      "file": "ambient/aldea_distante.mp3",
+      "category": "ambient",
+      "gain": 0.35,
+      "loop": true,
+      "scenes": [
+        "s2_claro",
+        "s3_*",
+        "s4_*"
+      ],
+      "source": {
+        "title": "geroezemoes.wav",
+        "author": "gecop",
+        "url": "https://freesound.org/people/gecop/sounds/640254/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Murmullo lejano e ininteligible de un grupo hablando flamenco, grabado en interior. Se usa filtrado por volumen como bullicio tras la empalizada. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "amanecer_aves",
+      "file": "ambient/amanecer_aves.mp3",
+      "category": "ambient",
+      "gain": 0.5,
+      "loop": true,
+      "scenes": [
+        "s5_final_*"
+      ],
+      "source": {
+        "title": "Rainforest Morning Chorus.wav",
+        "author": "digifishmusic",
+        "url": "https://freesound.org/people/digifishmusic/sounds/57608/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Coro matinal de selva australiana (Crater Lakes), no centroamericana. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "jaguar_sierra",
+      "file": "creatures/jaguar_sierra.flac",
+      "category": "creatures",
+      "gain": 0.9,
+      "loop": false,
+      "scenes": [
+        "señales aleatorias con amenaza >= 20"
+      ],
+      "source": {
+        "title": "Jaguar saw",
+        "author": "About Zoos",
+        "url": "https://commons.wikimedia.org/w/index.php?curid=112996041",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Vocalización real de jaguar (Panthera onca), Attica Zoological Park. Fuente original: vídeo de About Zoos. Descargado de Wikimedia Commons sin ediciones."
+    },
+    {
+      "id": "felino_grunido",
+      "file": "creatures/felino_grunido.mp3",
+      "category": "creatures",
+      "gain": 0.8,
+      "loop": false,
+      "scenes": [
+        "señales aleatorias",
+        "amenaza alta"
+      ],
+      "source": {
+        "title": "Tiger Growl",
+        "author": "peenois",
+        "url": "https://freesound.org/people/peenois/sounds/496131/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Gruñido de tigre usado como gran felino compatible: no se encontró gruñido largo de jaguar con licencia verificable. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "felino_rugido_ataque",
+      "file": "creatures/felino_rugido_ataque.mp3",
+      "category": "creatures",
+      "gain": 1.0,
+      "loop": false,
+      "scenes": [
+        "subidas bruscas de amenaza",
+        "s4_alarma",
+        "final en soledad"
+      ],
+      "source": {
+        "title": "Tiger Roar",
+        "author": "lauramellis",
+        "url": "https://freesound.org/people/lauramellis/sounds/263115/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Rugido de tigre como sustituto del ataque; limitación documentada. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "fogata_crepitante",
+      "file": "effects/fogata_crepitante.mp3",
+      "category": "effects",
+      "gain": 0.6,
+      "loop": true,
+      "scenes": [
+        "s4_*",
+        "s5_decision"
+      ],
+      "source": {
+        "title": "Crackling Fire",
+        "author": "Sauron974",
+        "url": "https://freesound.org/people/Sauron974/sounds/204348/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "fogata_cercana_loop",
+      "file": "effects/fogata_cercana_loop.mp3",
+      "category": "effects",
+      "gain": 0.5,
+      "loop": true,
+      "scenes": [
+        "s4_fuego"
+      ],
+      "source": {
+        "title": "Ambiance_Campfire_Loop_Stereo.wav",
+        "author": "Nox_Sound",
+        "url": "https://freesound.org/people/Nox_Sound/sounds/558967/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Grabación cercana de hoguera, pensada para bucle. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "antorcha",
+      "file": "effects/antorcha.mp3",
+      "category": "effects",
+      "gain": 0.45,
+      "loop": true,
+      "scenes": [
+        "s2_claro",
+        "s3_*"
+      ],
+      "source": {
+        "title": "maple fire",
+        "author": "Nivatius",
+        "url": "https://freesound.org/people/Nivatius/sounds/519520/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Fuego de leña usado como antorchas en segundo plano. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "tambor_lento",
+      "file": "effects/tambor_lento.mp3",
+      "category": "effects",
+      "gain": 0.3,
+      "loop": true,
+      "scenes": [
+        "s2_claro",
+        "s3_*"
+      ],
+      "source": {
+        "title": "Shaman Hand Frame Drumming 01",
+        "author": "Jagadamba",
+        "url": "https://freesound.org/people/Jagadamba/sounds/257182/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Tambor de marco grabado en estudio. No es una reconstrucción de música pipil. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "tambor_persecucion",
+      "file": "effects/tambor_persecucion.mp3",
+      "category": "effects",
+      "gain": 0.45,
+      "loop": true,
+      "scenes": [
+        "s2_persecucion (capa de tensión)",
+        "s4_alarma"
+      ],
+      "source": {
+        "title": "Shaman Hand Frame Drumming 04",
+        "author": "Jagadamba",
+        "url": "https://freesound.org/people/Jagadamba/sounds/257183/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Tambor de marco grabado en estudio. No es una reconstrucción de música pipil. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "pasos_hojarasca",
+      "file": "effects/pasos_hojarasca.mp3",
+      "category": "effects",
+      "gain": 0.6,
+      "loop": false,
+      "scenes": [
+        "transiciones de escena"
+      ],
+      "source": {
+        "title": "Footsteps / Walking on foliage in a forest",
+        "author": "Dominik_W",
+        "url": "https://freesound.org/people/Dominik_W/sounds/398685/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "vegetacion",
+      "file": "effects/vegetacion.mp3",
+      "category": "effects",
+      "gain": 0.5,
+      "loop": false,
+      "scenes": [
+        "movimiento del jaguar entre la vegetación"
+      ],
+      "source": {
+        "title": "Rustle walking by the leaves.wav",
+        "author": "Magdaadga",
+        "url": "https://freesound.org/people/Magdaadga/sounds/420404/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": false,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Licencia según metadatos de Openverse/Freesound. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "exploracion",
+      "file": "music/exploracion.mp3",
+      "category": "music",
+      "gain": 0.5,
+      "loop": true,
+      "scenes": [
+        "s1_*",
+        "s2_claro",
+        "s3_*",
+        "s4_refugio",
+        "s4_sed",
+        "s4_fuego"
+      ],
+      "source": {
+        "title": "Dark ambient drone sound",
+        "author": "martinbeltov",
+        "url": "https://freesound.org/people/martinbeltov/sounds/244196/",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Dron oscuro de síntesis (pad). Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "persecucion",
+      "file": "music/persecucion.mp3",
+      "category": "music",
+      "gain": 0.55,
+      "loop": true,
+      "scenes": [
+        "s2_persecucion",
+        "s2_corrida",
+        "s2_paralizado",
+        "s3_tekwani",
+        "s4_alarma"
+      ],
+      "source": {
+        "title": "Horror-Suspense Drone Texture",
+        "author": "Hybrid_V",
+        "url": "https://freesound.org/people/Hybrid_V/sounds/320830/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "La página muestra 'Attribution 4.0' y, en otro punto, 'Attribution 3.0'; se atribuye bajo CC BY 4.0, que cumple ambas. Capas de sintetizador y banjo preparado. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "desenlace_aldea",
+      "file": "music/desenlace_aldea.mp3",
+      "category": "music",
+      "gain": 0.5,
+      "loop": true,
+      "scenes": [
+        "s5_final_aldea"
+      ],
+      "source": {
+        "title": "Mystical Guitar Atmosphere",
+        "author": "MichiJung",
+        "url": "https://freesound.org/people/MichiJung/sounds/719441/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Atmósfera de guitarra procesada, calma. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "desenlace_solo",
+      "file": "music/desenlace_solo.mp3",
+      "category": "music",
+      "gain": 0.5,
+      "loop": true,
+      "scenes": [
+        "s5_final_solo"
+      ],
+      "source": {
+        "title": "Deep Cinematic Rumble Stereo",
+        "author": "PatrickLieberkind",
+        "url": "https://freesound.org/people/PatrickLieberkind/sounds/207555/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Rumor grave cinematográfico. Descargado mediante la API de Openverse (vista previa MP3 HQ de Freesound). Sin ediciones."
+    },
+    {
+      "id": "ui_move",
+      "file": "ui/ui_move.wav",
+      "category": "ui",
+      "gain": 0.35,
+      "loop": false,
+      "scenes": [
+        "menús"
+      ],
+      "source": {
+        "title": "ui_move (síntesis propia)",
+        "author": "Proyecto YULU",
+        "url": "tools/generate_sounds.py",
+        "license": "Propio (sin restricciones)",
+        "license_url": "",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Breve señal de interfaz generada por código; no es sonido ambiental."
+    },
+    {
+      "id": "ui_confirm",
+      "file": "ui/ui_confirm.wav",
+      "category": "ui",
+      "gain": 0.4,
+      "loop": false,
+      "scenes": [
+        "confirmar decisión"
+      ],
+      "source": {
+        "title": "ui_confirm (síntesis propia)",
+        "author": "Proyecto YULU",
+        "url": "tools/generate_sounds.py",
+        "license": "Propio (sin restricciones)",
+        "license_url": "",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Señal de interfaz generada por código."
+    },
+    {
+      "id": "learn_chime",
+      "file": "ui/learn_chime.wav",
+      "category": "ui",
+      "gain": 0.5,
+      "loop": false,
+      "scenes": [
+        "nueva expresión aprendida"
+      ],
+      "source": {
+        "title": "learn_chime (síntesis propia)",
+        "author": "Proyecto YULU",
+        "url": "tools/generate_sounds.py",
+        "license": "Propio (sin restricciones)",
+        "license_url": "",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Señal de interfaz generada por código."
+    },
+    {
+      "id": "tick",
+      "file": "ui/tick.wav",
+      "category": "ui",
+      "gain": 0.5,
+      "loop": false,
+      "scenes": [
+        "últimos 3 s del temporizador"
+      ],
+      "source": {
+        "title": "tick (síntesis propia)",
+        "author": "Proyecto YULU",
+        "url": "tools/generate_sounds.py",
+        "license": "Propio (sin restricciones)",
+        "license_url": "",
+        "attribution_required": false,
+        "license_verified_on_page": true,
+        "downloaded": "2026-10-18",
+        "modifications": "ninguna"
+      },
+      "notes": "Señal de interfaz generada por código."
+    }
+  ]
+}

@@ -115,7 +115,7 @@ _SCENES: list[Scene] = [
         choices=(Choice("antorchas", "Acercarte a las antorchas.", "s2_claro", Effect(threat=-5), "Caminas hacia la luz con las piernas temblando."),),
     ),
     Scene(
-        id="s2_ceiba", chapter_step=2, title=T_PERSECUCION, background="forest_path",
+        id="s2_ceiba", chapter_step=2, title=T_PERSECUCION, background="forest_path", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "Desde la rama ves lo que el suelo escondía: un resplandor naranja al fondo del valle. Antorchas. Una aldea."),
             DialogueLine(NARRATOR, "El jaguar se aburre de esperar y se aleja entre la niebla. Sabes que volverá."),
@@ -123,7 +123,7 @@ _SCENES: list[Scene] = [
         choices=(Choice("bajar", "Bajar y caminar hacia el resplandor.", "s2_claro", Effect(flags=("rumbo_aldea",)), "Bajas con cuidado y sigues la luz a través de la niebla."),),
     ),
     Scene(
-        id="s2_rio", chapter_step=2, title=T_PERSECUCION, background="forest_path",
+        id="s2_rio", chapter_step=2, title=T_PERSECUCION, background="forest_path", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "La corriente te arrastra río abajo. Cuando por fin tocas fondo, el bosque se ha abierto."),
             DialogueLine(NARRATOR, "En la otra orilla, a lo lejos, antorchas. Y en tu orilla, muy atrás, un rugido frustrado."),
@@ -139,7 +139,7 @@ _SCENES: list[Scene] = [
         choices=(Choice("luz", "Ir hacia la luz.", "s2_claro", Effect(threat=5), "Te sujetas el brazo y caminas hacia el fuego."),),
     ),
     Scene(
-        id="s2_claro", chapter_step=2, title=T_PERSECUCION, background="village_edge", ambient="village_distant",
+        id="s2_claro", chapter_step=2, title=T_PERSECUCION, background="village_edge", ambient="village_distant", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "Una empalizada de troncos. Antorchas en lo alto. Detrás, techos de palma y el tambor que oíste al despertar."),
             DialogueLine(NARRATOR, "Una figura con lanza se asoma sobre la empalizada y te grita algo en una lengua que no entiendes."),
@@ -149,7 +149,7 @@ _SCENES: list[Scene] = [
     ),
     # ---------------- ESCENA 3: LA ALDEA ----------------
     Scene(
-        id="s3_puerta", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate",
+        id="s3_puerta", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "La puerta de troncos se abre apenas un palmo. Una lanza asoma por la rendija."),
             DialogueLine(GUARD, "Tay tikneki?!", nahuat_id="tay_tikneki"),
@@ -165,7 +165,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s3_anciana", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate",
+        id="s3_anciana", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=False,
         lines=(
             DialogueLine(NARRATOR, "La anciana lleva una antorcha. Te mira las manos vacías, el barro, la sangre del brazo."),
             DialogueLine(ELDER, "Yek tayua.", nahuat_id="yek_tayua"),
@@ -181,7 +181,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s3_nombre", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate",
+        id="s3_nombre", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=False,
         lines=(
             DialogueLine(ELDER, "Ken mutukay?", nahuat_id="ken_mutukay"),
             DialogueLine(NARRATOR, "Se toca el pecho y dice su propio nombre. Luego te señala a ti y levanta las cejas."),
@@ -196,7 +196,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s3_nombre_otra_vez", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate",
+        id="s3_nombre_otra_vez", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=False,
         lines=(
             DialogueLine(ELDER, "Ken mutukay?", nahuat_id="ken_mutukay"),
             DialogueLine(NARRATOR, "Ahora sabes qué te pregunta. Para responder: «naja» es yo, «nutukay» es mi nombre."),
@@ -275,7 +275,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s4_alarma", chapter_step=4, title=T_CONFIANZA, background="shelter", ambient="shelter_alarm", jaguar_visible=True,
+        id="s4_alarma", chapter_step=4, title=T_CONFIANZA, background="shelter", ambient="shelter_alarm", jaguar_visible=False,
         timer_seconds=10.0, timeout_choice="paralizarse",
         lines=(
             DialogueLine(NARRATOR, "Un golpe seco contra la empalizada. Luego otro. Los perros enloquecen."),
@@ -328,7 +328,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s5_final_solo", chapter_step=5, title=T_AMANECER, background="dawn", ambient="dawn", jaguar_visible=True,
+        id="s5_final_solo", chapter_step=5, title=T_AMANECER, background="dawn", ambient="dawn", jaguar_visible=False,
         ending=BAD_ENDING,
         lines=(
             DialogueLine(NARRATOR, "Antes de que salga el sol, el guardia abre la puerta y señala el sendero. No hay rencor en su gesto, pero tampoco compañía."),

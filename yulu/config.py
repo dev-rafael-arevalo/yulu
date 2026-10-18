@@ -31,7 +31,7 @@ TRUST_START = 0
 THREAT_HIGH = 70
 
 # Volúmenes por defecto (0.0 a 1.0), independientes por categoría.
-DEFAULT_VOLUMES = {"music": 0.5, "ambient": 0.7, "sfx": 0.8, "voice": 1.0}
+DEFAULT_VOLUMES = {"music": 0.35, "ambient": 0.5, "sfx": 0.7, "voice": 1.0}
 
 # Velocidad del texto en caracteres por segundo.
 TYPEWRITER_CPS = 45

@@ -1,4 +1,7 @@
-"""Genera efectos, ambientes y música PROVISIONALES por síntesis (sin dependencias externas).
+"""Genera únicamente las señales de interfaz (ui_*) por síntesis, sin dependencias externas.
+
+Los ambientes, criaturas, efectos y música del juego son grabaciones con licencia
+(ver yulu/assets/audio/CREDITS.md); este script ya no los produce.
 
 Uso:  python tools/generate_sounds.py [--force]
 
@@ -271,20 +274,7 @@ def dawn_theme() -> list[float]:
 
 
 SOUNDS: dict[str, dict[str, callable]] = {
-    "ambient": {"insects": insects, "wind": wind, "heartbeat": heartbeat, "drum": drum, "fire": fire, "birds": birds, "tension": tension},
-    "sfx": {
-        "footsteps": footsteps,
-        "branch_snap": branch_snap,
-        "jaguar_growl_1": lambda: growl(72.0, 1.3),
-        "jaguar_growl_2": lambda: growl(95.0, 0.9),
-        "jaguar_roar": roar,
-        "ui_move": ui_move,
-        "ui_confirm": ui_confirm,
-        "learn_chime": learn_chime,
-        "tick": tick,
-        "dawn_birds": dawn_birds,
-    },
-    "music": {"night_drone": night_drone, "dawn_theme": dawn_theme},
+    "ui": {"ui_move": ui_move, "ui_confirm": ui_confirm, "learn_chime": learn_chime, "tick": tick},
 }
 
 

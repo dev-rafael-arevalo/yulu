@@ -22,6 +22,7 @@ from yulu.state.engine import ChoiceResult, NarrativeEngine
 from yulu.state.game_state import GameState
 from yulu.ui.assets import ImageStore
 from yulu.ui.background import Background
+from yulu.ui.characters import CharacterLayer
 from yulu.ui.choice_menu import ChoiceMenu
 from yulu.ui.dialogue_box import DialogueBox
 from yulu.ui.glossary import Glossary
@@ -72,6 +73,7 @@ class Game:
         self.glossary = Glossary(self.lexicon)
         self.fade = Fade()
         self.jaguar = JaguarPresence(self.store)
+        self.characters = CharacterLayer(self.store)
         self.vignette = make_vignette()
         self._backgrounds: dict[str, Background] = {}
         self.background = self._background_for(self.scene)
@@ -129,6 +131,7 @@ class Game:
     def _say(self, line: DialogueLine) -> None:
         """Muestra la línea con subtítulo y reproduce su narración pregenerada si existe."""
         self.dialogue.set_line(line)
+        self.characters.set_speaker(line.speaker)
         self.audio.play_voice(voice_filename(line))
 
     def _replay_voice(self) -> None:
@@ -148,6 +151,7 @@ class Game:
         self.title_timer = 2.6 if (first or scene.title != self._last_title) else 0.0
         self._last_title = scene.title
         self.phase = Phase.DIALOGUE
+        self.characters.set_scene(scene.id)
         self.soundscape.enter_scene(scene, self.state.threat)
         self._say(scene.lines[0])
         log.info("Escena %s (amenaza=%s, confianza=%s, vocabulario=%d)", scene.id, self.state.threat, self.state.trust, len(self.state.vocabulary))
@@ -271,6 +275,7 @@ class Game:
         self.time_s += dt
         self.background.update(dt)
         self.jaguar.update(dt, self.state.threat, self.scene.jaguar_visible)
+        self.characters.update(dt)
         self.dialogue.update(dt)
         self.title_timer = max(0.0, self.title_timer - dt)
         self.shake_time = max(0.0, self.shake_time - dt)
@@ -286,6 +291,7 @@ class Game:
         self.background.draw(surface, self.time_s)
         self.jaguar.draw(surface, self.time_s)
         surface.blit(self.vignette, (0, 0))
+        self.characters.draw(surface)
         self._draw_threat_tint(surface)
 
         if self.title_timer > 0 and not self.paused:

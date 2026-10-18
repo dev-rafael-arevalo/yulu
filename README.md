@@ -10,8 +10,8 @@ aprender expresiones, interpretar diálogos y tomar decisiones con consecuencias
 
 > Estado del proyecto: **FASE 4 completada**. Capítulo 1 jugable de principio a fin con
 > cinco escenas, 12 expresiones de náhuat con fuente citada, glosario, dos finales,
-> fondos generados por IA, ambiente sonoro por capas, efectos, música, narración en
-> español pregenerada y volúmenes independientes. Pendiente: pruebas finales y
+> fondos y personajes generados por IA, grabaciones ambientales con licencia, música de
+> dron, narración expresiva pregenerada y volúmenes independientes. Pendiente: pruebas finales y
 > documentación académica (FASE 5).
 
 ## Requisitos
@@ -86,24 +86,40 @@ con ajuste 16:9, deriva de cámara, niebla y humo. Los prompts para generarlas e
 ## Audio
 
 El administrador de audio ([`yulu/audio/audio_manager.py`](yulu/audio/audio_manager.py))
-mezcla cuatro categorías con volumen propio: música en bucle, ambiente por capas con
-fundidos, efectos y voz. El paisaje sonoro ([`soundscape.py`](yulu/audio/soundscape.py))
-elige las capas según la escena y añade una capa de tensión y rugidos espaciados al azar
-según la amenaza. Si falta cualquier archivo, la partida continúa y se registra una advertencia.
-Los volúmenes se guardan en `settings.json`.
+lee [`yulu/assets/audio/manifest.json`](yulu/assets/audio/manifest.json) y mezcla cuatro
+categorías con volumen propio: música en bucle, ambiente por capas con fundidos, efectos
+(con ligera variación de volumen y paneo) y voz. La música se atenúa mientras habla un
+personaje. El paisaje sonoro ([`soundscape.py`](yulu/audio/soundscape.py)) elige las capas
+por escena, hace crecer los tambores con la amenaza durante la persecución, amortigua el
+exterior dentro del refugio y lanza vocalizaciones del jaguar a intervalos aleatorios.
+Si falta cualquier archivo, la partida continúa y se registra una advertencia. Los
+volúmenes se guardan en `settings.json`.
 
-- **Efectos, ambientes y música** son **sintéticos provisionales** generados localmente:
-  `python tools/generate_sounds.py`. Pueden sustituirse por grabaciones con licencia
-  compatible conservando el nombre del archivo en `yulu/assets/audio/`.
+- **Grabaciones**: selva nocturna, lluvia, viento, murmullo de aldea, fuego, tambores,
+  pasos, vocalizaciones de felinos y música de dron son grabaciones con licencia CC0 o
+  CC BY obtenidas de Freesound (a través de la API de Openverse) y Wikimedia Commons.
+  Autor, licencia, URL, fecha y limitaciones de cada una están en
+  [`yulu/assets/audio/CREDITS.md`](yulu/assets/audio/CREDITS.md). Solo las cuatro señales
+  de interfaz (`ui_*`) se generan por código.
 - **Narración en español**: se pregenera sin conexión con la voz SAPI5 de Windows
-  (`Microsoft Sabina Desktop`, es-MX):
+  (`Microsoft Sabina Desktop`, es-MX) usando SSML con ritmo, tono y pausas distintos
+  por personaje:
 
   ```powershell
   .venv\Scripts\python tools\generate_narration.py
   ```
 
-  Crea unos 106 WAV (35 MB) en `yulu/assets/audio/voice/`, que no se incluyen en Git.
+  Crea unos 106 WAV (42 MB) en `yulu/assets/audio/voice/`, que no se incluyen en Git.
   Las frases en náhuat se leen con fonética española aproximada: **no es una voz nativa**.
+- **Herramientas**: `tools/check_audio.py` valida archivos y metadatos de licencia;
+  `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla
+  de una escena, y `--id jaguar_sierra` un sonido concreto.
+
+## Personajes
+
+Los retratos de la anciana, el guardia y el niño aparecen solo cuando hablan, y los grupos
+de pobladores solo en las escenas declaradas en la sección `characters` del manifiesto de
+imágenes. Se recortan de la hoja de referencia con `tools/slice_character_sheet.py`.
 
 ## Pruebas
 
