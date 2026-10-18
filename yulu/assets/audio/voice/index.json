@@ -3,636 +3,855 @@
   "speaker": "Narrador",
   "text": "Despiertas con la cara contra la tierra húmeda. No recuerdas cómo llegaste aquí.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "a8a3c2cdda41e2b9",
+  "status": "generada"
  },
  "1f942d1ff6b0.wav": {
   "speaker": "Narrador",
   "text": "Es de noche. El bosque respira a tu alrededor: insectos, hojas, un viento que no ves.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "359e1e14aec43d28",
+  "status": "generada"
  },
  "1c66c158093a.wav": {
   "speaker": "Narrador",
   "text": "Entre los árboles, algo se mueve sin hacer ruido. Luego, silencio.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "513fa01235e84e57",
+  "status": "generada"
  },
  "cdd70917836b.wav": {
   "speaker": "Tú",
   "text": "¿Dónde estoy...? Tengo que pensar. Tengo que moverme antes de que amanezca.",
   "nahuat": false,
-  "voice": "male"
+  "voice": "es_ES-davefx-medium",
+  "hash": "9cb694fec4125c47",
+  "status": "generada"
  },
  "edaada21a402.wav": {
   "speaker": "Narrador",
   "text": "Respiras despacio. Cuando dejas de moverte, el bosque empieza a hablarte.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "e076b64cc32ebb01",
+  "status": "generada"
  },
  "f1142c6de455.wav": {
   "speaker": "Narrador",
   "text": "Tu voz rompe la noche. Todo calla de golpe... y luego un rugido bajo responde a lo lejos.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "c39dc65f91270e97",
+  "status": "generada"
  },
  "4830b5521f67.wav": {
   "speaker": "Narrador",
   "text": "Avanzas a tientas. Las raíces te hacen tropezar y cada rama rota suena como un disparo.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "c410ffed3047a183",
+  "status": "generada"
  },
  "8cec480cb06d.wav": {
   "speaker": "Narrador",
   "text": "A tu derecha corre agua. A tu izquierda, muy lejos, un tambor marca un ritmo lento.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "dcbbb22a31ca6def",
+  "status": "generada"
  },
  "62d9bd3bdb56.wav": {
   "speaker": "Narrador",
   "text": "Y detrás de ti, dos puntos ámbar se encienden entre los helechos. Te están mirando.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "a7c39748cf0a8bf0",
+  "status": "generada"
  },
  "39a8ffdf45da.wav": {
   "speaker": "Tú",
   "text": "Un tambor significa gente. El agua significa un camino. Pero no puedo quedarme aquí.",
   "nahuat": false,
-  "voice": "male"
+  "voice": "es_ES-davefx-medium",
+  "hash": "6ad07134bda06496",
+  "status": "generada"
  },
  "e0427d90053f.wav": {
   "speaker": "Narrador",
   "text": "Caminas hacia el ritmo. Los ojos ámbar se mueven contigo, a la misma distancia.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "f3d47864b9114582",
+  "status": "generada"
  },
  "6d510c36fc7c.wav": {
   "speaker": "Narrador",
   "text": "El río te guía, pero el suelo blando deja huellas... y algo las sigue.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "e8d45c332e9fb164",
+  "status": "generada"
  },
  "7db84d20d041.wav": {
   "speaker": "Narrador",
   "text": "El eco de tu grito muere. Nadie responde, salvo el bosque.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "645e41e9aeb5edff",
+  "status": "generada"
  },
  "9a7dba07073f.wav": {
   "speaker": "Narrador",
   "text": "Ahora sabes que no estás solo. Y lo que te acompaña ya sabe dónde estás.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "71629753a5963b02",
+  "status": "generada"
  },
  "9c14c04dab48.wav": {
   "speaker": "Narrador",
   "text": "Corres. Las ramas te azotan la cara. Oyes las zarpas golpear la tierra detrás de ti.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "5c87242b93701088",
+  "status": "generada"
  },
  "762dc7b48bb4.wav": {
   "speaker": "Narrador",
   "text": "Te haces pequeño entre las raíces. El jaguar pasa cerca, olfatea... y sigue de largo. Por ahora.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "c87c1aab91a193e9",
+  "status": "generada"
  },
  "714d6fb541f5.wav": {
   "speaker": "Narrador",
   "text": "Tras unos pasos el suelo se abre en un claro. La luna ilumina un sendero de tierra pisada.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "24dfec24983625c0",
+  "status": "generada"
  },
  "dcad86e2370c.wav": {
   "speaker": "Narrador",
   "text": "Al otro lado del claro, dos ojos ámbar flotan a la altura de tu cintura.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "57df7107b0c81ed6",
+  "status": "generada"
  },
  "7631f8c0a8ef.wav": {
   "speaker": "Tú",
   "text": "Un sendero. Alguien lo usa. Pero ese animal está justo entre el camino y yo.",
   "nahuat": false,
-  "voice": "male"
+  "voice": "es_ES-davefx-medium",
+  "hash": "9d8e7e3186ae0c9a",
+  "status": "generada"
  },
  "fbf786c7f57a.wav": {
   "speaker": "Narrador",
   "text": "Avanzas pegado a los troncos. Los ojos giran siguiéndote, pero no se acercan.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "e25b98fc142f5db1",
+  "status": "generada"
  },
  "3d6a46681ab7.wav": {
   "speaker": "Narrador",
   "text": "Cruzas bajo la luna, a la vista. El jaguar baja la cabeza y empieza a moverse.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "dd4ac5d2a06f516a",
+  "status": "generada"
  },
  "22966954c905.wav": {
   "speaker": "Narrador",
   "text": "Un rugido corto, muy cerca. El jaguar ya no se esconde.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "40d237bfbb8c2afb",
+  "status": "generada"
  },
  "bc6140c75cd1.wav": {
   "speaker": "Narrador",
   "text": "Delante de ti el sendero se bifurca: una ceiba enorme, un río negro y la pendiente que baja hacia el tambor.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "cdca43c29083f5d8",
+  "status": "generada"
  },
  "a8a755501c40.wav": {
   "speaker": "Tú",
   "text": "No hay tiempo. Decide.",
   "nahuat": false,
-  "voice": "male"
+  "voice": "es_ES-davefx-medium",
+  "hash": "081f03fdf35f0180",
+  "status": "generada"
  },
  "d35fe750b06e.wav": {
   "speaker": "Narrador",
   "text": "Corres hasta que los pulmones arden. El jaguar corre más rápido que tú, pero el ruido de abajo lo frena.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "30ff46dab6ede51e",
+  "status": "generada"
  },
  "2b13e1a1a8ab.wav": {
   "speaker": "Narrador",
   "text": "Subes por las raíces tabulares hasta una rama alta. Abajo, el jaguar da vueltas y gruñe.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "035273ced56f616a",
+  "status": "generada"
  },
  "9a667072505c.wav": {
   "speaker": "Narrador",
   "text": "El agua está helada y te llega al pecho. En la orilla, el jaguar duda y no entra.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "5852ad92c01f8b5b",
+  "status": "generada"
  },
  "9b8511190339.wav": {
   "speaker": "Narrador",
   "text": "No te mueves. El jaguar tampoco... hasta que salta. Caes, ruedas y echas a correr.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "1a5f8d7aa1a1d1c1",
+  "status": "generada"
  },
  "e2fc5f8d3e96.wav": {
   "speaker": "Narrador",
   "text": "La pendiente termina de golpe. Frente a ti, entre los árboles, arde una línea de antorchas.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "d97ba82c1f3490d2",
+  "status": "generada"
  },
  "abd7ea741951.wav": {
   "speaker": "Narrador",
   "text": "Detrás, las zarpas se detienen. El jaguar no se acerca al fuego. Todavía.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "4007562274bb4071",
+  "status": "generada"
  },
  "b46073bbc397.wav": {
   "speaker": "Narrador",
   "text": "Caminas hacia la luz con las piernas temblando.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "fb2b7e2bbcd97db8",
+  "status": "generada"
  },
  "e529cc3ed571.wav": {
   "speaker": "Narrador",
   "text": "Desde la rama ves lo que el suelo escondía: un resplandor naranja al fondo del valle. Antorchas. Una aldea.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "8122456ae74f8b7c",
+  "status": "generada"
  },
  "637fab6b3127.wav": {
   "speaker": "Narrador",
   "text": "El jaguar se aburre de esperar y se aleja entre la niebla. Sabes que volverá.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "ef80f0dfa2e799bb",
+  "status": "generada"
  },
  "0214942bea5b.wav": {
   "speaker": "Narrador",
   "text": "Bajas con cuidado y sigues la luz a través de la niebla.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "56df771f77a9d348",
+  "status": "generada"
  },
  "2d2e6e859077.wav": {
   "speaker": "Narrador",
   "text": "La corriente te arrastra río abajo. Cuando por fin tocas fondo, el bosque se ha abierto.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "ce1a3fa86e42d03f",
+  "status": "generada"
  },
  "7a718457412a.wav": {
   "speaker": "Narrador",
   "text": "En la otra orilla, a lo lejos, antorchas. Y en tu orilla, muy atrás, un rugido frustrado.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "907526a2b0f0f216",
+  "status": "generada"
  },
  "9f82699b4d20.wav": {
   "speaker": "Narrador",
   "text": "Empapado y tiritando, sigues la luz.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "b9e2a2cfd9903eb2",
+  "status": "generada"
  },
  "40eba7e8cce8.wav": {
   "speaker": "Narrador",
   "text": "Tienes un corte en el brazo y el corazón en la garganta, pero sigues vivo.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "b1d1b98fdd14ecb0",
+  "status": "generada"
  },
  "be2c9fd1e78c.wav": {
   "speaker": "Narrador",
   "text": "Corres sin rumbo hasta que una luz naranja aparece entre los troncos. Fuego. Gente.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "f7fc17109cf21718",
+  "status": "generada"
  },
  "9afcd82fba83.wav": {
   "speaker": "Narrador",
   "text": "Te sujetas el brazo y caminas hacia el fuego.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "6245d6bc69b9ec53",
+  "status": "generada"
  },
  "d9e55e470ff0.wav": {
   "speaker": "Narrador",
   "text": "Una empalizada de troncos. Antorchas en lo alto. Detrás, techos de palma y el tambor que oíste al despertar.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "8fb0f21d867546f9",
+  "status": "generada"
  },
  "27c4d113bfbc.wav": {
   "speaker": "Narrador",
   "text": "Una figura con lanza se asoma sobre la empalizada y te grita algo en una lengua que no entiendes.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "303b2ca9e925cd5b",
+  "status": "generada"
  },
  "7f8cdf737d96.wav": {
   "speaker": "Tú",
   "text": "No entiendo nada de lo que dice. Pero si no consigo que me abran, el jaguar me alcanzará aquí mismo.",
   "nahuat": false,
-  "voice": "male"
+  "voice": "es_ES-davefx-medium",
+  "hash": "4682ad60863ca730",
+  "status": "generada"
  },
  "43a4d5227c2a.wav": {
   "speaker": "Narrador",
   "text": "Avanzas despacio, con las manos a la vista.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "be9059a8720855d8",
+  "status": "generada"
  },
  "3f71e2530687.wav": {
   "speaker": "Narrador",
   "text": "La puerta de troncos se abre apenas un palmo. Una lanza asoma por la rendija.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "49cfeaa0ff48006c",
+  "status": "generada"
  },
- "a44bddb480cf.wav": {
+ "nahuat/tay_tikneki.wav": {
   "speaker": "Guardia",
   "text": "Tay tikneki?!",
   "nahuat": true,
-  "voice": "male"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "786d7f6c04b5.wav": {
   "speaker": "Narrador",
   "text": "No entiendes ni una palabra. El guardia repite más fuerte, señalando con la lanza hacia el bosque.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "84acc36a41d3b8dd",
+  "status": "generada"
  },
  "cf65ada32e86.wav": {
   "speaker": "Narrador",
   "text": "El guardia parpadea. Una voz de mujer, detrás de él, ríe bajito y te lo explica con gestos: «tay tikneki» es «¿qué quieres?». Acabas de entender tu primera frase.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "d360817cd91b90b2",
+  "status": "generada"
  },
  "743c1a35e978.wav": {
   "speaker": "Narrador",
   "text": "Tus gritos no significan nada para él. La lanza avanza un palmo. Detrás, alguien le pone una mano en el hombro y repite despacio la pregunta: «tay tikneki», ¿qué quieres?",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "ac2512d254acb671",
+  "status": "generada"
  },
  "10dc44fd4cce.wav": {
   "speaker": "Narrador",
   "text": "El gesto no necesita idioma. La lanza baja un poco. Una anciana se asoma por encima del hombro del guardia y repite su pregunta con suavidad: «tay tikneki», ¿qué quieres?",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "97894e4edcc5c8a6",
+  "status": "generada"
  },
  "57300b2f0192.wav": {
   "speaker": "Narrador",
   "text": "La anciana lleva una antorcha. Te mira las manos vacías, el barro, la sangre del brazo.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "f1a6a238ce4498e3",
+  "status": "generada"
  },
- "7727e17d5004.wav": {
+ "nahuat/yek_tayua.wav": {
   "speaker": "Anciana",
   "text": "Yek tayua.",
   "nahuat": true,
-  "voice": "female"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "c387cd2d1034.wav": {
   "speaker": "Narrador",
   "text": "Lo dice con calma, inclinando la cabeza. Señala la luna y repite: «tayua». Luego espera tu respuesta.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "04bb7fedd7a5bae2",
+  "status": "generada"
  },
  "0e25391d9e9a.wav": {
   "speaker": "Narrador",
   "text": "La anciana sonríe. Has devuelto el saludo de la noche: «yek» es bueno, «tayua» es noche. El guardia relaja la lanza.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "1a61c677a9faf42f",
+  "status": "generada"
  },
  "c21e4882f553.wav": {
   "speaker": "Narrador",
   "text": "La anciana ríe y niega con la cabeza. Señala la luna: «tayua», noche. «Tunal» es el día, el sol. Lo intentaste, y eso cuenta.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "d09d77453a241f44",
+  "status": "generada"
  },
  "febf9239efa4.wav": {
   "speaker": "Narrador",
   "text": "La anciana espera. Al no responder, suspira y repite una vez más: «yek tayua». Buena noche. Ahora lo sabes.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "5d4af2efdeb2e2c3",
+  "status": "generada"
  },
- "5d3fe78b05b0.wav": {
+ "nahuat/ken_mutukay.wav": {
   "speaker": "Anciana",
   "text": "Ken mutukay?",
   "nahuat": true,
-  "voice": "female"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "c7b57335a887.wav": {
   "speaker": "Narrador",
   "text": "Se toca el pecho y dice su propio nombre. Luego te señala a ti y levanta las cejas.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "3f8b59797d902484",
+  "status": "generada"
  },
  "e8878dbef929.wav": {
   "speaker": "Narrador",
   "text": "«Yulu», repite ella, y tu nombre suena distinto en su boca. Te ha preguntado cómo te llamas y le has respondido.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "5a0e485462341ded",
+  "status": "generada"
  },
  "d5f2859bde32.wav": {
   "speaker": "Narrador",
   "text": "La anciana ladea la cabeza. «Ken mutukay» pregunta tu nombre, no cómo estás. Vuelve a señalarte, paciente.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "079845e0f8731b31",
+  "status": "generada"
  },
  "f754f5fa6b37.wav": {
   "speaker": "Narrador",
   "text": "Ella repite despacio, sílaba a sílaba: «mu-tu-kay». Tu nombre. Quiere saber cómo te llamas.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "bd7910976c40854d",
+  "status": "generada"
  },
  "837c2bd3d62b.wav": {
   "speaker": "Narrador",
   "text": "Ahora sabes qué te pregunta. Para responder: «naja» es yo, «nutukay» es mi nombre.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "dc1b8938dea90f83",
+  "status": "generada"
  },
  "1f68d8d2a2fb.wav": {
   "speaker": "Narrador",
   "text": "«Yulu», repite la anciana, y asiente. Segunda vez, pero lo has dicho bien.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "bf73fd1a2cf413b7",
+  "status": "generada"
  },
  "e9ce5d807b1d.wav": {
   "speaker": "Narrador",
   "text": "Das dos pasos y un rugido te detiene en seco. Vuelves corriendo a la puerta.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "abb9f50cf1c9474a",
+  "status": "generada"
  },
  "c48a8aff65e4.wav": {
   "speaker": "Narrador",
   "text": "Un rugido corto sale del bosque, muy cerca. El guardia levanta la antorcha y escruta la oscuridad.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "f8b836a3f0da90bd",
+  "status": "generada"
  },
- "7e8e15fc44e9.wav": {
+ "nahuat/tekwani.wav": {
   "speaker": "Guardia",
   "text": "Tekwani!",
   "nahuat": true,
-  "voice": "male"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "683ad4c255e5.wav": {
   "speaker": "Narrador",
   "text": "Lo grita hacia dentro de la aldea mientras señala los ojos ámbar que brillan al borde del claro.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "d5354ac90c07e376",
+  "status": "generada"
  },
  "5cfb14967870.wav": {
   "speaker": "Narrador",
   "text": "El guardia te mira, luego al bosque, y por primera vez os miráis como aliados. «Tekwani»: el que come gente. El jaguar.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "b96cd850fdf6fdc9",
+  "status": "generada"
  },
  "db28f3fa17ef.wav": {
   "speaker": "Narrador",
   "text": "«Tengo miedo.» La anciana asiente: ella también. Te toma del brazo y te mete dentro. Al jaguar lo llaman «tekwani».",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "24e6a8a48ccf6ef4",
+  "status": "generada"
  },
  "2fd5ce34f863.wav": {
   "speaker": "Narrador",
   "text": "Empujas al guardia y entras. La anciana grita algo que no entiendes. Nadie te detiene, pero nadie te mira bien. Solo retienes una palabra: «tekwani».",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "1dbf2105dfea9e32",
+  "status": "generada"
  },
  "0abb01db38b1.wav": {
   "speaker": "Narrador",
   "text": "El jaguar da un paso al claro. La anciana te agarra y tira de ti hacia dentro. El guardia cierra la puerta gritando «tekwani» una y otra vez.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "75434ae715b70441",
+  "status": "generada"
  },
  "48249f46de3b.wav": {
   "speaker": "Narrador",
   "text": "Una casa de caña y barro. Una hoguera baja. Varias personas te miran en silencio desde la sombra.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "24a8511823a1aad6",
+  "status": "generada"
  },
- "9a3646040ad9.wav": {
+ "nahuat/ken_tinemi.wav": {
   "speaker": "Anciana",
   "text": "Ken tinemi?",
   "nahuat": true,
-  "voice": "female"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "1811f749e801.wav": {
   "speaker": "Narrador",
   "text": "Te ofrece sentarte junto al fuego. Suena a cortesía, pero todos esperan tu respuesta.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "f735742f98a56515",
+  "status": "generada"
  },
  "e6ab36ad1313.wav": {
   "speaker": "Narrador",
   "text": "«Estoy bien». Varias cabezas asienten. Una mujer te acerca un paño para el brazo.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "cd2bd6876bf2e919",
+  "status": "generada"
  },
  "c14a0ff49f26.wav": {
   "speaker": "Narrador",
   "text": "«No». Es honesto: no estás bien. La anciana murmura algo y una mujer te limpia la herida.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "5cd3ed5b3e91a8c9",
+  "status": "generada"
  },
  "c6faf7f4e4e2.wav": {
   "speaker": "Narrador",
   "text": "Le has preguntado «¿qué quieres?» a quien te acoge. Alguien ríe. La anciana, paciente, repite: «ken tinemi?», ¿cómo estás?",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "79d5264602ac24fb",
+  "status": "generada"
  },
  "62910753d19e.wav": {
   "speaker": "Narrador",
   "text": "Para decir «estoy bien»: «ninemi yek». Para decir que no: «te».",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "0e58552f485740c7",
+  "status": "generada"
  },
  "c70f0ba486a9.wav": {
   "speaker": "Narrador",
   "text": "«Estoy bien». La anciana asiente despacio. Aprendes rápido, dice su gesto.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "27a8c0a93ede4d74",
+  "status": "generada"
  },
  "19219087247a.wav": {
   "speaker": "Narrador",
   "text": "«No». Ella entiende. Una mujer se acerca con un paño.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "2859ab7d1d69ea42",
+  "status": "generada"
  },
  "0a626e15a309.wav": {
   "speaker": "Narrador",
   "text": "Un niño trae un cántaro de agua y se lo entrega a la anciana.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "ffa71da5fdf9b21c",
+  "status": "generada"
  },
- "7beeea17870a.wav": {
+ "nahuat/padiush.wav": {
   "speaker": "Niño",
   "text": "Padiush.",
   "nahuat": true,
-  "voice": "male"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "5abf06dd73dd.wav": {
   "speaker": "Narrador",
   "text": "Ella le acaricia la cabeza. Luego sostiene el cántaro frente a ti y te mira.",
   "nahuat": false,
-  "voice": "female"
- },
- "ebc1eff36cc0.wav": {
-  "speaker": "Anciana",
-  "text": "Tay tikneki?",
-  "nahuat": true,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "c3603307c7ef53e5",
+  "status": "generada"
  },
  "c9c28acf163b.wav": {
   "speaker": "Narrador",
   "text": "«Sí». Te da el cántaro. El agua está fría y sabe a barro y a vida. Oyes de nuevo al niño: «padiush». Gracias.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "ba30038ab04c6644",
+  "status": "generada"
  },
  "04f43e631fee.wav": {
   "speaker": "Narrador",
   "text": "«Gracias». La anciana ríe con ganas y te aprieta el hombro. Has usado una palabra de la aldea para agradecer a la aldea.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "7ec5636f0d4c5cea",
+  "status": "generada"
  },
  "2fe55d045674.wav": {
   "speaker": "Narrador",
   "text": "Bebes. Nadie dice nada, pero el niño se aleja. Lo último que oyes de él es la palabra que repetía: «padiush».",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "79c088bced1ced9c",
+  "status": "generada"
  },
  "6ff017d20aa9.wav": {
   "speaker": "Narrador",
   "text": "Un golpe seco contra la empalizada. Luego otro. Los perros enloquecen.",
   "nahuat": false,
-  "voice": "female"
- },
- "67f35e531415.wav": {
-  "speaker": "Guardia",
-  "text": "Tekwani! Tekwani!",
-  "nahuat": true,
-  "voice": "male"
+  "voice": "es_MX-claude-high",
+  "hash": "d7af760837391d3b",
+  "status": "generada"
  },
  "71cc84270f60.wav": {
   "speaker": "Narrador",
   "text": "La anciana se levanta. Los hombres toman antorchas. El jaguar está dentro del claro.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "9cc14b06c827af92",
+  "status": "generada"
  },
  "d5497725e353.wav": {
   "speaker": "Narrador",
   "text": "«¡Ayúdame!» La anciana te pone una antorcha en la mano y te coloca entre dos hombres. Ya no eres un extraño: eres uno más en el círculo de fuego.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "c6f6d6506af5b07d",
+  "status": "generada"
  },
  "eae210144b6d.wav": {
   "speaker": "Narrador",
   "text": "No hacen falta palabras. El círculo de fuego avanza hacia la puerta y el jaguar retrocede entre gruñidos. Alguien grita «shinechpalewi» y dos hombres acuden: ayúdame.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "8ccd29a7cfcac465",
+  "status": "generada"
  },
  "b2e0e1549c7e.wav": {
   "speaker": "Narrador",
   "text": "Nadie te lo reprocha en voz alta. Oyes gritar «shinechpalewi», ¡ayúdame!, y no te mueves. Cuando el peligro pasa, nadie te busca con la mirada.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "d13b464a710cd1ca",
+  "status": "generada"
  },
  "ad45689e4304.wav": {
   "speaker": "Narrador",
   "text": "El rugido entra por la rendija de la puerta. Alguien grita «shinechpalewi» y te empuja al suelo. El fuego hace el resto.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "5034f484790e44d9",
+  "status": "generada"
  },
  "ea1501e3e728.wav": {
   "speaker": "Narrador",
   "text": "El jaguar se retira a la selva. Las antorchas tiemblan. La anciana te mira largo rato y dice algo a los demás.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "c41c2a65c7dee8ad",
+  "status": "generada"
  },
  "fc6f4e03ea1a.wav": {
   "speaker": "Narrador",
   "text": "No entiendes la discusión, pero entiendes las miradas. Deciden qué hacer contigo cuando amanezca.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "9b456f03c050f9fd",
+  "status": "generada"
  },
  "8d84a5238ab6.wav": {
   "speaker": "Narrador",
   "text": "«Gracias». La palabra cae en el silencio y lo ablanda un poco.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "67ef6e1e75ee19b3",
+  "status": "generada"
  },
  "41461fbb97de.wav": {
   "speaker": "Narrador",
   "text": "El fuego crepita. Nadie habla. La noche se hace larga.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "adc97e705f37586d",
+  "status": "generada"
  },
  "42e0896b95e1.wav": {
   "speaker": "Narrador",
   "text": "El cielo cambia de negro a índigo. Los insectos callan uno a uno. La anciana se levanta y hace una señal.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "76fc46749227d1c3",
+  "status": "generada"
  },
- "500519f34d79.wav": {
+ "nahuat/yek_tunal.wav": {
   "speaker": "Anciana",
   "text": "Yek tunal.",
   "nahuat": true,
-  "voice": "female"
+  "voice": null,
+  "status": "pendiente de grabación humana"
  },
  "782ba5915637.wav": {
   "speaker": "Narrador",
   "text": "«Buen día». Ya no es de noche. La aldea te acompaña hasta el sendero con agua, tortillas y una antorcha apagada, por si vuelves a perderte.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "98ae45c5dcbd18ef",
+  "status": "generada"
  },
  "68444cb6a4dd.wav": {
   "speaker": "Narrador",
   "text": "Al borde de la selva, entre la niebla dorada, el tekwani te observa una última vez. No te sigue.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "dd97236e25de5dfd",
+  "status": "generada"
  },
  "c75e38987a92.wav": {
   "speaker": "Narrador",
   "text": "Has sobrevivido a la noche del jaguar. Y no lo hiciste solo: lo hiciste con palabras.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "b80c7587f7c509bd",
+  "status": "generada"
  },
  "78fb57b6798f.wav": {
   "speaker": "Narrador",
   "text": "Antes de que salga el sol, el guardia abre la puerta y señala el sendero. No hay rencor en su gesto, pero tampoco compañía.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "3f7d9781f85781d4",
+  "status": "generada"
  },
  "059055a6827f.wav": {
   "speaker": "Narrador",
   "text": "Caminas solo hacia la luz gris. Detrás, en la niebla, unas huellas grandes siguen las tuyas a la misma distancia de siempre.",
   "nahuat": false,
-  "voice": "female"
+  "voice": "es_MX-claude-high",
+  "hash": "2add8a2eeb628728",
+  "status": "generada"
  },
  "e69c80e653ea.wav": {
   "speaker": "Narrador",
   "text": "Has sobrevivido a la noche. Pero la aldea no confió en ti, y el jaguar lo sabe. Quizá la próxima vez entiendas mejor sus palabras.",
   "nahuat": false,
-  "voice": "female"
- }
+  "voice": "es_MX-claude-high",
+  "hash": "5969d0bcab5a6220",
+  "status": "generada"
+ },
+ "_pending_nahuat": [
+  {
+   "file": "nahuat/tay_tikneki.wav",
+   "text": "Tay tikneki?!"
+  },
+  {
+   "file": "nahuat/yek_tayua.wav",
+   "text": "Yek tayua."
+  },
+  {
+   "file": "nahuat/ken_mutukay.wav",
+   "text": "Ken mutukay?"
+  },
+  {
+   "file": "nahuat/tekwani.wav",
+   "text": "Tekwani!"
+  },
+  {
+   "file": "nahuat/ken_tinemi.wav",
+   "text": "Ken tinemi?"
+  },
+  {
+   "file": "nahuat/padiush.wav",
+   "text": "Padiush."
+  },
+  {
+   "file": "nahuat/yek_tunal.wav",
+   "text": "Yek tunal."
+  }
+ ]
 }
