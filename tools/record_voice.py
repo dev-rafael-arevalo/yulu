@@ -268,7 +268,8 @@ class Session:
             y += draw_text(s, "Contexto: " + expression.context, (60, y + 10), 19, config.TEXT_DIM, max_width=W - 120)
             draw_text(s, "Di solo la frase en náhuat, sin la traducción. Una pausa breve antes y después.", (60, y + 24), 18, config.TEXT_DIM, max_width=W - 120)
         else:
-            draw_text(s, item.text, (60, 160), 34, config.TEXT, max_width=W - 120)
+            size = 34 if len(item.text) <= 140 else 28 if len(item.text) <= 220 else 24
+            draw_text(s, item.text, (60, 160), size, config.TEXT, max_width=W - 120)
             hint = {
                 NARRATOR: "Voz pausada y grave, con intención de suspense. Respeta las pausas de los puntos.",
                 "Tú": "Primera persona, en voz baja, como quien piensa en voz alta.",
@@ -311,7 +312,7 @@ def main() -> int:
         print(f"\n{len(items)} líneas por grabar:")
         for n, item in enumerate(items, 1):
             tag = "NÁHUAT " if item.nahuat_id else ""
-            print(f"  {n:>3}. [{item.speaker}] {tag}{item.text[:70]}")
+            print(f"  {n:>3}. [{item.speaker}] {tag}{item.text}")
         return 0
     if not items:
         print("No hay líneas pendientes con esos filtros. Usa --redo para regrabar.")
