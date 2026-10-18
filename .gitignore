@@ -9,3 +9,6 @@ yulu/assets/audio/voice/*.wav
 .venv-tts/
 yulu/assets/voices/
 yulu/assets/images/reference/
+yulu/assets/images/YULU_recursos_visuales_iniciales/
+yulu/assets/images/YULU_personajes_para_claude/
+yulu/assets/images/YULU_referencia_cultural/
