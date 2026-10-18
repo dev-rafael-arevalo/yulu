@@ -150,10 +150,13 @@ def save_wav(path: Path, samples: array) -> None:
 
 # ---------- captura ----------
 class Recorder:
+    """Captura por SDL2. El dispositivo se abre UNA sola vez y queda activo toda la sesión:
+    abrir y cerrar el micrófono en cada toma podía bloquear el programa al cerrar el
+    dispositivo mientras su hilo de captura seguía entregando datos."""
+
     def __init__(self, device_index: int | None) -> None:
         from pygame._sdl2 import audio as sdl_audio
 
-        self._sdl = sdl_audio
         names = sdl_audio.get_audio_device_names(True)
         if not names:
             raise RuntimeError("No se encontró ningún micrófono.")
@@ -161,31 +164,33 @@ class Recorder:
         self.chunks: list[bytes] = []
         self.level = 0.0
         self.recording = False
-        self._device = None
-
-    def start(self) -> None:
-        self.chunks = []
-        self._device = self._sdl.AudioDevice(
-            devicename=self.device_name, iscapture=True, frequency=RATE, audioformat=self._sdl.AUDIO_S16,
+        self._device = sdl_audio.AudioDevice(
+            devicename=self.device_name, iscapture=True, frequency=RATE, audioformat=sdl_audio.AUDIO_S16,
             numchannels=1, chunksize=2048, allowed_changes=0, callback=self._on_chunk,
         )
         self._device.pause(0)
+
+    def start(self) -> None:
+        self.chunks = []
         self.recording = True
 
     def _on_chunk(self, _device, buffer) -> None:
         data = bytes(buffer)
-        self.chunks.append(data)
         samples = array("h", data)
         self.level = (max((abs(v) for v in samples), default=0)) / 32767
+        if self.recording:
+            self.chunks.append(data)
 
     def stop(self) -> array:
-        if self._device is not None:
-            self._device.pause(1)
-            self._device.close()
-            self._device = None
         self.recording = False
-        self.level = 0.0
-        return array("h", b"".join(self.chunks))
+        data = array("h", b"".join(self.chunks))
+        self.chunks = []
+        return data
+
+    def close(self) -> None:
+        # No se cierra explícitamente: pygame.quit() libera el dispositivo al salir y así se
+        # evita el bloqueo observado al cerrar con el hilo de captura activo.
+        self.recording = False
 
 
 # ---------- interfaz ----------
@@ -224,8 +229,7 @@ class Session:
     def _handle_key(self, key: int) -> bool:
         item = self.current
         if key == pygame.K_ESCAPE:
-            if self.recorder.recording:
-                self.recorder.stop()
+            self.recorder.close()
             return True
         if key == pygame.K_SPACE:
             if self.recorder.recording:

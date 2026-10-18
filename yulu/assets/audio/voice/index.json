@@ -201,185 +201,208 @@
   "speaker": "Narrador",
   "text": "Delante de ti el sendero se bifurca: una ceiba enorme, un río negro y la pendiente que baja hacia el tambor.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "cdca43c29083f5d8",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.19
  },
  "a8a755501c40.wav": {
   "speaker": "Tú",
   "text": "No hay tiempo. Decide.",
   "nahuat": false,
-  "voice": "es_ES-davefx-medium",
-  "hash": "081f03fdf35f0180",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 3.13
  },
  "d35fe750b06e.wav": {
   "speaker": "Narrador",
   "text": "Corres hasta que los pulmones arden. El jaguar corre más rápido que tú, pero el ruido de abajo lo frena.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "30ff46dab6ede51e",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.85
  },
  "2b13e1a1a8ab.wav": {
   "speaker": "Narrador",
   "text": "Subes por las raíces tabulares hasta una rama alta. Abajo, el jaguar da vueltas y gruñe.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "035273ced56f616a",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.11
  },
  "9a667072505c.wav": {
   "speaker": "Narrador",
   "text": "El agua está helada y te llega al pecho. En la orilla, el jaguar duda y no entra.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5852ad92c01f8b5b",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.74
  },
  "9b8511190339.wav": {
   "speaker": "Narrador",
   "text": "No te mueves. El jaguar tampoco... hasta que salta. Caes, ruedas y echas a correr.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "1a5f8d7aa1a1d1c1",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.37
  },
  "e2fc5f8d3e96.wav": {
   "speaker": "Narrador",
   "text": "La pendiente termina de golpe. Frente a ti, entre los árboles, arde una línea de antorchas.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "d97ba82c1f3490d2",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.91
  },
  "abd7ea741951.wav": {
   "speaker": "Narrador",
   "text": "Detrás, las zarpas se detienen. El jaguar no se acerca al fuego. Todavía.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "4007562274bb4071",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.36
  },
  "b46073bbc397.wav": {
   "speaker": "Narrador",
   "text": "Caminas hacia la luz con las piernas temblando.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "fb2b7e2bbcd97db8",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 4.6
  },
  "e529cc3ed571.wav": {
   "speaker": "Narrador",
   "text": "Desde la rama ves lo que el suelo escondía: un resplandor naranja al fondo del valle. Antorchas. Una aldea.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "8122456ae74f8b7c",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.38
  },
  "637fab6b3127.wav": {
   "speaker": "Narrador",
   "text": "El jaguar se aburre de esperar y se aleja entre la niebla. Sabes que volverá.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "ef80f0dfa2e799bb",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.11
  },
  "0214942bea5b.wav": {
   "speaker": "Narrador",
   "text": "Bajas con cuidado y sigues la luz a través de la niebla.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "56df771f77a9d348",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 5.39
  },
  "2d2e6e859077.wav": {
   "speaker": "Narrador",
   "text": "La corriente te arrastra río abajo. Cuando por fin tocas fondo, el bosque se ha abierto.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "ce1a3fa86e42d03f",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.93
  },
  "7a718457412a.wav": {
   "speaker": "Narrador",
   "text": "En la otra orilla, a lo lejos, antorchas. Y en tu orilla, muy atrás, un rugido frustrado.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "907526a2b0f0f216",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 9.85
  },
  "9f82699b4d20.wav": {
   "speaker": "Narrador",
   "text": "Empapado y tiritando, sigues la luz.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "b9e2a2cfd9903eb2",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 4.46
  },
  "40eba7e8cce8.wav": {
   "speaker": "Narrador",
   "text": "Tienes un corte en el brazo y el corazón en la garganta, pero sigues vivo.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "b1d1b98fdd14ecb0",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.27
  },
  "be2c9fd1e78c.wav": {
   "speaker": "Narrador",
   "text": "Corres sin rumbo hasta que una luz naranja aparece entre los troncos. Fuego. Gente.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "f7fc17109cf21718",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.51
  },
  "9afcd82fba83.wav": {
   "speaker": "Narrador",
   "text": "Te sujetas el brazo y caminas hacia el fuego.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "6245d6bc69b9ec53",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 5.02
  },
  "d9e55e470ff0.wav": {
   "speaker": "Narrador",
   "text": "Una empalizada de troncos. Antorchas en lo alto. Detrás, techos de palma y el tambor que oíste al despertar.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "8fb0f21d867546f9",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.77
  },
  "27c4d113bfbc.wav": {
   "speaker": "Narrador",
   "text": "Una figura con lanza se asoma sobre la empalizada y te grita algo en una lengua que no entiendes.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "303b2ca9e925cd5b",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.12
  },
  "7f8cdf737d96.wav": {
   "speaker": "Tú",
   "text": "No entiendo nada de lo que dice. Pero si no consigo que me abran, el jaguar me alcanzará aquí mismo.",
   "nahuat": false,
-  "voice": "es_ES-davefx-medium",
-  "hash": "4682ad60863ca730",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.94
  },
  "43a4d5227c2a.wav": {
   "speaker": "Narrador",
   "text": "Avanzas despacio, con las manos a la vista.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "be9059a8720855d8",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 3.67
  },
  "3f71e2530687.wav": {
   "speaker": "Narrador",
   "text": "La puerta de troncos se abre apenas un palmo. Una lanza asoma por la rendija.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "49cfeaa0ff48006c",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.87
  },
  "nahuat/tay_tikneki.wav": {
   "speaker": "Guardia",
@@ -394,41 +417,46 @@
   "speaker": "Narrador",
   "text": "No entiendes ni una palabra. El guardia repite más fuerte, señalando con la lanza hacia el bosque.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "84acc36a41d3b8dd",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.46
  },
  "cf65ada32e86.wav": {
   "speaker": "Narrador",
   "text": "El guardia parpadea. Una voz de mujer, detrás de él, ríe bajito y te lo explica con gestos: «tay tikneki» es «¿qué quieres?». Acabas de entender tu primera frase.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "d360817cd91b90b2",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 15.25
  },
  "743c1a35e978.wav": {
   "speaker": "Narrador",
   "text": "Tus gritos no significan nada para él. La lanza avanza un palmo. Detrás, alguien le pone una mano en el hombro y repite despacio la pregunta: «tay tikneki», ¿qué quieres?",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "ac2512d254acb671",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 15.7
  },
  "10dc44fd4cce.wav": {
   "speaker": "Narrador",
   "text": "El gesto no necesita idioma. La lanza baja un poco. Una anciana se asoma por encima del hombro del guardia y repite su pregunta con suavidad: «tay tikneki», ¿qué quieres?",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "97894e4edcc5c8a6",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 15.23
  },
  "57300b2f0192.wav": {
   "speaker": "Narrador",
   "text": "La anciana lleva una antorcha. Te mira las manos vacías, el barro, la sangre del brazo.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "f1a6a238ce4498e3",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.66
  },
  "nahuat/yek_tayua.wav": {
   "speaker": "Anciana",
@@ -443,33 +471,37 @@
   "speaker": "Narrador",
   "text": "Lo dice con calma, inclinando la cabeza. Señala la luna y repite: «tayua». Luego espera tu respuesta.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "04bb7fedd7a5bae2",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.28
  },
  "0e25391d9e9a.wav": {
   "speaker": "Narrador",
   "text": "La anciana sonríe. Has devuelto el saludo de la noche: «yek» es bueno, «tayua» es noche. El guardia relaja la lanza.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "1a61c677a9faf42f",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.96
  },
  "c21e4882f553.wav": {
   "speaker": "Narrador",
   "text": "La anciana ríe y niega con la cabeza. Señala la luna: «tayua», noche. «Tunal» es el día, el sol. Lo intentaste, y eso cuenta.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "d09d77453a241f44",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 14.49
  },
  "febf9239efa4.wav": {
   "speaker": "Narrador",
   "text": "La anciana espera. Al no responder, suspira y repite una vez más: «yek tayua». Buena noche. Ahora lo sabes.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5d4af2efdeb2e2c3",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.03
  },
  "nahuat/ken_mutukay.wav": {
   "speaker": "Anciana",
@@ -484,65 +516,73 @@
   "speaker": "Narrador",
   "text": "Se toca el pecho y dice su propio nombre. Luego te señala a ti y levanta las cejas.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "3f8b59797d902484",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.23
  },
  "e8878dbef929.wav": {
   "speaker": "Narrador",
   "text": "«Yulu», repite ella, y tu nombre suena distinto en su boca. Te ha preguntado cómo te llamas y le has respondido.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "5a0e485462341ded",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.84
  },
  "d5f2859bde32.wav": {
   "speaker": "Narrador",
   "text": "La anciana ladea la cabeza. «Ken mutukay» pregunta tu nombre, no cómo estás. Vuelve a señalarte, paciente.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "079845e0f8731b31",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 11.04
  },
  "f754f5fa6b37.wav": {
   "speaker": "Narrador",
   "text": "Ella repite despacio, sílaba a sílaba: «mu-tu-kay». Tu nombre. Quiere saber cómo te llamas.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "bd7910976c40854d",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.95
  },
  "837c2bd3d62b.wav": {
   "speaker": "Narrador",
   "text": "Ahora sabes qué te pregunta. Para responder: «naja» es yo, «nutukay» es mi nombre.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "dc1b8938dea90f83",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.52
  },
  "1f68d8d2a2fb.wav": {
   "speaker": "Narrador",
   "text": "«Yulu», repite la anciana, y asiente. Segunda vez, pero lo has dicho bien.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "bf73fd1a2cf413b7",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.63
  },
  "e9ce5d807b1d.wav": {
   "speaker": "Narrador",
   "text": "Das dos pasos y un rugido te detiene en seco. Vuelves corriendo a la puerta.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "abb9f50cf1c9474a",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 5.38
  },
  "c48a8aff65e4.wav": {
   "speaker": "Narrador",
   "text": "Un rugido corto sale del bosque, muy cerca. El guardia levanta la antorcha y escruta la oscuridad.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "f8b836a3f0da90bd",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.9
  },
  "nahuat/tekwani.wav": {
   "speaker": "Guardia",
@@ -557,49 +597,55 @@
   "speaker": "Narrador",
   "text": "Lo grita hacia dentro de la aldea mientras señala los ojos ámbar que brillan al borde del claro.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "d5354ac90c07e376",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.09
  },
  "5cfb14967870.wav": {
   "speaker": "Narrador",
   "text": "El guardia te mira, luego al bosque, y por primera vez os miráis como aliados. «Tekwani»: el que come gente. El jaguar.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "b96cd850fdf6fdc9",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 8.9
  },
  "db28f3fa17ef.wav": {
   "speaker": "Narrador",
   "text": "«Tengo miedo.» La anciana asiente: ella también. Te toma del brazo y te mete dentro. Al jaguar lo llaman «tekwani».",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "24e6a8a48ccf6ef4",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.28
  },
  "2fd5ce34f863.wav": {
   "speaker": "Narrador",
   "text": "Empujas al guardia y entras. La anciana grita algo que no entiendes. Nadie te detiene, pero nadie te mira bien. Solo retienes una palabra: «tekwani».",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "1dbf2105dfea9e32",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.48
  },
  "0abb01db38b1.wav": {
   "speaker": "Narrador",
   "text": "El jaguar da un paso al claro. La anciana te agarra y tira de ti hacia dentro. El guardia cierra la puerta gritando «tekwani» una y otra vez.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "75434ae715b70441",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 10.36
  },
  "48249f46de3b.wav": {
   "speaker": "Narrador",
   "text": "Una casa de caña y barro. Una hoguera baja. Varias personas te miran en silencio desde la sombra.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "24a8511823a1aad6",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 7.52
  },
  "nahuat/ken_tinemi.wav": {
   "speaker": "Anciana",
@@ -614,17 +660,19 @@
   "speaker": "Narrador",
   "text": "Te ofrece sentarte junto al fuego. Suena a cortesía, pero todos esperan tu respuesta.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "f735742f98a56515",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.99
  },
  "e6ab36ad1313.wav": {
   "speaker": "Narrador",
   "text": "«Estoy bien». Varias cabezas asienten. Una mujer te acerca un paño para el brazo.",
   "nahuat": false,
-  "voice": "es_MX-claude-high",
-  "hash": "cd2bd6876bf2e919",
-  "status": "generada"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 6.24
  },
  "c14a0ff49f26.wav": {
   "speaker": "Narrador",
