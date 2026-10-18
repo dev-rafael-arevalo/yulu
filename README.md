@@ -49,7 +49,7 @@ Necesitas **Python 3.11 o superior** ([python.org](https://www.python.org/downlo
 **Windows** (PowerShell):
 
 ```powershell
-git clone https://github.com/<tu-usuario>/yulu.git
+git clone https://github.com/dev-rafael-arevalo/yulu.git
 cd yulu
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
@@ -59,7 +59,7 @@ python -m venv .venv
 **macOS / Linux**:
 
 ```bash
-git clone https://github.com/<tu-usuario>/yulu.git
+git clone https://github.com/dev-rafael-arevalo/yulu.git
 cd yulu
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
