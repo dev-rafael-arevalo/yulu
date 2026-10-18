@@ -288,7 +288,7 @@ class Game:
         surface.blit(self.vignette, (0, 0))
         self._draw_threat_tint(surface)
 
-        if self.title_timer > 0:
+        if self.title_timer > 0 and not self.paused:
             self._draw_title(surface)
         draw_hud(surface, self.state, self.scene.chapter_step, self.scene.title, self.timer_left, self.scene.timer_seconds)
         if self.background.is_provisional:
