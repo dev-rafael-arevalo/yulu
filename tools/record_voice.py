@@ -207,6 +207,8 @@ class Session:
                     return self.done
                 if event.type == pygame.KEYDOWN and self._handle_key(event.key):
                     return self.done
+            if self.current is None:
+                break  # se aceptó o saltó la última línea
             self.draw()
             self.clock.tick(30)
         self.draw(final=True)

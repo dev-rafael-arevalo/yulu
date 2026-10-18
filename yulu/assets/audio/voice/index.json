@@ -363,8 +363,10 @@
   "speaker": "Guardia",
   "text": "Tay tikneki?!",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 2.51
  },
  "786d7f6c04b5.wav": {
   "speaker": "Narrador",
@@ -410,8 +412,10 @@
   "speaker": "Anciana",
   "text": "Yek tayua.",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 2.97
  },
  "c387cd2d1034.wav": {
   "speaker": "Narrador",
@@ -449,8 +453,10 @@
   "speaker": "Anciana",
   "text": "Ken mutukay?",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 2.69
  },
  "c7b57335a887.wav": {
   "speaker": "Narrador",
@@ -520,8 +526,10 @@
   "speaker": "Guardia",
   "text": "Tekwani!",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 2.79
  },
  "683ad4c255e5.wav": {
   "speaker": "Narrador",
@@ -575,8 +583,10 @@
   "speaker": "Anciana",
   "text": "Ken tinemi?",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 2.46
  },
  "1811f749e801.wav": {
   "speaker": "Narrador",
@@ -646,8 +656,10 @@
   "speaker": "Niño",
   "text": "Padiush.",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 2.18
  },
  "5abf06dd73dd.wav": {
   "speaker": "Narrador",
@@ -773,8 +785,10 @@
   "speaker": "Anciana",
   "text": "Yek tunal.",
   "nahuat": true,
-  "voice": null,
-  "status": "pendiente de grabación humana"
+  "voice": "grabación humana (estudiante)",
+  "status": "grabada",
+  "hash": "human",
+  "seconds": 3.0
  },
  "782ba5915637.wav": {
   "speaker": "Narrador",
@@ -824,34 +838,5 @@
   "hash": "5969d0bcab5a6220",
   "status": "generada"
  },
- "_pending_nahuat": [
-  {
-   "file": "nahuat/tay_tikneki.wav",
-   "text": "Tay tikneki?!"
-  },
-  {
-   "file": "nahuat/yek_tayua.wav",
-   "text": "Yek tayua."
-  },
-  {
-   "file": "nahuat/ken_mutukay.wav",
-   "text": "Ken mutukay?"
-  },
-  {
-   "file": "nahuat/tekwani.wav",
-   "text": "Tekwani!"
-  },
-  {
-   "file": "nahuat/ken_tinemi.wav",
-   "text": "Ken tinemi?"
-  },
-  {
-   "file": "nahuat/padiush.wav",
-   "text": "Padiush."
-  },
-  {
-   "file": "nahuat/yek_tunal.wav",
-   "text": "Yek tunal."
-  }
- ]
+ "_pending_nahuat": []
 }
