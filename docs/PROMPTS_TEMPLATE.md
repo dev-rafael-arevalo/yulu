@@ -5,7 +5,7 @@ completarse con la experiencia propia del estudiante. Lo que aparece sin esa mar
 registro de lo ocurrido en la sesión de desarrollo del 18 de octubre de 2026 con
 Claude Code, incluido como ejemplo verificable; puede editarse o sustituirse.
 
-Estudiante: ✎ ____________________   Curso: ✎ ____________   Fecha de entrega: ✎ ________
+Estudiante: ✎ Rafael Edgardo Arévalo   Curso: ✎ AI for Developers G3   Fecha de entrega: ✎ 18/10/2026
 
 ## 1. Prompts documentados
 

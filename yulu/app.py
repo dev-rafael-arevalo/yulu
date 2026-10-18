@@ -13,7 +13,7 @@ import pygame
 from yulu import config
 from yulu.audio.audio_manager import AudioManager
 from yulu.audio.soundscape import Soundscape
-from yulu.audio.voice import voice_filename
+from yulu.audio.voice import is_human_recording_required, voice_filename
 from yulu.language.lexicon import Lexicon
 from yulu.narrative.scenes import GOOD_ENDING, NARRATOR, SCENES, START_SCENE
 from yulu.paths import PROJECT_ROOT
@@ -88,6 +88,7 @@ class Game:
         self.title_timer = 0.0
         self.shake_time = 0.0
         self.shake_amp = 0.0
+        self.voice_available = False
         self._enter_scene(first=True)
 
     # ---------- configuración de pantalla ----------
@@ -132,11 +133,13 @@ class Game:
         """Muestra la línea con subtítulo y reproduce su narración pregenerada si existe."""
         self.dialogue.set_line(line)
         self.characters.set_speaker(line.speaker)
-        self.audio.play_voice(voice_filename(line))
+        # Las frases en náhuat solo suenan si existe una grabación humana; nunca se sintetizan.
+        self.voice_available = self.audio.play_voice(voice_filename(line), optional=is_human_recording_required(line))
 
     def _replay_voice(self) -> None:
-        if self.dialogue.line is not None:
-            self.audio.play_voice(voice_filename(self.dialogue.line))
+        line = self.dialogue.line
+        if line is not None:
+            self.audio.play_voice(voice_filename(line), optional=is_human_recording_required(line))
 
     # ---------- flujo narrativo ----------
     def _enter_scene(self, first: bool = False) -> None:
@@ -361,6 +364,8 @@ class Game:
         else:
             text, color = "(No entiendes estas palabras... todavía.)", config.TEXT_DIM
         draw_text(surface, text, (104, H - 120), 20, color)
+        if not self.voice_available:
+            draw_text(surface, "náhuat: sin grabación de hablante", (W - 420, H - 120), 14, config.TEXT_DIM, shadow=False)
 
     def _draw_learned_card(self, surface: pygame.Surface) -> None:
         if not self.pending or not self.pending.learned:

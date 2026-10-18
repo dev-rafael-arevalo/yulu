@@ -157,3 +157,36 @@ def test_sound_entry_defaults():
     entry = SoundEntry("x", "ambient/x.mp3", "ambient")
     assert entry.gain == 1.0
     assert entry.loop is False
+
+
+# ---------- voces: configuración y náhuat ----------
+def test_voices_config_is_consistent():
+    config = json.loads((AUDIO_DIR / "voices.json").read_text(encoding="utf-8"))
+    speakers = {line.speaker for scene in SCENES.values() for line in scene.lines}
+    for speaker in speakers:
+        assert speaker in config["characters"], f"{speaker} sin voz configurada"
+    for name, char in config["characters"].items():
+        assert char["model"] in config["models"], f"{name} usa un modelo no declarado"
+    for model in config["models"].values():
+        assert model["file"].endswith(".onnx") and model.get("dataset_license")
+
+
+def test_nahuat_lines_are_never_synthesized():
+    from yulu.audio.voice import NAHUAT_DIR, is_human_recording_required
+
+    for scene in SCENES.values():
+        for line in scene.lines:
+            if line.nahuat_id:
+                assert is_human_recording_required(line)
+                assert voice_filename(line).startswith(NAHUAT_DIR + "/")
+            else:
+                assert not is_human_recording_required(line)
+
+
+def test_missing_optional_voice_is_silent(silent_audio, caplog):
+    import logging
+
+    with caplog.at_level(logging.WARNING, logger="yulu.audio"):
+        assert silent_audio.play_voice("nahuat/yek_tunal.wav", optional=True) is False
+        assert silent_audio.has_voice("nahuat/yek_tunal.wav") is False
+    assert not [r for r in caplog.records if "nahuat" in r.getMessage()]

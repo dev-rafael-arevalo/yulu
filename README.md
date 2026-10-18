@@ -49,7 +49,7 @@ No se instala nada a nivel global ni se requiere conexión durante la partida.
 | Flechas ↑ ↓ o 1-9 | Seleccionar una decisión |
 | Enter o clic | Confirmar la decisión |
 | G | Abrir o cerrar el glosario de náhuat (detiene el temporizador) |
-| V | Repetir la narración de la línea actual |
+| V | Repetir la narración de la línea actual (las líneas en náhuat solo si hay grabación humana) |
 | ← → (en pausa) | Ajustar el volumen de música, ambiente, efectos o voces |
 | Esc | Menú de pausa (continuar, volúmenes, volver a empezar, salir) |
 | F11 | Alternar pantalla completa / ventana |
@@ -102,17 +102,51 @@ volúmenes se guardan en `settings.json`.
   Autor, licencia, URL, fecha y limitaciones de cada una están en
   [`yulu/assets/audio/CREDITS.md`](yulu/assets/audio/CREDITS.md). Solo las cuatro señales
   de interfaz (`ui_*`) se generan por código.
-- **Narración en español**: se pregenera sin conexión con las voces de Windows
-  (motor WinRT: `Microsoft Sabina` para narradora y anciana, `Microsoft Raul` para
-  protagonista, guardia y niño; respaldo SAPI5 con una sola voz) usando SSML con ritmo,
-  tono y pausas distintos por personaje y volumen uniforme:
+- **Narración en español (Piper TTS, local)**: los diálogos se pregeneran con
+  [Piper](https://github.com/OHF-Voice/piper1-gpl) (código GPL-3.0) y modelos oficiales de
+  `rhasspy/piper-voices`. Piper necesita `onnxruntime`, que todavía no publica binarios para
+  Python 3.15, así que se usa un **segundo entorno solo para generar voces** con el Python 3.14
+  ya instalado en el equipo (el juego sigue en `.venv` y solo reproduce WAV):
 
   ```powershell
-  .venv\Scripts\python tools\generate_narration.py
+  # una vez: entorno de herramientas (ajusta la ruta si tu Python 3.14 está en otro sitio)
+  py -V:Astral\CPython3.14.7 -m venv .venv-tts
+  .venv-tts\Scripts\python -m pip install piper-tts onnxruntime
+
+  # modelos (unos 300 MB, no se incluyen en Git) en yulussetsoices\piper  # descarga manual desde https://huggingface.co/rhasspy/piper-voices (archivo .onnx + .onnx.json + MODEL_CARD)
+  # o con la utilidad de Piper:
+  .venv-tts\Scripts\python -m piper.download_voices es_MX-claude-high es_MX-ald-medium es_AR-daniela-high es_ES-davefx-medium --data-dir yulussetsoices\piper
+
+  # 1) tres frases de prueba para escuchar y evaluar
+  .venv-tts\Scripts\python tools\generate_narration.py --sample
+  # 2) todo el capítulo (solo lo que falta o cambió; --force para regenerar)
+  .venv-tts\Scripts\python tools\generate_narration.py
   ```
 
-  Crea unos 106 WAV (unos 40 MB) en `yulu/assets/audio/voice/`, que no se incluyen en Git.
-  Las frases en náhuat se leen con fonética española aproximada: **no es una voz nativa**.
+  | Personaje | Modelo | Licencia del dataset (según MODEL_CARD) |
+  |---|---|---|
+  | Narradora | `es_MX-claude-high` | Apache-2.0 |
+  | Anciana | `es_AR-daniela-high` | CC BY-SA 4.0 |
+  | Guardia y niño | `es_MX-ald-medium` | Unlicense |
+  | Protagonista | `es_ES-davefx-medium` | CC0 |
+
+  - **Cambiar la voz de un personaje**: edita `yulu/assets/audio/voices.json` (modelo,
+    `length_scale` para la velocidad, `sentence_silence` para las pausas) y vuelve a ejecutar
+    el generador; solo se regeneran las líneas cuyo texto o configuración cambió.
+  - **Escuchar las muestras**: `yulu/assets/audio/voice/samples/` (cualquier reproductor) o
+    `tools/audio_preview.py`. Los WAV finales quedan en `yulu/assets/audio/voice/` con
+    `index.json` (texto, locutor, modelo, estado) y `errors.log` si algo falló.
+  - **Náhuat**: las frases en náhuat **no se sintetizan**. Solo suenan si existe una grabación
+    hecha por una persona competente en la lengua en `yulu/assets/audio/voice/nahuat/<id>.wav`
+    (el id es el de `nahuat_ch1.json`); mientras tanto el juego muestra el texto y el aviso
+    "náhuat: sin grabación de hablante". `index.json` lista las pendientes.
+  - **Respaldo**: `--engine winrt` usa las voces de Windows (Sabina y Raul) si Piper no está
+    disponible.
+  - **Errores comunes**: *"piper-tts no está instalado en este intérprete"*: estás usando
+    `.venv` en lugar de `.venv-tts`. *"Modelo ... no encontrado"*: faltan el `.onnx` o el
+    `.onnx.json` en `yulu/assets/voices/piper/`. *"No matching distribution found for
+    onnxruntime"*: el intérprete es 3.15; crea `.venv-tts` con 3.14. Si falta un WAV, el juego
+    muestra el subtítulo, registra una advertencia y continúa.
 - **Herramientas**: `tools/check_audio.py` valida archivos y metadatos de licencia;
   `tools/audio_preview.py --scene s2_persecucion --threat 70` permite escuchar la mezcla
   de una escena, y `--id jaguar_sierra` un sonido concreto.

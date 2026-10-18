@@ -139,7 +139,10 @@ class AudioManager:
         self._sounds[sound_id] = sound
         return sound
 
-    def _voice_sound(self, filename: str) -> pygame.mixer.Sound | None:
+    def has_voice(self, filename: str) -> bool:
+        return (self.audio_dir / "voice" / filename).is_file()
+
+    def _voice_sound(self, filename: str, optional: bool) -> pygame.mixer.Sound | None:
         key = f"voice/{filename}"
         if key in self._sounds:
             return self._sounds[key]
@@ -150,7 +153,7 @@ class AudioManager:
                 sound = pygame.mixer.Sound(str(path))
             except pygame.error as exc:
                 self._warn(key, f"no se pudo cargar ({exc})")
-        else:
+        elif not optional:
             self._warn(key, "sin narración pregenerada (tools/generate_narration.py)")
         self._sounds[key] = sound
         return sound
@@ -296,10 +299,12 @@ class AudioManager:
         return True
 
     # ---------- voz ----------
-    def play_voice(self, filename: str) -> bool:
+    def play_voice(self, filename: str, optional: bool = False) -> bool:
+        """Reproduce una voz. Con `optional=True` la ausencia del archivo no genera advertencia
+        (grabaciones humanas de náhuat que pueden no existir)."""
         if not self.enabled or self._voice_channel is None:
             return False
-        sound = self._voice_sound(filename)
+        sound = self._voice_sound(filename, optional)
         if sound is None:
             return False
         self._voice_channel.stop()
