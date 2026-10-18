@@ -67,3 +67,29 @@ def test_background_falls_back_to_placeholder(tmp_path):
     surface = pygame.Surface((1280, 720))
     background.update(0.016)
     background.draw(surface, 0.0)  # no debe lanzar
+
+
+def test_cast_specs_are_valid_and_files_exist():
+    from yulu.narrative.scenes import SCENES
+    from yulu.paths import IMAGES_DIR
+
+    manifest = load_manifest()
+    speakers = {line.speaker for scene in SCENES.values() for line in scene.lines}
+    for scene_id, items in manifest["cast"].items():
+        assert scene_id in SCENES, f"reparto para escena inexistente {scene_id}"
+        for item in items:
+            assert (IMAGES_DIR / item["file"]).is_file(), f"{scene_id}: falta {item['file']}"
+            assert 0.0 <= item["x"] <= 1.0 and 0.1 <= item["height"] <= 1.0
+            if item.get("speaker"):
+                assert item["speaker"] in speakers, f"{scene_id}: locutor desconocido {item['speaker']}"
+
+
+def test_cast_layer_tolerates_missing_files(tmp_path):
+    from yulu.ui.cast import CastLayer
+
+    store = ImageStore(images_dir=tmp_path)
+    layer = CastLayer(store)
+    layer.set_scene("s3_anciana", "village_gate", 40)
+    layer.set_speaker("Anciana")
+    layer.update(0.1, 40)
+    layer.draw(pygame.Surface((1280, 720)))  # sin archivos no debe lanzar

@@ -1,5 +1,5 @@
 {
-  "_comment": "Manifiesto de recursos gráficos. Las rutas son relativas a yulu/assets/images. Si un archivo falta, el juego usa un escenario procedural provisional y lo indica en pantalla. El jaguar no usa recortes: se muestra íntegro en bg_07_jaguar_encounter.png y, cuando acecha fuera de plano, solo se dibujan sus ojos por código. 'torches' y 'fire' son posiciones normalizadas (0-1) para el resplandor animado.",
+  "_comment": "Manifiesto de recursos gráficos. Las rutas son relativas a yulu/assets/images. Si un archivo falta, el juego usa un escenario procedural provisional y lo indica en pantalla. 'cast' declara por escena los personajes y el jaguar (recortes revisados en images/cast, generados con tools/prepare_cutouts.py): x = centro horizontal, height = altura, ground = línea de pies, speaker = locutor que representa, jaguar = escala con la amenaza, dim = brillo relativo. 'torches' y 'fire' son posiciones normalizadas (0-1) para el resplandor animado.",
   "backgrounds": {
     "forest_dense": {
       "file": "bg_09_forest_moonlight.png",
@@ -81,59 +81,288 @@
     ],
     "smoke": "fx_torch_smoke.png"
   },
-  "characters": {
-    "dir": "characters",
-    "portraits": {
-      "Anciana": {
-        "file": "portrait_anciana_integrado.png",
-        "style": "card"
-      },
-      "Guardia": {
-        "file": "portrait_guardia_integrado.png",
-        "style": "card"
-      },
-      "Niño": {
-        "file": "npc_nino.png",
-        "style": "cutout"
+  "cast": {
+    "s1_escuchar": [
+      {
+        "file": "cast/jaguar_acecho_alt.png",
+        "x": 0.18,
+        "height": 0.3,
+        "ground": 0.765,
+        "jaguar": true,
+        "threat_scale": [
+          0.75,
+          1.3
+        ],
+        "dim": 0.85
       }
-    },
-    "scenes": {
-      "s4_refugio": [
-        {
-          "file": "group_familia.png",
-          "x": 0.02,
-          "bottom": 0.7,
-          "height": 0.34,
-          "alpha": 0.9
-        }
-      ],
-      "s4_refugio_otra_vez": [
-        {
-          "file": "group_familia.png",
-          "x": 0.02,
-          "bottom": 0.7,
-          "height": 0.34,
-          "alpha": 0.9
-        }
-      ],
-      "s4_sed": [
-        {
-          "file": "group_fogata.png",
-          "x": 0.04,
-          "bottom": 0.72,
-          "height": 0.36,
-          "alpha": 0.92
-        }
-      ],
-      "s5_final_aldea": [
-        {
-          "file": "group_familia.png",
-          "x": 0.22,
-          "bottom": 0.7,
-          "height": 0.3,
-          "alpha": 0.9
-        }
-      ]
-    }
+    ],
+    "s1_grito": [
+      {
+        "file": "cast/jaguar_acecho_alt.png",
+        "x": 0.18,
+        "height": 0.3,
+        "ground": 0.765,
+        "jaguar": true,
+        "threat_scale": [
+          0.75,
+          1.3
+        ],
+        "dim": 0.85
+      }
+    ],
+    "s1_camino": [
+      {
+        "file": "cast/jaguar_acecho_alt.png",
+        "x": 0.18,
+        "height": 0.3,
+        "ground": 0.765,
+        "jaguar": true,
+        "threat_scale": [
+          0.75,
+          1.3
+        ],
+        "dim": 0.85
+      }
+    ],
+    "s2_corrida": [
+      {
+        "file": "cast/jaguar_acecho.png",
+        "x": 0.22,
+        "height": 0.36,
+        "ground": 0.8,
+        "jaguar": true,
+        "threat_scale": [
+          0.8,
+          1.25
+        ],
+        "dim": 0.9
+      }
+    ],
+    "s2_paralizado": [
+      {
+        "file": "cast/jaguar_ataque.png",
+        "x": 0.5,
+        "height": 0.56,
+        "ground": 0.83,
+        "jaguar": true,
+        "threat_scale": [
+          1.0,
+          1.25
+        ]
+      }
+    ],
+    "s3_puerta": [
+      {
+        "file": "cast/guardia_lider.png",
+        "x": 0.6,
+        "height": 0.64,
+        "speaker": "Guardia"
+      }
+    ],
+    "s3_anciana": [
+      {
+        "file": "cast/guardia_lider.png",
+        "x": 0.56,
+        "height": 0.62,
+        "speaker": "Guardia"
+      },
+      {
+        "file": "cast/anciana.png",
+        "x": 0.72,
+        "height": 0.6,
+        "speaker": "Anciana"
+      }
+    ],
+    "s3_nombre": [
+      {
+        "file": "cast/guardia_lider.png",
+        "x": 0.56,
+        "height": 0.62,
+        "speaker": "Guardia"
+      },
+      {
+        "file": "cast/anciana.png",
+        "x": 0.72,
+        "height": 0.6,
+        "speaker": "Anciana"
+      }
+    ],
+    "s3_nombre_otra_vez": [
+      {
+        "file": "cast/guardia_lider.png",
+        "x": 0.56,
+        "height": 0.62,
+        "speaker": "Guardia"
+      },
+      {
+        "file": "cast/anciana.png",
+        "x": 0.72,
+        "height": 0.6,
+        "speaker": "Anciana"
+      }
+    ],
+    "s3_tekwani": [
+      {
+        "file": "cast/guardia_lider.png",
+        "x": 0.56,
+        "height": 0.62,
+        "speaker": "Guardia"
+      },
+      {
+        "file": "cast/anciana.png",
+        "x": 0.72,
+        "height": 0.6,
+        "speaker": "Anciana"
+      },
+      {
+        "file": "cast/jaguar_acecho.png",
+        "x": 0.13,
+        "height": 0.3,
+        "ground": 0.78,
+        "jaguar": true,
+        "threat_scale": [
+          0.8,
+          1.2
+        ],
+        "dim": 0.8
+      }
+    ],
+    "s4_refugio": [
+      {
+        "file": "cast/anciana.png",
+        "x": 0.62,
+        "height": 0.62,
+        "speaker": "Anciana"
+      },
+      {
+        "file": "cast/mujer.png",
+        "x": 0.78,
+        "height": 0.58,
+        "dim": 0.95
+      },
+      {
+        "file": "cast/nino.png",
+        "x": 0.905,
+        "height": 0.46,
+        "speaker": "Niño"
+      }
+    ],
+    "s4_refugio_otra_vez": [
+      {
+        "file": "cast/anciana.png",
+        "x": 0.62,
+        "height": 0.62,
+        "speaker": "Anciana"
+      },
+      {
+        "file": "cast/mujer.png",
+        "x": 0.78,
+        "height": 0.58,
+        "dim": 0.95
+      },
+      {
+        "file": "cast/nino.png",
+        "x": 0.905,
+        "height": 0.46,
+        "speaker": "Niño"
+      }
+    ],
+    "s4_sed": [
+      {
+        "file": "cast/anciana.png",
+        "x": 0.62,
+        "height": 0.62,
+        "speaker": "Anciana"
+      },
+      {
+        "file": "cast/mujer.png",
+        "x": 0.78,
+        "height": 0.58,
+        "dim": 0.95
+      },
+      {
+        "file": "cast/nino.png",
+        "x": 0.905,
+        "height": 0.46,
+        "speaker": "Niño"
+      }
+    ],
+    "s4_alarma": [
+      {
+        "file": "cast/joven_guardia.png",
+        "x": 0.4,
+        "height": 0.6,
+        "speaker": "Guardia"
+      },
+      {
+        "file": "cast/anciana.png",
+        "x": 0.62,
+        "height": 0.62,
+        "speaker": "Anciana"
+      },
+      {
+        "file": "cast/mujer.png",
+        "x": 0.78,
+        "height": 0.58,
+        "dim": 0.95
+      },
+      {
+        "file": "cast/nino.png",
+        "x": 0.905,
+        "height": 0.46,
+        "speaker": "Niño"
+      }
+    ],
+    "s5_final_aldea": [
+      {
+        "file": "cast/mujer_joven.png",
+        "x": 0.58,
+        "height": 0.56,
+        "dim": 0.95
+      },
+      {
+        "file": "cast/anciana.png",
+        "x": 0.7,
+        "height": 0.62,
+        "speaker": "Anciana"
+      },
+      {
+        "file": "cast/nino.png",
+        "x": 0.84,
+        "height": 0.46
+      },
+      {
+        "file": "cast/jaguar_acecho.png",
+        "x": 0.11,
+        "height": 0.22,
+        "ground": 0.745,
+        "jaguar": true,
+        "threat_scale": [
+          0.8,
+          0.9
+        ],
+        "dim": 0.6
+      }
+    ],
+    "s5_final_solo": [
+      {
+        "file": "cast/joven_guardia.png",
+        "x": 0.72,
+        "height": 0.6,
+        "dim": 0.9
+      },
+      {
+        "file": "cast/jaguar_acecho_alt.png",
+        "x": 0.15,
+        "height": 0.24,
+        "ground": 0.76,
+        "jaguar": true,
+        "threat_scale": [
+          0.8,
+          1.0
+        ],
+        "dim": 0.6
+      }
+    ]
   }
 }

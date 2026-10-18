@@ -20,6 +20,9 @@ def main() -> int:
         expected.append((f"fondo:{key}", spec.get("file", "")))
     for pose, filename in manifest.get("jaguar", {}).items():
         expected.append((f"jaguar:{pose}", filename))
+    for scene_id, items in manifest.get("cast", {}).items():
+        for item in items:
+            expected.append((f"reparto:{scene_id}", item["file"]))
     overlays = manifest.get("overlays", {})
     for filename in overlays.get("fog", []):
         expected.append(("niebla", filename))

@@ -153,9 +153,12 @@ volúmenes se guardan en `settings.json`.
 
 ## Personajes y referencias culturales
 
-La anciana y el guardia aparecen al hablar como **imágenes íntegras** (viñeta con bordes
-desvanecidos, sin recortar su fondo); el niño y los grupos de pobladores son recortes de la
-hoja de referencia (`tools/slice_character_sheet.py`). El jaguar de la persecución y la
+Cada escena declara su **reparto** (`cast` en `yulu/assets/manifest.json`): personajes de
+cuerpo entero y jaguar de pie sobre la línea de suelo, con sombra, tono de luz del escenario,
+el que habla iluminado y los demás atenuados; el jaguar escala con la amenaza y nunca es
+translúcido. Los recortes se generan desde el paquete de personajes con
+`tools/prepare_cutouts.py` (fondo negro eliminado por relleno desde los bordes, figura
+principal conservada, hoja de control sobre damero). El jaguar de la persecución y la
 reunión de la aldea son fondos completos. Criterios de vestuario, lo que se retiró y las
 incertidumbres declaradas están en [`docs/REFERENCIAS_CULTURALES.md`](docs/REFERENCIAS_CULTURALES.md).
 

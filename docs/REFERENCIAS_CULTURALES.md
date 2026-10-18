@@ -9,18 +9,19 @@ arqueológica ni etnográfica certificada.
 
 | Recurso | Uso | Criterio |
 |---|---|---|
-| `characters/portrait_anciana_integrado.png` | Retrato de la anciana cuando habla (viñeta con bordes desvanecidos, imagen íntegra) | Túnica de algodón claro con cenefas tejidas, manta o rebozo, collares de cuentas y orejeras de disco: elementos plausibles en Mesoamérica con fibras naturales, sin símbolos inventados presentados como históricos. |
-| `characters/portrait_guardia_integrado.png` | Retrato del guardia cuando habla | Banda tejida en la cabeza, manta anudada al hombro, faja, lanza de madera con punta lítica y escudo circular de madera y fibra. **Sustituye** al recorte anterior, que llevaba un tocado con aspecto de casco europeo. |
-| `bg_07_jaguar_encounter.png` | Fondo de la persecución y del momento de parálisis | Jaguar íntegro en su entorno, sin recorte ni transparencia. En el resto de escenas donde acecha fuera de plano solo se dibujan dos ojos ámbar por código; los recortes del jaguar se eliminaron. |
-| `bg_09_forest_moonlight.png`, `bg_10_forest_path.png` | Bosque del despertar y sendero de la huida | Imágenes íntegras a resolución completa del paquete de imágenes sólidas. |
-| `bg_08_village_fire.png` | Fondo de la deliberación tras la alarma y del amanecer previo a la decisión | Pobladores de la misma comunidad con vestuario coherente (algodón claro, cenefas rojas, collares), casas de palma y empalizada. |
-| `characters/npc_nino.png`, `group_familia.png`, `group_fogata.png` | Niño al hablar; grupos en el refugio | Vestuario coherente con los retratos integrados. |
-| `reference/concepto_cultural_*.png` | Solo referencia; no se muestran en el juego | Hojas de concepto del paquete de referencias. |
+| `cast/anciana.png`, `cast/guardia_lider.png`, `cast/joven_guardia.png`, `cast/mujer.png`, `cast/mujer_joven.png`, `cast/nino.png`, `cast/anciano.png`, `cast/hombre.png` | Reparto de cuerpo entero por escena (`cast` en el manifiesto): de pie sobre la línea de suelo, con sombra de contacto, tono de luz del escenario, el que habla iluminado y los demás atenuados | Túnicas y faldas de algodón claro con cenefas rojas tejidas, fajas, collares de cuentas y orejeras de disco, sandalias; el guardia líder lleva tocado de fibra con plumas y manta roja; el guardia joven, banda tejida. Vestuario coherente dentro de una sola comunidad. Interpretación artística, no reconstrucción. |
+| `cast/jaguar_acecho.png`, `cast/jaguar_acecho_alt.png`, `cast/jaguar_ataque.png` | Jaguar en acecho (escenas 1, carrera, puerta, finales) y en salto (parálisis). Escala y se acerca con la amenaza; siempre sólido | Recortes del paquete de personajes y jaguares; fondo negro eliminado por relleno desde los bordes para conservar las rosetas. |
+| `bg_07_jaguar_encounter.png` | Fondo de la persecución | Jaguar íntegro en su entorno. |
+| `bg_09_forest_moonlight.png`, `bg_10_forest_path.png` | Bosque del despertar y sendero de la huida | Imágenes íntegras a resolución completa. |
+| `bg_08_village_fire.png` | Deliberación tras la alarma y amanecer previo a la decisión | Pobladores de la misma comunidad; aquí no se superpone reparto para no duplicar figuras. |
+| `characters/portrait_*_integrado.png`, `characters/*.png`, `reference/*.png` | Ya no se muestran en el juego; se conservan como referencia | Sustituidos por el reparto de cuerpo entero a petición del estudiante (sin tarjetas ni recortes de hoja). |
 
 ## Qué se retiró
 
-- `group_guardia_anciano.png` (un guardia con tocado rígido tipo casco) ya no aparece en
-  ninguna escena. El archivo se conserva por si se regenera sin ese elemento.
+- `group_guardia_anciano.png` (un guardia con tocado rígido tipo casco), las viñetas de retrato
+  y los grupos recortados de la primera hoja ya no aparecen en ninguna escena.
+- Nota sobre el guardia líder: su tocado es de fibra con plumas, no un casco europeo; si se
+  prefiere evitar plumas, el manifiesto permite sustituirlo por `cast/joven_guardia.png`.
 - Los penachos grandes de plumas de algunas hojas de concepto no se usan en recursos finales.
 
 ## Pueblos y tradiciones a los que alude la historia

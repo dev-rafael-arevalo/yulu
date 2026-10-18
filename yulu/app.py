@@ -22,12 +22,11 @@ from yulu.state.engine import ChoiceResult, NarrativeEngine
 from yulu.state.game_state import GameState
 from yulu.ui.assets import ImageStore
 from yulu.ui.background import Background
-from yulu.ui.characters import CharacterLayer
+from yulu.ui.cast import CastLayer
 from yulu.ui.choice_menu import ChoiceMenu
 from yulu.ui.dialogue_box import DialogueBox
 from yulu.ui.glossary import Glossary
 from yulu.ui.hud import draw_hud
-from yulu.ui.jaguar import JaguarPresence
 from yulu.ui.pause_menu import PauseMenu
 from yulu.ui.text import draw_text
 from yulu.ui.transitions import Fade, make_vignette
@@ -72,8 +71,7 @@ class Game:
         self.pause = PauseMenu(self.audio.volumes)
         self.glossary = Glossary(self.lexicon)
         self.fade = Fade()
-        self.jaguar = JaguarPresence(self.store)
-        self.characters = CharacterLayer(self.store)
+        self.cast = CastLayer(self.store)
         self.vignette = make_vignette()
         self._backgrounds: dict[str, Background] = {}
         self.background = self._background_for(self.scene)
@@ -132,7 +130,7 @@ class Game:
     def _say(self, line: DialogueLine) -> None:
         """Muestra la línea con subtítulo y reproduce su narración pregenerada si existe."""
         self.dialogue.set_line(line)
-        self.characters.set_speaker(line.speaker)
+        self.cast.set_speaker(line.speaker)
         # Las frases en náhuat solo suenan si existe una grabación humana; nunca se sintetizan.
         self.voice_available = self.audio.play_voice(voice_filename(line), optional=is_human_recording_required(line))
 
@@ -154,7 +152,7 @@ class Game:
         self.title_timer = 2.6 if (first or scene.title != self._last_title) else 0.0
         self._last_title = scene.title
         self.phase = Phase.DIALOGUE
-        self.characters.set_scene(scene.id)
+        self.cast.set_scene(scene.id, scene.background, self.state.threat)
         self.soundscape.enter_scene(scene, self.state.threat)
         self._say(scene.lines[0])
         log.info("Escena %s (amenaza=%s, confianza=%s, vocabulario=%d)", scene.id, self.state.threat, self.state.trust, len(self.state.vocabulary))
@@ -176,7 +174,7 @@ class Game:
             self.fade.start(on_midpoint=self._enter_scene)
             return
         self.phase = Phase.CHOICES
-        self.characters.set_speaker(None)  # el retrato no debe quedar bajo el menú de decisiones
+        self.cast.set_speaker(None)  # nadie habla mientras el jugador decide
         self.menu.set_choices(self.engine.available_choices(self.state))
         # La presión temporal empieza solo cuando el jugador ya leyó la escena.
         self.timer_left = self.scene.timer_seconds
@@ -203,7 +201,6 @@ class Game:
 
     def _restart(self) -> None:
         self.state = self.engine.restart()
-        self.jaguar = JaguarPresence(self.store)
         self.fade.start(on_midpoint=lambda: self._enter_scene(first=True))
 
     def _shake(self, amplitude: float, duration: float) -> None:
@@ -300,8 +297,7 @@ class Game:
             return
         self.time_s += dt
         self.background.update(dt)
-        self.jaguar.update(dt, self.state.threat, self.scene.jaguar_visible)
-        self.characters.update(dt)
+        self.cast.update(dt, self.state.threat)
         self.dialogue.update(dt)
         self.title_timer = max(0.0, self.title_timer - dt)
         self.shake_time = max(0.0, self.shake_time - dt)
@@ -315,9 +311,8 @@ class Game:
     def draw(self) -> None:
         surface = self.canvas
         self.background.draw(surface, self.time_s)
-        self.jaguar.draw(surface, self.time_s)
+        self.cast.draw(surface)
         surface.blit(self.vignette, (0, 0))
-        self.characters.draw(surface)
         self._draw_threat_tint(surface)
 
         if self.title_timer > 0 and not self.paused:

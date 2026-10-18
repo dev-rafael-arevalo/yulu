@@ -46,7 +46,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s1_escuchar", chapter_step=1, title=T_DESPERTAR, background="forest_dense",
+        id="s1_escuchar", chapter_step=1, title=T_DESPERTAR, background="forest_dense", jaguar_visible=True,
         lines=(
             DialogueLine(NARRATOR, "A tu derecha corre agua. A tu izquierda, muy lejos, un tambor marca un ritmo lento."),
             DialogueLine(NARRATOR, "Y detrás de ti, dos puntos ámbar se encienden entre los helechos. Te están mirando."),
@@ -60,7 +60,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s1_grito", chapter_step=1, title=T_DESPERTAR, background="forest_dense",
+        id="s1_grito", chapter_step=1, title=T_DESPERTAR, background="forest_dense", jaguar_visible=True,
         lines=(
             DialogueLine(NARRATOR, "El eco de tu grito muere. Nadie responde, salvo el bosque."),
             DialogueLine(NARRATOR, "Ahora sabes que no estás solo. Y lo que te acompaña ya sabe dónde estás."),
@@ -73,7 +73,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s1_camino", chapter_step=1, title=T_DESPERTAR, background="forest_dense",
+        id="s1_camino", chapter_step=1, title=T_DESPERTAR, background="forest_dense", jaguar_visible=True,
         lines=(
             DialogueLine(NARRATOR, "Tras unos pasos el suelo se abre en un claro. La luna ilumina un sendero de tierra pisada."),
             DialogueLine(NARRATOR, "Al otro lado del claro, dos ojos ámbar flotan a la altura de tu cintura."),
@@ -107,7 +107,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s2_corrida", chapter_step=2, title=T_PERSECUCION, background="forest_path", ambient="forest_tense",
+        id="s2_corrida", chapter_step=2, title=T_PERSECUCION, background="forest_path", ambient="forest_tense", jaguar_visible=True,
         lines=(
             DialogueLine(NARRATOR, "La pendiente termina de golpe. Frente a ti, entre los árboles, arde una línea de antorchas."),
             DialogueLine(NARRATOR, "Detrás, las zarpas se detienen. El jaguar no se acerca al fuego. Todavía."),
@@ -131,7 +131,7 @@ _SCENES: list[Scene] = [
         choices=(Choice("salir", "Salir del agua y caminar hacia las antorchas.", "s2_claro", Effect(flags=("rumbo_aldea",)), "Empapado y tiritando, sigues la luz."),),
     ),
     Scene(
-        id="s2_paralizado", chapter_step=2, title=T_PERSECUCION, background="jaguar_close", ambient="forest_tense", jaguar_visible=False,
+        id="s2_paralizado", chapter_step=2, title=T_PERSECUCION, background="forest_path", ambient="forest_tense", jaguar_visible=True,
         lines=(
             DialogueLine(NARRATOR, "Tienes un corte en el brazo y el corazón en la garganta, pero sigues vivo."),
             DialogueLine(NARRATOR, "Corres sin rumbo hasta que una luz naranja aparece entre los troncos. Fuego. Gente."),
@@ -209,7 +209,7 @@ _SCENES: list[Scene] = [
         ),
     ),
     Scene(
-        id="s3_tekwani", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=False,
+        id="s3_tekwani", chapter_step=3, title=T_ALDEA, background="village_gate", ambient="village_gate", jaguar_visible=True,
         timer_seconds=12.0, timeout_choice="paralizarse",
         lines=(
             DialogueLine(NARRATOR, "Un rugido corto sale del bosque, muy cerca. El guardia levanta la antorcha y escruta la oscuridad."),
