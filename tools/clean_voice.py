@@ -38,6 +38,12 @@ TARGET_RATE = 22050
 FRAME, HOP = 2048, 512
 HIGHPASS_HZ, LOWPASS_HZ = 85.0, 10000.0
 FLOOR_DB = -24.0
+PRESETS = {
+    # suave: solo reducción de ruido moderada (como la primera pasada)
+    "suave": dict(strength=1.6, floor_db=-24.0, gate_db=None, presence_db=0.0, compress=False, reverb=0.0),
+    # estudio: ruido muy reducido, silencios cerrados del todo, presencia, compresión y sala corta
+    "estudio": dict(strength=2.6, floor_db=-42.0, gate_db=-46.0, presence_db=3.5, compress=True, reverb=0.10),
+}
 TARGET_RMS_DB, PEAK_DB = -20.0, -1.0
 
 
@@ -81,13 +87,13 @@ def istft(spec: np.ndarray, length: int) -> np.ndarray:
     return out[FRAME // 2: FRAME // 2 + length]
 
 
-def spectral_gate(x: np.ndarray, rate: int, strength: float) -> np.ndarray:
+def spectral_gate(x: np.ndarray, rate: int, strength: float, floor_db: float = FLOOR_DB, presence_db: float = 0.0) -> np.ndarray:
     spec = stft(x)
     mag = np.abs(spec)
     energy = mag.mean(axis=1)
     quiet = mag[energy <= np.percentile(energy, 15)]
     noise = quiet.mean(axis=0) if len(quiet) else mag.min(axis=0)
-    floor = 10 ** (FLOOR_DB / 20)
+    floor = 10 ** (floor_db / 20)
     gain = np.clip((mag - strength * noise[None, :]) / np.maximum(mag, 1e-9), floor, 1.0)
     # suavizado temporal (3 tramas) y en frecuencia (5 bandas) contra el ruido musical
     kernel_t = np.ones(3) / 3
@@ -97,7 +103,47 @@ def spectral_gate(x: np.ndarray, rate: int, strength: float) -> np.ndarray:
     freqs = np.fft.rfftfreq(FRAME, 1 / rate)
     band = ((freqs >= HIGHPASS_HZ) & (freqs <= LOWPASS_HZ)).astype(float)
     band = np.convolve(band, np.ones(3) / 3, mode="same")
+    if presence_db:
+        # realce de presencia (inteligibilidad) entre 2 y 4,5 kHz
+        bump = np.exp(-((freqs - 3200.0) / 1100.0) ** 2) * (10 ** (presence_db / 20) - 1)
+        band = band * (1 + bump)
     return istft(spec * gain * band[None, :], len(x))
+
+
+def time_gate(x: np.ndarray, rate: int, gate_db: float, attack_ms: float = 8, release_ms: float = 90) -> np.ndarray:
+    """Silencia del todo los huecos entre frases: envolvente RMS con ataque rápido y liberación lenta."""
+    win = max(1, int(rate * 0.01))
+    power = np.convolve(x ** 2, np.ones(win) / win, mode="same")
+    level_db = 10 * np.log10(power + 1e-12)
+    target = (level_db > gate_db).astype(float)
+    a_att, a_rel = np.exp(-1 / (rate * attack_ms / 1000)), np.exp(-1 / (rate * release_ms / 1000))
+    env = np.empty_like(target)
+    g = 0.0
+    for i, t in enumerate(target):
+        g = t + (g - t) * (a_att if t > g else a_rel)
+        env[i] = g
+    return x * (0.02 + 0.98 * env)
+
+
+def compress(x: np.ndarray, rate: int, threshold_db: float = -24.0, ratio: float = 2.5) -> np.ndarray:
+    """Compresión suave para igualar sílabas fuertes y débiles."""
+    win = int(rate * 0.03)
+    env = np.sqrt(np.convolve(x ** 2, np.ones(win) / win, mode="same") + 1e-12)
+    env_db = 20 * np.log10(env)
+    over = np.maximum(env_db - threshold_db, 0.0)
+    gain_db = -over * (1 - 1 / ratio)
+    return x * 10 ** (gain_db / 20)
+
+
+def small_room(x: np.ndarray, rate: int, mix: float) -> np.ndarray:
+    """Reverberación corta de sala (algunas reflexiones tempranas amortiguadas)."""
+    if mix <= 0:
+        return x
+    out = x.copy()
+    for delay_ms, gain in ((13, 0.45), (23, 0.35), (37, 0.28), (53, 0.2), (79, 0.14), (113, 0.09)):
+        d = int(rate * delay_ms / 1000)
+        out[d:] += x[:-d] * gain * mix
+    return out
 
 
 def normalize(x: np.ndarray) -> np.ndarray:
@@ -131,14 +177,19 @@ def noise_floor_db(x: np.ndarray, rate: int) -> float:
     return float(20 * np.log10(min(blocks) + 1e-9))
 
 
-def process(path: Path, strength: float) -> tuple[float, float]:
+def process(path: Path, preset: dict) -> tuple[float, float]:
     raw_path = RAW_DIR / path.relative_to(VOICE_DIR)
     if not raw_path.exists():
         raw_path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(path, raw_path)
     x, rate = read_wav(raw_path)
     before = noise_floor_db(x, rate)
-    y = spectral_gate(x, rate, strength)
+    y = spectral_gate(x, rate, preset["strength"], preset["floor_db"], preset["presence_db"])
+    if preset["gate_db"] is not None:
+        y = time_gate(y, rate, preset["gate_db"])
+    if preset["compress"]:
+        y = compress(y, rate)
+    y = small_room(y, rate, preset["reverb"])
     y = resample(y, rate)
     y = normalize(y)
     write_wav(path, y, TARGET_RATE)
@@ -147,13 +198,17 @@ def process(path: Path, strength: float) -> tuple[float, float]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--strength", type=float, default=1.6, help="Factor de sustracción del ruido (1.0 suave, 2.0 agresivo)")
+    parser.add_argument("--preset", choices=sorted(PRESETS), default="estudio", help="Conjunto de ajustes (por defecto: estudio)")
+    parser.add_argument("--strength", type=float, default=None, help="Sobrescribe el factor de sustracción del ruido del preajuste")
     parser.add_argument("--only", help="Procesar solo este archivo (ruta relativa a voice/)")
     args = parser.parse_args()
     index = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
     targets = [k for k, v in index.items() if not k.startswith("_") and str(v.get("voice", "")).startswith("grabación humana")]
     if args.only:
         targets = [t for t in targets if t == args.only]
+    preset = dict(PRESETS[args.preset])
+    if args.strength is not None:
+        preset["strength"] = args.strength
     done = 0
     improvements = []
     for name in targets:
@@ -161,9 +216,9 @@ def main() -> int:
         if not path.exists():
             print(f"  FALTA {name}")
             continue
-        before, after = process(path, args.strength)
+        before, after = process(path, preset)
         improvements.append(before - after)
-        index[name]["processed"] = {"strength": args.strength, "rate": TARGET_RATE, "noise_floor_db": round(after, 1)}
+        index[name]["processed"] = {"preset": args.preset, **preset, "rate": TARGET_RATE, "noise_floor_db": round(after, 1)}
         done += 1
     INDEX_PATH.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     if improvements:

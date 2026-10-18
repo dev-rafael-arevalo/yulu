@@ -8,9 +8,15 @@
   "hash": "human",
   "seconds": 6.4,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -68.4
+   "noise_floor_db": -108.5
   }
  },
  "1f942d1ff6b0.wav": {
@@ -22,9 +28,15 @@
   "hash": "human",
   "seconds": 8.34,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -60.8
+   "noise_floor_db": -81.3
   }
  },
  "1c66c158093a.wav": {
@@ -36,9 +48,15 @@
   "hash": "human",
   "seconds": 6.82,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -62.0
+   "noise_floor_db": -101.3
   }
  },
  "cdd70917836b.wav": {
@@ -50,9 +68,15 @@
   "hash": "human",
   "seconds": 6.23,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -68.1
+   "noise_floor_db": -111.1
   }
  },
  "edaada21a402.wav": {
@@ -64,9 +88,15 @@
   "hash": "human",
   "seconds": 6.19,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -52.2
+   "noise_floor_db": -72.3
   }
  },
  "f1142c6de455.wav": {
@@ -78,9 +108,15 @@
   "hash": "human",
   "seconds": 7.71,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.3
+   "noise_floor_db": -76.9
   }
  },
  "4830b5521f67.wav": {
@@ -92,9 +128,15 @@
   "hash": "human",
   "seconds": 7.68,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.7
+   "noise_floor_db": -73.1
   }
  },
  "8cec480cb06d.wav": {
@@ -106,9 +148,15 @@
   "hash": "human",
   "seconds": 7.22,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -57.3
+   "noise_floor_db": -62.1
   }
  },
  "62d9bd3bdb56.wav": {
@@ -120,9 +168,15 @@
   "hash": "human",
   "seconds": 7.91,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -65.2
+   "noise_floor_db": -89.7
   }
  },
  "39a8ffdf45da.wav": {
@@ -134,9 +188,15 @@
   "hash": "human",
   "seconds": 7.03,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.3
+   "noise_floor_db": -102.9
   }
  },
  "e0427d90053f.wav": {
@@ -148,9 +208,15 @@
   "hash": "human",
   "seconds": 6.62,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -61.1
+   "noise_floor_db": -78.0
   }
  },
  "6d510c36fc7c.wav": {
@@ -162,9 +228,15 @@
   "hash": "human",
   "seconds": 6.82,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -55.9
+   "noise_floor_db": -74.2
   }
  },
  "7db84d20d041.wav": {
@@ -176,9 +248,15 @@
   "hash": "human",
   "seconds": 6.5,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.0
+   "noise_floor_db": -105.4
   }
  },
  "9a7dba07073f.wav": {
@@ -190,9 +268,15 @@
   "hash": "human",
   "seconds": 6.82,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.2
+   "noise_floor_db": -88.7
   }
  },
  "9c14c04dab48.wav": {
@@ -204,9 +288,15 @@
   "hash": "human",
   "seconds": 8.43,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.6
+   "noise_floor_db": -102.4
   }
  },
  "762dc7b48bb4.wav": {
@@ -218,9 +308,15 @@
   "hash": "human",
   "seconds": 11.39,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.2
+   "noise_floor_db": -102.1
   }
  },
  "714d6fb541f5.wav": {
@@ -232,9 +328,15 @@
   "hash": "human",
   "seconds": 9.27,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.8
+   "noise_floor_db": -98.5
   }
  },
  "dcad86e2370c.wav": {
@@ -246,9 +348,15 @@
   "hash": "human",
   "seconds": 7.58,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -50.6
+   "noise_floor_db": -52.1
   }
  },
  "7631f8c0a8ef.wav": {
@@ -260,9 +368,15 @@
   "hash": "human",
   "seconds": 6.82,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -69.2
+   "noise_floor_db": -110.1
   }
  },
  "fbf786c7f57a.wav": {
@@ -274,9 +388,15 @@
   "hash": "human",
   "seconds": 8.23,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -61.6
+   "noise_floor_db": -96.6
   }
  },
  "3d6a46681ab7.wav": {
@@ -288,9 +408,15 @@
   "hash": "human",
   "seconds": 8.39,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -66.4
+   "noise_floor_db": -108.0
   }
  },
  "22966954c905.wav": {
@@ -302,9 +428,15 @@
   "hash": "human",
   "seconds": 4.79,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -57.1
+   "noise_floor_db": -79.4
   }
  },
  "bc6140c75cd1.wav": {
@@ -316,9 +448,15 @@
   "hash": "human",
   "seconds": 9.19,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -69.4
+   "noise_floor_db": -105.5
   }
  },
  "a8a755501c40.wav": {
@@ -330,9 +468,15 @@
   "hash": "human",
   "seconds": 3.13,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -50.9
+   "noise_floor_db": -62.8
   }
  },
  "d35fe750b06e.wav": {
@@ -344,9 +488,15 @@
   "hash": "human",
   "seconds": 8.85,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -62.4
+   "noise_floor_db": -90.7
   }
  },
  "2b13e1a1a8ab.wav": {
@@ -358,9 +508,15 @@
   "hash": "human",
   "seconds": 9.11,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.2
+   "noise_floor_db": -96.7
   }
  },
  "9a667072505c.wav": {
@@ -372,9 +528,15 @@
   "hash": "human",
   "seconds": 8.74,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -54.1
+   "noise_floor_db": -62.6
   }
  },
  "9b8511190339.wav": {
@@ -386,9 +548,15 @@
   "hash": "human",
   "seconds": 8.37,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -59.8
+   "noise_floor_db": -93.2
   }
  },
  "e2fc5f8d3e96.wav": {
@@ -400,9 +568,15 @@
   "hash": "human",
   "seconds": 8.91,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -47.3
+   "noise_floor_db": -58.6
   }
  },
  "abd7ea741951.wav": {
@@ -414,9 +588,15 @@
   "hash": "human",
   "seconds": 8.36,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -66.5
+   "noise_floor_db": -108.3
   }
  },
  "b46073bbc397.wav": {
@@ -428,9 +608,15 @@
   "hash": "human",
   "seconds": 4.6,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -41.1
+   "noise_floor_db": -43.7
   }
  },
  "e529cc3ed571.wav": {
@@ -442,9 +628,15 @@
   "hash": "human",
   "seconds": 11.38,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -45.9
+   "noise_floor_db": -66.6
   }
  },
  "637fab6b3127.wav": {
@@ -456,9 +648,15 @@
   "hash": "human",
   "seconds": 7.11,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -50.2
+   "noise_floor_db": -74.0
   }
  },
  "0214942bea5b.wav": {
@@ -470,9 +668,15 @@
   "hash": "human",
   "seconds": 5.39,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -50.3
+   "noise_floor_db": -52.1
   }
  },
  "2d2e6e859077.wav": {
@@ -484,9 +688,15 @@
   "hash": "human",
   "seconds": 7.93,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.5
+   "noise_floor_db": -89.0
   }
  },
  "7a718457412a.wav": {
@@ -498,9 +708,15 @@
   "hash": "human",
   "seconds": 9.85,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.0
+   "noise_floor_db": -98.9
   }
  },
  "9f82699b4d20.wav": {
@@ -512,9 +728,15 @@
   "hash": "human",
   "seconds": 4.46,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -49.4
+   "noise_floor_db": -63.9
   }
  },
  "40eba7e8cce8.wav": {
@@ -526,9 +748,15 @@
   "hash": "human",
   "seconds": 7.27,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -49.6
+   "noise_floor_db": -63.9
   }
  },
  "be2c9fd1e78c.wav": {
@@ -540,9 +768,15 @@
   "hash": "human",
   "seconds": 8.51,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -49.6
+   "noise_floor_db": -57.1
   }
  },
  "9afcd82fba83.wav": {
@@ -554,9 +788,15 @@
   "hash": "human",
   "seconds": 5.02,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -49.6
+   "noise_floor_db": -75.5
   }
  },
  "d9e55e470ff0.wav": {
@@ -568,9 +808,15 @@
   "hash": "human",
   "seconds": 10.77,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -45.1
+   "noise_floor_db": -48.5
   }
  },
  "27c4d113bfbc.wav": {
@@ -582,9 +828,15 @@
   "hash": "human",
   "seconds": 10.12,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -47.6
+   "noise_floor_db": -46.8
   }
  },
  "7f8cdf737d96.wav": {
@@ -596,9 +848,15 @@
   "hash": "human",
   "seconds": 7.94,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -44.6
+   "noise_floor_db": -45.5
   }
  },
  "43a4d5227c2a.wav": {
@@ -610,9 +868,15 @@
   "hash": "human",
   "seconds": 3.67,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -37.8
+   "noise_floor_db": -37.9
   }
  },
  "3f71e2530687.wav": {
@@ -624,9 +888,15 @@
   "hash": "human",
   "seconds": 7.87,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -66.3
+   "noise_floor_db": -106.8
   }
  },
  "nahuat/tay_tikneki.wav": {
@@ -638,9 +908,15 @@
   "hash": "human",
   "seconds": 2.51,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -56.1
+   "noise_floor_db": -78.1
   }
  },
  "786d7f6c04b5.wav": {
@@ -652,9 +928,15 @@
   "hash": "human",
   "seconds": 8.46,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -59.6
+   "noise_floor_db": -65.6
   }
  },
  "cf65ada32e86.wav": {
@@ -666,9 +948,15 @@
   "hash": "human",
   "seconds": 15.25,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -65.3
+   "noise_floor_db": -104.7
   }
  },
  "743c1a35e978.wav": {
@@ -680,9 +968,15 @@
   "hash": "human",
   "seconds": 15.7,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -66.9
+   "noise_floor_db": -105.5
   }
  },
  "10dc44fd4cce.wav": {
@@ -694,9 +988,15 @@
   "hash": "human",
   "seconds": 15.23,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.9
+   "noise_floor_db": -98.2
   }
  },
  "57300b2f0192.wav": {
@@ -708,9 +1008,15 @@
   "hash": "human",
   "seconds": 8.66,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.9
+   "noise_floor_db": -104.2
   }
  },
  "nahuat/yek_tayua.wav": {
@@ -722,9 +1028,15 @@
   "hash": "human",
   "seconds": 2.97,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -58.5
+   "noise_floor_db": -75.0
   }
  },
  "c387cd2d1034.wav": {
@@ -736,9 +1048,15 @@
   "hash": "human",
   "seconds": 11.28,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.7
+   "noise_floor_db": -113.3
   }
  },
  "0e25391d9e9a.wav": {
@@ -750,9 +1068,15 @@
   "hash": "human",
   "seconds": 11.96,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -66.8
+   "noise_floor_db": -103.3
   }
  },
  "c21e4882f553.wav": {
@@ -764,9 +1088,15 @@
   "hash": "human",
   "seconds": 14.49,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -65.5
+   "noise_floor_db": -104.0
   }
  },
  "febf9239efa4.wav": {
@@ -778,9 +1108,15 @@
   "hash": "human",
   "seconds": 11.03,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -68.0
+   "noise_floor_db": -108.8
   }
  },
  "nahuat/ken_mutukay.wav": {
@@ -792,9 +1128,15 @@
   "hash": "human",
   "seconds": 2.69,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -56.2
+   "noise_floor_db": -73.5
   }
  },
  "c7b57335a887.wav": {
@@ -806,9 +1148,15 @@
   "hash": "human",
   "seconds": 6.23,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.8
+   "noise_floor_db": -100.0
   }
  },
  "e8878dbef929.wav": {
@@ -820,9 +1168,15 @@
   "hash": "human",
   "seconds": 8.84,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -67.7
+   "noise_floor_db": -109.3
   }
  },
  "d5f2859bde32.wav": {
@@ -834,9 +1188,15 @@
   "hash": "human",
   "seconds": 11.04,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -68.1
+   "noise_floor_db": -109.0
   }
  },
  "f754f5fa6b37.wav": {
@@ -848,9 +1208,15 @@
   "hash": "human",
   "seconds": 8.95,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -70.0
+   "noise_floor_db": -110.1
   }
  },
  "837c2bd3d62b.wav": {
@@ -862,9 +1228,15 @@
   "hash": "human",
   "seconds": 7.52,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -69.2
+   "noise_floor_db": -104.6
   }
  },
  "1f68d8d2a2fb.wav": {
@@ -876,9 +1248,15 @@
   "hash": "human",
   "seconds": 7.63,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.6
+   "noise_floor_db": -106.4
   }
  },
  "e9ce5d807b1d.wav": {
@@ -890,9 +1268,15 @@
   "hash": "human",
   "seconds": 5.38,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -62.9
+   "noise_floor_db": -93.2
   }
  },
  "c48a8aff65e4.wav": {
@@ -904,9 +1288,15 @@
   "hash": "human",
   "seconds": 6.9,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -56.5
+   "noise_floor_db": -66.1
   }
  },
  "nahuat/tekwani.wav": {
@@ -918,9 +1308,15 @@
   "hash": "human",
   "seconds": 2.79,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -56.6
+   "noise_floor_db": -75.6
   }
  },
  "683ad4c255e5.wav": {
@@ -932,9 +1328,15 @@
   "hash": "human",
   "seconds": 6.09,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -55.0
+   "noise_floor_db": -55.8
   }
  },
  "5cfb14967870.wav": {
@@ -946,9 +1348,15 @@
   "hash": "human",
   "seconds": 8.9,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -73.6
+   "noise_floor_db": -113.3
   }
  },
  "db28f3fa17ef.wav": {
@@ -960,9 +1368,15 @@
   "hash": "human",
   "seconds": 10.28,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.7
+   "noise_floor_db": -101.4
   }
  },
  "2fd5ce34f863.wav": {
@@ -974,9 +1388,15 @@
   "hash": "human",
   "seconds": 10.48,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -64.7
+   "noise_floor_db": -96.3
   }
  },
  "0abb01db38b1.wav": {
@@ -988,9 +1408,15 @@
   "hash": "human",
   "seconds": 10.36,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -59.6
+   "noise_floor_db": -85.3
   }
  },
  "48249f46de3b.wav": {
@@ -1002,9 +1428,15 @@
   "hash": "human",
   "seconds": 7.52,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -56.0
+   "noise_floor_db": -83.2
   }
  },
  "nahuat/ken_tinemi.wav": {
@@ -1016,9 +1448,15 @@
   "hash": "human",
   "seconds": 2.46,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.5
+   "noise_floor_db": -78.8
   }
  },
  "1811f749e801.wav": {
@@ -1030,9 +1468,15 @@
   "hash": "human",
   "seconds": 6.99,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -51.1
+   "noise_floor_db": -69.3
   }
  },
  "e6ab36ad1313.wav": {
@@ -1044,9 +1488,15 @@
   "hash": "human",
   "seconds": 6.24,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -55.6
+   "noise_floor_db": -65.4
   }
  },
  "c14a0ff49f26.wav": {
@@ -1058,9 +1508,15 @@
   "hash": "human",
   "seconds": 7.79,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -63.9
+   "noise_floor_db": -99.6
   }
  },
  "c6faf7f4e4e2.wav": {
@@ -1072,9 +1528,15 @@
   "hash": "human",
   "seconds": 12.17,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -52.0
+   "noise_floor_db": -87.5
   }
  },
  "62910753d19e.wav": {
@@ -1086,9 +1548,15 @@
   "hash": "human",
   "seconds": 7.63,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.6
+   "noise_floor_db": -88.2
   }
  },
  "c70f0ba486a9.wav": {
@@ -1100,9 +1568,15 @@
   "hash": "human",
   "seconds": 7.0,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -59.1
+   "noise_floor_db": -100.0
   }
  },
  "19219087247a.wav": {
@@ -1114,9 +1588,15 @@
   "hash": "human",
   "seconds": 5.5,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -54.5
+   "noise_floor_db": -86.7
   }
  },
  "0a626e15a309.wav": {
@@ -1128,9 +1608,15 @@
   "hash": "human",
   "seconds": 4.7,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -58.7
+   "noise_floor_db": -79.1
   }
  },
  "nahuat/padiush.wav": {
@@ -1142,9 +1628,15 @@
   "hash": "human",
   "seconds": 2.18,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -59.8
+   "noise_floor_db": -72.2
   }
  },
  "5abf06dd73dd.wav": {
@@ -1156,9 +1648,15 @@
   "hash": "human",
   "seconds": 6.24,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.2
+   "noise_floor_db": -91.0
   }
  },
  "c9c28acf163b.wav": {
@@ -1170,9 +1668,15 @@
   "hash": "human",
   "seconds": 11.07,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -58.7
+   "noise_floor_db": -96.1
   }
  },
  "04f43e631fee.wav": {
@@ -1184,9 +1688,15 @@
   "hash": "human",
   "seconds": 9.84,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.6
+   "noise_floor_db": -90.8
   }
  },
  "2fe55d045674.wav": {
@@ -1198,9 +1708,15 @@
   "hash": "human",
   "seconds": 9.82,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -55.0
+   "noise_floor_db": -93.1
   }
  },
  "6ff017d20aa9.wav": {
@@ -1212,9 +1728,15 @@
   "hash": "human",
   "seconds": 5.93,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -51.7
+   "noise_floor_db": -58.8
   }
  },
  "71cc84270f60.wav": {
@@ -1226,9 +1748,15 @@
   "hash": "human",
   "seconds": 7.11,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -54.3
+   "noise_floor_db": -90.6
   }
  },
  "d5497725e353.wav": {
@@ -1240,9 +1768,15 @@
   "hash": "human",
   "seconds": 11.19,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -51.8
+   "noise_floor_db": -82.1
   }
  },
  "eae210144b6d.wav": {
@@ -1254,9 +1788,15 @@
   "hash": "human",
   "seconds": 15.15,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -60.0
+   "noise_floor_db": -103.9
   }
  },
  "b2e0e1549c7e.wav": {
@@ -1268,9 +1808,15 @@
   "hash": "human",
   "seconds": 11.99,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -59.8
+   "noise_floor_db": -96.5
   }
  },
  "ad45689e4304.wav": {
@@ -1282,9 +1828,15 @@
   "hash": "human",
   "seconds": 10.99,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.1
+   "noise_floor_db": -77.0
   }
  },
  "ea1501e3e728.wav": {
@@ -1296,9 +1848,15 @@
   "hash": "human",
   "seconds": 9.35,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -62.2
+   "noise_floor_db": -101.9
   }
  },
  "fc6f4e03ea1a.wav": {
@@ -1310,9 +1868,15 @@
   "hash": "human",
   "seconds": 7.18,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -55.6
+   "noise_floor_db": -89.0
   }
  },
  "8d84a5238ab6.wav": {
@@ -1324,9 +1888,15 @@
   "hash": "human",
   "seconds": 5.34,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.7
+   "noise_floor_db": -81.7
   }
  },
  "41461fbb97de.wav": {
@@ -1338,9 +1908,15 @@
   "hash": "human",
   "seconds": 6.13,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -54.5
+   "noise_floor_db": -90.6
   }
  },
  "42e0896b95e1.wav": {
@@ -1352,9 +1928,15 @@
   "hash": "human",
   "seconds": 10.17,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -52.1
+   "noise_floor_db": -79.8
   }
  },
  "nahuat/yek_tunal.wav": {
@@ -1366,9 +1948,15 @@
   "hash": "human",
   "seconds": 3.0,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -60.0
+   "noise_floor_db": -80.3
   }
  },
  "782ba5915637.wav": {
@@ -1380,9 +1968,15 @@
   "hash": "human",
   "seconds": 11.89,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.1
+   "noise_floor_db": -85.0
   }
  },
  "68444cb6a4dd.wav": {
@@ -1394,9 +1988,15 @@
   "hash": "human",
   "seconds": 9.57,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -52.4
+   "noise_floor_db": -85.3
   }
  },
  "c75e38987a92.wav": {
@@ -1408,9 +2008,15 @@
   "hash": "human",
   "seconds": 7.85,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -51.6
+   "noise_floor_db": -88.3
   }
  },
  "78fb57b6798f.wav": {
@@ -1422,9 +2028,15 @@
   "hash": "human",
   "seconds": 10.14,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -52.9
+   "noise_floor_db": -74.3
   }
  },
  "059055a6827f.wav": {
@@ -1436,9 +2048,15 @@
   "hash": "human",
   "seconds": 11.25,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -54.3
+   "noise_floor_db": -89.6
   }
  },
  "e69c80e653ea.wav": {
@@ -1450,9 +2068,15 @@
   "hash": "human",
   "seconds": 12.96,
   "processed": {
-   "strength": 1.6,
+   "preset": "estudio",
+   "strength": 2.6,
+   "floor_db": -42.0,
+   "gate_db": -46.0,
+   "presence_db": 3.5,
+   "compress": true,
+   "reverb": 0.1,
    "rate": 22050,
-   "noise_floor_db": -53.2
+   "noise_floor_db": -84.3
   }
  },
  "_pending_nahuat": []
